@@ -5,6 +5,8 @@ import { Menu, X, MessageCircle, ArrowLeft } from 'lucide-react';
 const Navigation = ({ showBackButton = false, onBack }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [currentLanguage, setCurrentLanguage] = useState('ru');
+  const [showLanguageMenu, setShowLanguageMenu] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,6 +15,23 @@ const Navigation = ({ showBackButton = false, onBack }) => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (showLanguageMenu && !event.target.closest('.language-selector')) {
+        setShowLanguageMenu(false);
+      }
+    };
+    
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [showLanguageMenu]);
+
+  const languages = [
+    { code: 'ru', name: 'Русский', flag: '🇷🇺' },
+    { code: 'uz', name: 'O'zbekcha', flag: '🇺🇿' },
+    { code: 'en', name: 'English', flag: '🇺🇸' }
+  ];
 
   const navItems = [
     { name: 'О нас', href: '#about' },
@@ -34,7 +53,7 @@ const Navigation = ({ showBackButton = false, onBack }) => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 min-h-[4rem]">
+        <div className="flex justify-between items-center h-16 min-h-[4rem] py-2">
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
@@ -57,7 +76,7 @@ const Navigation = ({ showBackButton = false, onBack }) => {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
               <a
                 key={item.name}
@@ -67,6 +86,49 @@ const Navigation = ({ showBackButton = false, onBack }) => {
                 {item.name}
               </a>
             ))}
+            
+            {/* Language Selector */}
+            <div className="relative language-selector">
+              <motion.button
+                onClick={() => setShowLanguageMenu(!showLanguageMenu)}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors duration-200"
+              >
+                <span className="text-lg">
+                  {languages.find(lang => lang.code === currentLanguage)?.flag}
+                </span>
+                <span className="text-sm font-medium text-gray-700">
+                  {languages.find(lang => lang.code === currentLanguage)?.code.toUpperCase()}
+                </span>
+              </motion.button>
+              
+              {showLanguageMenu && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  className="absolute top-full right-0 mt-2 bg-white rounded-lg shadow-lg border border-gray-200 py-2 min-w-[140px] z-50"
+                >
+                  {languages.map((language) => (
+                    <button
+                      key={language.code}
+                      onClick={() => {
+                        setCurrentLanguage(language.code);
+                        setShowLanguageMenu(false);
+                      }}
+                      className={`w-full flex items-center space-x-3 px-4 py-2 text-left hover:bg-gray-50 transition-colors duration-200 ${
+                        currentLanguage === language.code ? 'bg-primary-50 text-primary-600' : 'text-gray-700'
+                      }`}
+                    >
+                      <span className="text-lg">{language.flag}</span>
+                      <span className="text-sm font-medium">{language.name}</span>
+                    </button>
+                  ))}
+                </motion.div>
+              )}
+            </div>
+            
             <motion.a
               href="https://t.me/ddfeeevv"
               target="_blank"
@@ -110,6 +172,31 @@ const Navigation = ({ showBackButton = false, onBack }) => {
                   {item.name}
                 </a>
               ))}
+              
+              {/* Mobile Language Selector */}
+              <div className="px-3 py-2">
+                <div className="text-sm font-medium text-gray-700 mb-2">Язык / Til / Language</div>
+                <div className="flex space-x-2">
+                  {languages.map((language) => (
+                    <button
+                      key={language.code}
+                      onClick={() => {
+                        setCurrentLanguage(language.code);
+                        setIsOpen(false);
+                      }}
+                      className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-colors duration-200 ${
+                        currentLanguage === language.code 
+                          ? 'bg-primary-100 text-primary-600' 
+                          : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                      }`}
+                    >
+                      <span className="text-lg">{language.flag}</span>
+                      <span className="text-sm font-medium">{language.code.toUpperCase()}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+              
               <a
                 href="https://t.me/ddfeeevv"
                 target="_blank"
