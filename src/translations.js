@@ -314,18 +314,6 @@ export const translations = {
           childName: "Артем, 7 лет",
           text: "Отличные курсы! Сын стал более усидчивым и внимательным. Преподаватель объясняет все очень понятно, а маленькие группы позволяют уделить внимание каждому ребенку.",
           avatar: "👩‍🏫"
-        },
-        {
-          name: "Михаил Волков",
-          childName: "Даша, 9 лет",
-          text: "Дочь мечтала стать программистом, и эти занятия помогли ей понять, что это действительно интересно. Теперь дома постоянно что-то изобретает и программирует!",
-          avatar: "👨‍🔬"
-        },
-        {
-          name: "Ольга Морозова",
-          childName: "Кирилл, 11 лет",
-          text: "Сын всегда был увлечен техникой, но здесь он нашел единомышленников. Работа в команде над проектами очень развивает коммуникативные навыки. Рекомендую!",
-          avatar: "👩‍🎓"
         }
       ]
     },
@@ -779,18 +767,6 @@ export const translations = {
           childName: "Artem, 7 yosh",
           text: "Ajoyib kurslar! O\'g\'lim yanada sabr-toqatli va diqqatli bo\'ldi. O\'qituvchi hamma narsani juda tushunarli tushuntiradi, kichik guruhlar esa har bir bolaga e\'tibor berish imkonini beradi.",
           avatar: "👩‍🏫"
-        },
-        {
-          name: "Mixail Volkov",
-          childName: "Dasha, 9 yosh",
-          text: "Qizim dasturchi bo\'lishni orzu qilgan va bu darslar unga bu haqiqatan ham qiziqarli ekanligini tushunishga yordam berdi. Endi uyda doimo nimadir ixtiro qiladi va dasturlaydi!",
-          avatar: "👨‍🔬"
-        },
-        {
-          name: "Olga Morozova",
-          childName: "Kirill, 11 yosh",
-          text: "O\'g\'lim har doim texnika bilan qiziqqan, lekin bu yerda u hamfikrlarni topdi. Loyihalar ustida jamoaviy ish kommunikativ ko\'nikmalarni juda rivojlantiradi. Tavsiya qilaman!",
-          avatar: "👩‍🎓"
         }
       ]
     },
@@ -1244,18 +1220,6 @@ export const translations = {
           childName: "Artem, 7 years old",
           text: "Excellent courses! My son became more focused and attentive. The teacher explains everything very clearly, and small groups allow attention to each child.",
           avatar: "👩‍🏫"
-        },
-        {
-          name: "Mikhail Volkov",
-          childName: "Dasha, 9 years old",
-          text: "My daughter dreamed of becoming a programmer, and these classes helped her understand that it's really interesting. Now she constantly invents and programs something at home!",
-          avatar: "👨‍🔬"
-        },
-        {
-          name: "Olga Morozova",
-          childName: "Kirill, 11 years old",
-          text: "My son has always been passionate about technology, but here he found like-minded people. Teamwork on projects really develops communication skills. I recommend!",
-          avatar: "👩‍🎓"
         }
       ]
     },
