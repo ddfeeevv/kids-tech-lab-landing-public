@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Blocks, Clock, Users, Target, CheckCircle } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const CourseRobotics = ({ onBack }) => {
+  const { t } = useLanguage();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -22,22 +24,6 @@ const CourseRobotics = ({ onBack }) => {
     }
   };
 
-  const features = [
-    "Конструирование роботов из LEGO-подобных наборов",
-    "Изучение основ механики и физики",
-    "Программирование поведения роботов",
-    "Решение инженерных задач",
-    "Развитие логического мышления",
-    "Работа в команде над проектами"
-  ];
-
-  const schedule = [
-    { week: "1-2 неделя", topic: "Знакомство с конструктором, основы сборки" },
-    { week: "3-4 неделя", topic: "Создание простых механизмов и передач" },
-    { week: "5-6 неделя", topic: "Программирование движений робота" },
-    { week: "7-8 неделя", topic: "Создание сложных роботов и соревнования" }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-red-100">
       <div className="max-w-6xl mx-auto px-4 py-8">
@@ -54,13 +40,13 @@ const CourseRobotics = ({ onBack }) => {
             <div className="w-20 h-20 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
               <Blocks size={40} className="text-white" />
             </div>
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Робототехника</h1>
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">{t('coursePages.robotics.title')}</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Создавайте роботов из конструктора и программируйте их поведение!
+              {t('coursePages.robotics.subtitle')}
             </p>
             <div className="mt-6">
               <span className="inline-block bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-2 rounded-full text-lg font-semibold shadow-lg">
-                🎁 БЕСПЛАТНО!
+                {t('coursePages.free')}
               </span>
             </div>
           </motion.div>
@@ -77,38 +63,36 @@ const CourseRobotics = ({ onBack }) => {
           >
             {/* Course Info */}
             <motion.div variants={itemVariants} className="bg-white rounded-2xl p-8 shadow-lg">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">О курсе</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('coursePages.robotics.about.title')}</h2>
               <p className="text-gray-600 leading-relaxed mb-6">
-                На этом курсе дети научатся конструировать роботов из LEGO-подобных наборов, 
-                изучат основы механики и программирования. Мы создадим множество интересных 
-                роботов и проведем увлекательные соревнования!
+                {t('coursePages.robotics.about.description')}
               </p>
               
               <div className="grid grid-cols-2 gap-4">
                 <div className="flex items-center">
                   <Clock size={20} className="text-primary-600 mr-2" />
-                  <span className="text-gray-600">8 недель</span>
+                  <span className="text-gray-600">{t('coursePages.robotics.about.duration')}</span>
                 </div>
                 <div className="flex items-center">
                   <Users size={20} className="text-primary-600 mr-2" />
-                  <span className="text-gray-600">6-10 детей</span>
+                  <span className="text-gray-600">{t('coursePages.robotics.about.groupSize')}</span>
                 </div>
                 <div className="flex items-center">
                   <Target size={20} className="text-primary-600 mr-2" />
-                  <span className="text-gray-600">8-12 лет</span>
+                  <span className="text-gray-600">{t('coursePages.robotics.about.age')}</span>
                 </div>
                 <div className="flex items-center">
                   <CheckCircle size={20} className="text-green-600 mr-2" />
-                  <span className="text-gray-600">Бесплатно</span>
+                  <span className="text-gray-600">{t('coursePages.robotics.about.price')}</span>
                 </div>
               </div>
             </motion.div>
 
             {/* What You'll Learn */}
             <motion.div variants={itemVariants} className="bg-white rounded-2xl p-8 shadow-lg">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Чему научитесь</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('coursePages.robotics.learn.title')}</h2>
               <ul className="space-y-3">
-                {features.map((feature, index) => (
+                {t('coursePages.robotics.learn.features').map((feature, index) => (
                   <li key={index} className="flex items-start">
                     <CheckCircle size={20} className="text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600">{feature}</span>
@@ -126,29 +110,29 @@ const CourseRobotics = ({ onBack }) => {
             viewport={{ once: true, amount: 0.3 }}
             className="space-y-8"
           >
-            {/* Schedule */}
+            {/* Course Program */}
             <motion.div variants={itemVariants} className="bg-white rounded-2xl p-8 shadow-lg">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Программа курса</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('coursePages.robotics.program.title')}</h2>
               <div className="space-y-4">
-                {schedule.map((item, index) => (
+                {t('coursePages.robotics.program.weeks').map((item, index) => (
                   <div key={index} className="flex items-start p-4 bg-gradient-to-r from-orange-50 to-red-50 rounded-lg">
-                    <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-4 flex-shrink-0">
+                    <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 flex-shrink-0">
                       {index + 1}
                     </div>
                     <div>
                       <div className="font-semibold text-gray-900">{item.week}</div>
-                      <div className="text-gray-600 text-sm">{item.topic}</div>
+                      <div className="text-gray-600">{item.topic}</div>
                     </div>
                   </div>
                 ))}
               </div>
             </motion.div>
 
-            {/* CTA */}
+            {/* CTA Section */}
             <motion.div variants={itemVariants} className="bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl p-8 text-white text-center">
-              <h3 className="text-2xl font-bold mb-4">Готовы начать?</h3>
+              <h3 className="text-2xl font-bold mb-4">{t('coursePages.robotics.cta.title')}</h3>
               <p className="mb-6 opacity-90">
-                Запишитесь на бесплатный курс робототехники и создайте своего первого робота!
+                {t('coursePages.robotics.cta.subtitle')}
               </p>
               <a
                 href="https://t.me/ddfeeevv"
@@ -156,11 +140,28 @@ const CourseRobotics = ({ onBack }) => {
                 rel="noopener noreferrer"
                 className="inline-block bg-white text-orange-600 font-semibold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                Записаться на курс
+                {t('coursePages.robotics.cta.button')}
               </a>
             </motion.div>
           </motion.div>
         </div>
+
+        {/* Back Button */}
+        <motion.div
+          variants={itemVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="mt-12 text-center"
+        >
+          <button
+            onClick={onBack}
+            className="inline-flex items-center bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors duration-300"
+          >
+            <ArrowLeft size={20} className="mr-2" />
+            {t('coursePages.backToCourses')}
+          </button>
+        </motion.div>
       </div>
     </div>
   );
