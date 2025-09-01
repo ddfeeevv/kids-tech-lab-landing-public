@@ -25,10 +25,10 @@ const About = () => {
   };
 
   const stats = [
-    { icon: Users, number: "6-10", label: "детей в группе" },
-    { icon: Home, number: "Дома", label: "уютная атмосфера" },
-    { icon: Heart, number: "100%", label: "бесплатно" },
-    { icon: GraduationCap, number: "120+", label: "проведенных занятий" }
+    { icon: Users, number: "6-10", label: t('about.stats.groupSize') },
+    { icon: Home, number: t('about.stats.homeNumber'), label: t('about.stats.homeLabel') },
+    { icon: Heart, number: "100%", label: t('about.stats.free') },
+    { icon: GraduationCap, number: "120+", label: t('about.stats.classesHeld') }
   ];
 
   return (
@@ -55,9 +55,7 @@ const About = () => {
                   {t('about.goal')}
                 </p>
                 <p>
-                  Работаю с <strong>мини-группами 6-10 детей</strong>, что позволяет уделить 
-                  внимание каждому ученику и создать комфортную атмосферу для обучения. 
-                  <strong>Все курсы полностью бесплатные!</strong>
+                  {t('about.experience')}
                 </p>
               </div>
             </div>

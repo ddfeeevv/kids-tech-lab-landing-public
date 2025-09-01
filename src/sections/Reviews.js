@@ -241,19 +241,19 @@ const Reviews = () => {
           className="mt-16 text-center"
         >
           <div className="bg-gradient-to-r from-primary-600 to-secondary-600 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-6">Наши достижения</h3>
+            <h3 className="text-2xl font-bold mb-6">{t('reviews.achievements.title')}</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div>
                 <div className="text-4xl font-bold mb-2">50+</div>
-                <div className="text-lg opacity-90">Довольных детей</div>
+                <div className="text-lg opacity-90">{t('reviews.achievements.satisfiedChildren')}</div>
               </div>
               <div>
                 <div className="text-4xl font-bold mb-2">100%</div>
-                <div className="text-lg opacity-90">Бесплатно</div>
+                <div className="text-lg opacity-90">{t('reviews.achievements.free')}</div>
               </div>
               <div>
                 <div className="text-4xl font-bold mb-2">120+</div>
-                <div className="text-lg opacity-90">Проведенных занятий</div>
+                <div className="text-lg opacity-90">{t('reviews.achievements.classesHeld')}</div>
               </div>
             </div>
           </div>

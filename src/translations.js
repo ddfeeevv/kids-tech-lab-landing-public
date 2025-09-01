@@ -24,10 +24,13 @@ export const translations = {
       title: 'Обо мне',
       description: 'Привет! Меня зовут Данил, и я основатель Kids Tech Lab. Я энтузиаст IT-технологий, который решил делиться знаниями с подрастающим поколением абсолютно бесплатно.',
       goal: 'Моя цель — показать детям, что технологии — это не только игры, но и мощный инструмент для творчества и решения реальных задач. Каждое занятие — это приключение в мире инноваций!',
+      experience: 'Работаю с мини-группами 6-10 детей, что позволяет уделить внимание каждому ученику и создать комфортную атмосферу для обучения. Все курсы полностью бесплатные!',
       stats: {
-        free: '100% бесплатно',
-        students: '50+ учеников',
-        projects: '200+ проектов'
+        groupSize: 'детей в группе',
+        homeNumber: 'Дома',
+        homeLabel: 'уютная атмосфера',
+        free: 'бесплатно',
+        classesHeld: 'проведенных занятий'
       }
     },
     
@@ -229,9 +232,13 @@ export const translations = {
       form: {
         title: 'Форма записи',
         parentName: 'Ваше имя *',
+        parentNamePlaceholder: 'Мадина',
         phone: 'Телефон *',
+        phonePlaceholder: '+998 90 788 24 75',
         email: 'Email',
+        emailPlaceholder: 'madina@example.com',
         childName: 'Имя ребенка *',
+        childNamePlaceholder: 'Алишер',
         childAge: 'Возраст ребенка *',
         agePlaceholder: 'Введите возраст от 8 до 12',
         ageError: 'Мы занимаемся только с детьми от 8 до 12 лет',
@@ -285,10 +292,13 @@ export const translations = {
       title: 'Men haqimda',
       description: 'Salom! Menim ismim Danil, Kids Tech Lab asoschisi. Men IT-texnologiyalarga qiziqish bildiruvchi bo\'lib, bilimlarni avlodga mutlaqo bepul ulashishga qaror qildim.',
       goal: 'Mening maqsadim - bolalarga texnologiyalar nafaqat o\'yinlar, balki ijod va haqiqiy muammolarni hal qilish uchun kuchli vosita ekanligini ko\'rsatish. Har bir dars - innovatsiyalar dunyosidagi sarguzasht!',
+      experience: '6-10 boladan iborat mini-guruhlar bilan ishlayman, bu har bir o\'quvchiga e\'tibor berish va qulay o\'qitish muhitini yaratish imkonini beradi. Barcha kurslar to\'liq bepul!',
       stats: {
-        free: '100% bepul',
-        students: '50+ o\'quvchi',
-        projects: '200+ loyiha'
+        groupSize: 'bolalar guruhda',
+        homeNumber: 'Uyda',
+        homeLabel: 'qulay muhit',
+        free: 'bepul',
+        classesHeld: 'o\'tkazilgan darslar'
       }
     },
     
@@ -490,9 +500,13 @@ export const translations = {
       form: {
         title: 'Yozilish shakli',
         parentName: 'Sizning ismingiz *',
+        parentNamePlaceholder: 'Madina',
         phone: 'Telefon *',
+        phonePlaceholder: '+998 90 788 24 75',
         email: 'Email',
+        emailPlaceholder: 'madina@example.com',
         childName: 'Bolaning ismi *',
+        childNamePlaceholder: 'Alisher',
         childAge: 'Bolaning yoshi *',
         agePlaceholder: '8-12 yosh oralig\'ida kiriting',
         ageError: 'Biz faqat 8-12 yoshdagi bolalar bilan ishlaymiz',
@@ -546,10 +560,13 @@ export const translations = {
       title: 'About Me',
       description: 'Hello! My name is Danil, and I am the founder of Kids Tech Lab. I am an IT technology enthusiast who decided to share knowledge with the younger generation absolutely free.',
       goal: 'My goal is to show children that technology is not just games, but also a powerful tool for creativity and solving real problems. Every lesson is an adventure in the world of innovation!',
+      experience: 'I work with mini-groups of 6-10 children, which allows me to pay attention to each student and create a comfortable learning atmosphere. All courses are completely free!',
       stats: {
-        free: '100% Free',
-        students: '50+ Students',
-        projects: '200+ Projects'
+        groupSize: 'children in group',
+        homeNumber: 'At Home',
+        homeLabel: 'cozy atmosphere',
+        free: 'free',
+        classesHeld: 'classes held'
       }
     },
     
@@ -751,9 +768,13 @@ export const translations = {
       form: {
         title: 'Registration Form',
         parentName: 'Your Name *',
+        parentNamePlaceholder: 'Madina',
         phone: 'Phone *',
+        phonePlaceholder: '+998 90 788 24 75',
         email: 'Email',
+        emailPlaceholder: 'madina@example.com',
         childName: 'Child\'s Name *',
+        childNamePlaceholder: 'Alisher',
         childAge: 'Child\'s Age *',
         agePlaceholder: 'Enter age from 8 to 12',
         ageError: 'We only work with children 8-12 years old',

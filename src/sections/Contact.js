@@ -89,28 +89,28 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: MessageCircle,
-      title: "Telegram",
+      title: t('contact.info.telegram'),
       value: "@ddfeeevv",
       link: "https://t.me/ddfeeevv",
       color: "from-blue-500 to-cyan-500"
     },
     {
       icon: Phone,
-      title: "Телефон",
+      title: t('contact.info.phone'),
       value: "+998 90 788 24 75",
       link: "tel:+998907882475",
       color: "from-green-500 to-emerald-500"
     },
     {
       icon: MapPin,
-      title: "Адрес",
+      title: t('contact.info.address'),
       value: "2-й проезд Хамроз, 10А, Мирабадский район",
       link: "https://maps.google.com/?q=2-й+проезд+Хамроз,+10А,+Мирабадский+район",
       color: "from-orange-500 to-red-500"
     },
     {
       icon: Clock,
-      title: "Время работы",
+      title: t('contact.info.workingHours'),
       value: "Пн и Пт: 10:00-12:00, Связь в любое время",
       link: "#",
       color: "from-purple-500 to-pink-500"
@@ -184,7 +184,7 @@ const Contact = () => {
           >
             <motion.div variants={itemVariants} className="bg-white rounded-2xl p-8 shadow-xl">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Форма записи
+                {t('contact.form.title')}
               </h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -192,7 +192,7 @@ const Contact = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Ваше имя *
+                      {t('contact.form.parentName')}
                     </label>
                     <input
                       type="text"
@@ -201,12 +201,12 @@ const Contact = () => {
                       onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
-                      placeholder="Мадина"
+                      placeholder={t('contact.form.parentNamePlaceholder')}
                     />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Телефон *
+                      {t('contact.form.phone')}
                     </label>
                     <input
                       type="tel"
@@ -215,22 +215,22 @@ const Contact = () => {
                       onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
-                      placeholder="+998 90 788 24 75"
+                      placeholder={t('contact.form.phonePlaceholder')}
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Email
-                  </label>
+                                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      {t('contact.form.email')}
+                    </label>
                   <input
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
-                                          placeholder="madina@example.com"
+                                          placeholder={t('contact.form.emailPlaceholder')}
                   />
                 </div>
 
@@ -238,7 +238,7 @@ const Contact = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Имя ребенка *
+                      {t('contact.form.childName')}
                     </label>
                     <input
                       type="text"
@@ -247,12 +247,12 @@ const Contact = () => {
                       onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
-                      placeholder="Алишер"
+                      placeholder={t('contact.form.childNamePlaceholder')}
                     />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Возраст ребенка *
+                      {t('contact.form.childAge')}
                     </label>
                     <input
                       type="number"
@@ -265,24 +265,24 @@ const Contact = () => {
                       className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none ${
                         ageError ? 'border-red-500' : 'border-gray-300'
                       }`}
-                      placeholder="Введите возраст от 8 до 12"
+                      placeholder={t('contact.form.agePlaceholder')}
                     />
                     {ageError && (
-                      <p className="mt-2 text-sm text-red-600">{ageError}</p>
+                      <p className="mt-2 text-sm text-red-600">{t('contact.form.ageError')}</p>
                     )}
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Интересы ребенка
-                  </label>
+                                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      {t('contact.form.interests')}
+                    </label>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {[
-                      { value: "3d-printing", label: "3D-печать", icon: "🖨️" },
-                      { value: "arduino", label: "Arduino", icon: "🔧" },
-                      { value: "robotics", label: "Робототехника", icon: "🤖" },
-                      { value: "programming", label: "Программирование", icon: "💻" }
+                      { value: "3d-printing", label: t('courseCards.3d-printing.title'), icon: "🖨️" },
+                      { value: "arduino", label: t('courseCards.arduino.title'), icon: "🔧" },
+                      { value: "robotics", label: t('courseCards.robotics.title'), icon: "🤖" },
+                      { value: "programming", label: t('courseCards.it.title'), icon: "💻" }
                     ].map((option) => (
                       <label key={option.value} className="flex items-center p-4 border border-gray-300 rounded-lg hover:bg-primary-50 cursor-pointer transition-all duration-200">
                         <input
@@ -310,16 +310,16 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Дополнительная информация
-                  </label>
+                                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      {t('contact.form.message')}
+                    </label>
                   <textarea
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
                     rows={4}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
-                    placeholder="Расскажите о ваших пожеланиях или вопросах..."
+                    placeholder={t('contact.form.messagePlaceholder')}
                   />
                 </div>
 
@@ -330,7 +330,7 @@ const Contact = () => {
                   className="w-full btn-primary flex items-center justify-center space-x-2"
                 >
                   <Send size={20} />
-                  <span>Отправить заявку</span>
+                  <span>{t('contact.form.submit')}</span>
                 </motion.button>
               </form>
             </motion.div>
@@ -346,7 +346,7 @@ const Contact = () => {
           >
             <motion.div variants={itemVariants}>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Контактная информация
+                {t('contact.info.title')}
               </h3>
               <div className="space-y-4">
                 {contactInfo.map((info, index) => (
@@ -373,9 +373,9 @@ const Contact = () => {
 
             {/* Quick Contact */}
             <motion.div variants={itemVariants} className="bg-gradient-to-r from-primary-600 to-secondary-600 rounded-2xl p-8 text-white">
-              <h4 className="text-xl font-bold mb-4">Быстрая связь</h4>
+              <h4 className="text-xl font-bold mb-4">{t('contact.info.quickContact.title')}</h4>
               <p className="mb-6 opacity-90">
-                Есть вопросы? Свяжитесь с нами прямо сейчас через Telegram!
+                {t('contact.info.quickContact.message')}
               </p>
               <motion.a
                 href="https://t.me/ddfeeevv"
@@ -385,7 +385,7 @@ const Contact = () => {
                 whileTap={{ scale: 0.95 }}
                 className="inline-block bg-white text-primary-600 font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                Написать в Telegram
+                {t('contact.info.quickContact.button')}
               </motion.a>
             </motion.div>
           </motion.div>
