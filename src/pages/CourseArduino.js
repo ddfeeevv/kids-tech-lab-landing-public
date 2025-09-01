@@ -36,13 +36,7 @@ const CourseArduino = ({ onBack }) => {
           animate="visible"
           className="mb-12"
         >
-          <button 
-            onClick={onBack}
-            className="inline-flex items-center text-gray-500 hover:text-gray-700 mb-6 transition-colors group"
-          >
-            <ArrowLeft size={16} className="mr-2 group-hover:-translate-x-1 transition-transform" />
-            <span className="text-sm font-medium">{t('coursePages.backToCourses')}</span>
-          </button>
+
           
           <motion.div variants={itemVariants} className="text-center">
             <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
