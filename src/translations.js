@@ -136,7 +136,39 @@ export const translations = {
         satisfiedChildren: 'Довольных детей',
         free: 'Бесплатно',
         classesHeld: 'Проведенных занятий'
-      }
+      },
+      testimonials: [
+        {
+          name: "Анна Петрова",
+          childName: "Максим, 8 лет",
+          text: "Мой сын просто в восторге от занятий! За месяц научился создавать простые 3D-модели и даже напечатал свою первую игрушку. Преподаватель очень терпеливый и умеет заинтересовать детей.",
+          avatar: "👩‍💼"
+        },
+        {
+          name: "Дмитрий Смирнов",
+          childName: "София, 10 лет",
+          text: "Дочь всегда с нетерпением ждет занятий. Особенно ей нравится программирование Arduino - создала свой первый светящийся браслет! Атмосфера очень домашняя и уютная.",
+          avatar: "👨‍💻"
+        },
+        {
+          name: "Елена Козлова",
+          childName: "Артем, 7 лет",
+          text: "Отличные курсы! Сын стал более усидчивым и внимательным. Преподаватель объясняет все очень понятно, а маленькие группы позволяют уделить внимание каждому ребенку.",
+          avatar: "👩‍🏫"
+        },
+        {
+          name: "Михаил Волков",
+          childName: "Даша, 9 лет",
+          text: "Дочь мечтала стать программистом, и эти занятия помогли ей понять, что это действительно интересно. Теперь дома постоянно что-то изобретает и программирует!",
+          avatar: "👨‍🔬"
+        },
+        {
+          name: "Ольга Морозова",
+          childName: "Кирилл, 11 лет",
+          text: "Сын всегда был увлечен техникой, но здесь он нашел единомышленников. Работа в команде над проектами очень развивает коммуникативные навыки. Рекомендую!",
+          avatar: "👩‍🎓"
+        }
+      ]
     },
 
     // FAQ Section
@@ -180,7 +212,12 @@ export const translations = {
           question: 'Что получает ребенок после окончания курса?',
           answer: 'После завершения курса каждый ребенок получает сертификат об окончании и все созданные им проекты. Также мы даем рекомендации по дальнейшему развитию в области технологий.'
         }
-      ]
+      ],
+      cta: {
+        title: 'Не нашли ответ на свой вопрос?',
+        subtitle: 'Свяжитесь с нами в Telegram, и мы с радостью ответим на все ваши вопросы и поможем выбрать подходящий курс для вашего ребенка',
+        button: 'Написать в Telegram'
+      }
     },
 
     // Donations Section
@@ -258,6 +295,7 @@ export const translations = {
         phone: 'Телефон',
         address: 'Адрес',
         workingHours: 'Время работы',
+        workingHoursValue: 'Пн и Пт: 10:00-12:00, Связь в любое время',
         quickContact: {
           title: 'Быстрая связь',
           message: 'Есть вопросы? Свяжитесь с нами прямо сейчас через Telegram!',
@@ -404,7 +442,39 @@ export const translations = {
         satisfiedChildren: 'Mamnun bolalar',
         free: 'Bepul',
         classesHeld: 'O\'tkazilgan darslar'
-      }
+      },
+      testimonials: [
+        {
+          name: "Anna Petrova",
+          childName: "Maksim, 8 yosh",
+          text: "Mening o\'g\'lim darslardan juda mamnun! Bir oy ichida oddiy 3D-modellar yaratishni o\'rgandi va hatto birinchi o\'yinchoqini bosdi. O\'qituvchi juda sabr-toqatli va bolalarni qiziqtira oladi.",
+          avatar: "👩‍💼"
+        },
+        {
+          name: "Dmitriy Smirnov",
+          childName: "Sofiya, 10 yosh",
+          text: "Qizim har doim darslarni intizorlik bilan kutadi. Ayniqsa Arduino dasturlash yoqadi - birinchi yorqin bilakuzugini yaratdi! Muhit juda uyga o\'xshash va qulay.",
+          avatar: "👨‍💻"
+        },
+        {
+          name: "Elena Kozlova",
+          childName: "Artem, 7 yosh",
+          text: "Ajoyib kurslar! O\'g\'lim yanada sabr-toqatli va diqqatli bo\'ldi. O\'qituvchi hamma narsani juda tushunarli tushuntiradi, kichik guruhlar esa har bir bolaga e\'tibor berish imkonini beradi.",
+          avatar: "👩‍🏫"
+        },
+        {
+          name: "Mixail Volkov",
+          childName: "Dasha, 9 yosh",
+          text: "Qizim dasturchi bo\'lishni orzu qilgan va bu darslar unga bu haqiqatan ham qiziqarli ekanligini tushunishga yordam berdi. Endi uyda doimo nimadir ixtiro qiladi va dasturlaydi!",
+          avatar: "👨‍🔬"
+        },
+        {
+          name: "Olga Morozova",
+          childName: "Kirill, 11 yosh",
+          text: "O\'g\'lim har doim texnika bilan qiziqqan, lekin bu yerda u hamfikrlarni topdi. Loyihalar ustida jamoaviy ish kommunikativ ko\'nikmalarni juda rivojlantiradi. Tavsiya qilaman!",
+          avatar: "👩‍🎓"
+        }
+      ]
     },
 
     // FAQ Section
@@ -448,7 +518,12 @@ export const translations = {
           question: 'Kurs tugagandan so\'ng bola nima oladi?',
           answer: 'Kurs tugagandan so\'ng har bir bola tugatish sertifikati va yaratgan barcha loyihalarini oladi. Shuningdek, biz texnologiyalar sohasida keyingi rivojlanish bo\'yicha tavsiyalar beramiz.'
         }
-      ]
+      ],
+      cta: {
+        title: 'O\'z savolingizga javob topa olmadingizmi?',
+        subtitle: 'Bizga Telegram orqali murojaat qiling va biz mamnuniyat bilan barcha savollaringizga javob beramiz va bolangiz uchun mos kursni tanlashda yordam beramiz',
+        button: 'Telegramda yozish'
+      }
     },
 
     // Donations Section
@@ -526,6 +601,7 @@ export const translations = {
         phone: 'Telefon',
         address: 'Manzil',
         workingHours: 'Ish vaqti',
+        workingHoursValue: 'Du va Ju: 10:00-12:00, Har qanday vaqtda aloqa',
         quickContact: {
           title: 'Tezkor aloqa',
           message: 'Savollaringiz bormi? Hozircha Telegram orqali biz bilan bog\'laning!',
@@ -672,7 +748,39 @@ export const translations = {
         satisfiedChildren: 'Satisfied Children',
         free: 'Free',
         classesHeld: 'Classes Held'
-      }
+      },
+      testimonials: [
+        {
+          name: "Anna Petrova",
+          childName: "Maxim, 8 years old",
+          text: "My son is absolutely delighted with the classes! In a month he learned to create simple 3D models and even printed his first toy. The teacher is very patient and knows how to interest children.",
+          avatar: "👩‍💼"
+        },
+        {
+          name: "Dmitry Smirnov",
+          childName: "Sofia, 10 years old",
+          text: "My daughter always looks forward to classes. She especially likes Arduino programming - she created her first glowing bracelet! The atmosphere is very homely and cozy.",
+          avatar: "👨‍💻"
+        },
+        {
+          name: "Elena Kozlova",
+          childName: "Artem, 7 years old",
+          text: "Excellent courses! My son became more focused and attentive. The teacher explains everything very clearly, and small groups allow attention to each child.",
+          avatar: "👩‍🏫"
+        },
+        {
+          name: "Mikhail Volkov",
+          childName: "Dasha, 9 years old",
+          text: "My daughter dreamed of becoming a programmer, and these classes helped her understand that it's really interesting. Now she constantly invents and programs something at home!",
+          avatar: "👨‍🔬"
+        },
+        {
+          name: "Olga Morozova",
+          childName: "Kirill, 11 years old",
+          text: "My son has always been passionate about technology, but here he found like-minded people. Teamwork on projects really develops communication skills. I recommend!",
+          avatar: "👩‍🎓"
+        }
+      ]
     },
 
     // FAQ Section
@@ -716,7 +824,12 @@ export const translations = {
           question: 'What does a child receive after completing the course?',
           answer: 'After completing the course, each child receives a certificate of completion and all projects they created. We also give recommendations for further development in the field of technology.'
         }
-      ]
+      ],
+      cta: {
+        title: 'Didn\'t find an answer to your question?',
+        subtitle: 'Contact us on Telegram, and we will gladly answer all your questions and help you choose the right course for your child',
+        button: 'Write in Telegram'
+      }
     },
 
     // Donations Section
@@ -794,6 +907,7 @@ export const translations = {
         phone: 'Phone',
         address: 'Address',
         workingHours: 'Working Hours',
+        workingHoursValue: 'Mon & Fri: 10:00-12:00, Contact anytime',
         quickContact: {
           title: 'Quick Contact',
           message: 'Have questions? Contact us right now via Telegram!',

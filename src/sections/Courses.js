@@ -68,10 +68,10 @@ const Courses = ({ onCourseSelect }) => {
   ];
 
   const benefits = [
-    { icon: Zap, title: "Практические проекты", desc: "Каждое занятие — это создание реального проекта" },
-    { icon: Target, title: "Индивидуальный подход", desc: "Учитываем интересы и способности каждого ребенка" },
-    { icon: Users, title: "Работа в команде", desc: "Учимся сотрудничать и делиться идеями" },
-    { icon: Clock, title: "Гибкий график", desc: "Занятия в удобное время для детей и родителей" }
+    { icon: Zap, title: t('courses.benefits.practical.title'), desc: t('courses.benefits.practical.desc') },
+    { icon: Target, title: t('courses.benefits.individual.title'), desc: t('courses.benefits.individual.desc') },
+    { icon: Users, title: t('courses.benefits.team.title'), desc: t('courses.benefits.team.desc') },
+    { icon: Clock, title: t('courses.benefits.schedule.title'), desc: t('courses.benefits.schedule.desc') }
   ];
 
   return (
@@ -165,7 +165,7 @@ const Courses = ({ onCourseSelect }) => {
             variants={itemVariants}
             className="text-3xl font-bold text-center text-gray-900 mb-12"
           >
-            Почему выбирают нас
+            {t('courses.benefits.title')}
           </motion.h3>
           
           <motion.div 

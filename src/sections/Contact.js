@@ -111,7 +111,7 @@ const Contact = () => {
     {
       icon: Clock,
       title: t('contact.info.workingHours'),
-      value: "Пн и Пт: 10:00-12:00, Связь в любое время",
+      value: t('contact.info.workingHoursValue'),
       link: "#",
       color: "from-purple-500 to-pink-500"
     }

@@ -27,23 +27,23 @@ const Donations = () => {
   const benefits = [
     {
       icon: Gift,
-      title: "Расходные материалы",
-      description: "Пластик для 3D-печати, электрокомпоненты, датчики"
+      title: t('donations.benefits.materials.title'),
+      description: t('donations.benefits.materials.description')
     },
     {
       icon: Users,
-      title: "Больше детей",
-      description: "Возможность обучать большее количество учеников"
+      title: t('donations.benefits.moreChildren.title'),
+      description: t('donations.benefits.moreChildren.description')
     },
     {
       icon: Target,
-      title: "Расширение программ",
-      description: "Новые курсы и углубленные программы обучения"
+      title: t('donations.benefits.expansion.title'),
+      description: t('donations.benefits.expansion.description')
     },
     {
       icon: Shield,
-      title: "Прозрачность",
-      description: "Полный отчет о расходовании средств"
+      title: t('donations.benefits.transparency.title'),
+      description: t('donations.benefits.transparency.description')
     }
   ];
 
@@ -89,38 +89,35 @@ const Donations = () => {
           >
             <motion.div variants={itemVariants} className="bg-white rounded-2xl p-8 shadow-lg">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Почему мы просим о поддержке?
+                {t('donations.whySupport.title')}
               </h3>
               <div className="space-y-4 text-gray-600">
                 <p>
-                  Хотя наши курсы полностью бесплатны для детей, мы сталкиваемся с постоянными 
-                  расходами на оборудование, материалы и развитие проекта.
+                  {t('donations.whySupport.description')}
                 </p>
                 <p>
-                  Каждое пожертвование идет на покупку расходников для 3D-принтеров, 
-                  электрокомпонентов, датчиков и других материалов для обучения.
+                  {t('donations.whySupport.materials')}
                 </p>
                 <p>
-                  Мы гарантируем полную прозрачность: каждый донор получает детальный отчет 
-                  о том, как были использованы его средства.
+                  {t('donations.whySupport.transparency')}
                 </p>
               </div>
             </motion.div>
 
             <motion.div variants={itemVariants} className="bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl p-8 text-white">
-              <h4 className="text-xl font-bold mb-4">Как вы можете помочь?</h4>
+              <h4 className="text-xl font-bold mb-4">{t('donations.howToHelp.title')}</h4>
               <ul className="space-y-3 text-green-50">
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Финансовая поддержка на любую сумму</span>
+                  <span>{t('donations.howToHelp.financial')}</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Передача оборудования в хорошем состоянии</span>
+                  <span>{t('donations.howToHelp.equipment')}</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Распространение информации о нашем проекте</span>
+                  <span>{t('donations.howToHelp.sharing')}</span>
                 </li>
               </ul>
             </motion.div>
@@ -138,7 +135,7 @@ const Donations = () => {
               variants={itemVariants}
               className="text-2xl font-bold text-gray-900 text-center lg:text-left"
             >
-              На что идут ваши средства
+              {t('donations.benefits.title')}
             </motion.h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
@@ -176,14 +173,13 @@ const Donations = () => {
             variants={itemVariants}
             className="text-2xl font-bold text-gray-900 mb-4"
           >
-            Готовы поддержать проект?
+            {t('donations.cta.title')}
           </motion.h3>
           <motion.p 
             variants={itemVariants}
             className="text-gray-600 mb-8 max-w-2xl mx-auto"
           >
-            Напишите нам в Telegram, и мы предоставим реквизиты для перевода, 
-            а также отправим полный отчет о расходовании ваших средств.
+            {t('donations.cta.subtitle')}
           </motion.p>
           <motion.div variants={itemVariants}>
             <motion.a
@@ -195,7 +191,7 @@ const Donations = () => {
               className="inline-flex items-center bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold py-4 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <Heart size={20} className="mr-2" />
-              Написать о поддержке
+              {t('donations.cta.button')}
             </motion.a>
           </motion.div>
         </motion.div>

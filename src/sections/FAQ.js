@@ -124,11 +124,10 @@ const FAQ = () => {
         >
           <div className="bg-gradient-to-r from-primary-600 to-secondary-600 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">
-              Не нашли ответ на свой вопрос?
+              {t('faq.cta.title')}
             </h3>
             <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
-              Свяжитесь с нами в Telegram, и мы с радостью ответим на все ваши вопросы 
-              и поможем выбрать подходящий курс для вашего ребенка
+              {t('faq.cta.subtitle')}
             </p>
             <motion.a
               href="https://t.me/ddfeeevv"
@@ -138,7 +137,7 @@ const FAQ = () => {
               whileTap={{ scale: 0.95 }}
               className="inline-block bg-white text-primary-600 font-semibold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              Написать в Telegram
+              {t('faq.cta.button')}
             </motion.a>
           </div>
         </motion.div>

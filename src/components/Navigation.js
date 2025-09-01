@@ -49,11 +49,11 @@ const Navigation = ({ showBackButton = false, onBack }) => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 min-h-[4rem] py-2">
+        <div className="flex items-center justify-center h-16 min-h-[4rem] py-2 relative">
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="flex items-center space-x-2"
+            className="flex items-center space-x-2 absolute left-0"
           >
             {showBackButton && (
               <motion.button
@@ -139,7 +139,7 @@ const Navigation = ({ showBackButton = false, onBack }) => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden absolute right-0">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-600 hover:text-primary-600 transition-colors duration-200"
