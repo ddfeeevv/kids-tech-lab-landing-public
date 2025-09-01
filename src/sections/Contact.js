@@ -261,7 +261,7 @@ const Contact = () => {
                       min="8"
                       max="12"
                       required
-                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 ${
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none ${
                         ageError ? 'border-red-500' : 'border-gray-300'
                       }`}
                       placeholder="Введите возраст от 8 до 12"

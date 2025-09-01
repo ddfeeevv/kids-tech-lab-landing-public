@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Menu, X, MessageCircle } from 'lucide-react';
+import { Menu, X, MessageCircle, ArrowLeft } from 'lucide-react';
 
-const Navigation = () => {
+const Navigation = ({ showBackButton = false, onBack }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -39,6 +39,16 @@ const Navigation = () => {
             whileHover={{ scale: 1.05 }}
             className="flex items-center space-x-2"
           >
+            {showBackButton && (
+              <motion.button
+                onClick={onBack}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="mr-4 p-2 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors duration-200"
+              >
+                <ArrowLeft size={20} className="text-gray-600" />
+              </motion.button>
+            )}
             <div className="w-8 h-8 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">KTL</span>
             </div>

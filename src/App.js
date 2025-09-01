@@ -44,7 +44,10 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Navigation />
+      <Navigation 
+        showBackButton={currentPage !== 'home'} 
+        onBack={() => setCurrentPage('home')} 
+      />
       {renderPage()}
     </div>
   );
