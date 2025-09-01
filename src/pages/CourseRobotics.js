@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Blocks, Clock, Users, Target, CheckCircle } from 'lucide-react';
+import { Blocks, Clock, Users, Target, CheckCircle, ArrowLeft } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const CourseRobotics = ({ onBack }) => {

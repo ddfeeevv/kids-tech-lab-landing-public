@@ -467,7 +467,7 @@ export const translations = {
       subtitle: '8-12 yoshdagi bolalar uchun 3D-bosish, Arduino va raqamli ko\'nikmalar',
       freeBanner: '🎉 100% BEPUL!',
       description: 'Bolalarni amaliy loyihalar va ijodiy tajribalar orqali zamonaviy texnologiyalar dunyosiga chuqur kirib boramiz',
-      viewCourses: 'Kurslarni ko\'rish',
+      viewCourses: "Kurslarni ko'rish",
       signUp: 'Darsga yozilish',
       scrollDown: 'Pastga aylantiring'
     },
@@ -475,27 +475,27 @@ export const translations = {
     // About Section
     about: {
       title: 'Men haqimda',
-      description: 'Salom! Menim ismim Danil, Kids Tech Lab asoschisi. Men IT-texnologiyalarga qiziqish bildiruvchi bo\'lib, bilimlarni avlodga mutlaqo bepul ulashishga qaror qildim.',
-      goal: 'Mening maqsadim - bolalarga texnologiyalar nafaqat o\'yinlar, balki ijod va haqiqiy muammolarni hal qilish uchun kuchli vosita ekanligini ko\'rsatish. Har bir dars - innovatsiyalar dunyosidagi sarguzasht!',
-      experience: '6-10 boladan iborat mini-guruhlar bilan ishlayman, bu har bir o\'quvchiga e\'tibor berish va qulay o\'qitish muhitini yaratish imkonini beradi. Barcha kurslar to\'liq bepul!',
+      description: "Salom! Menim ismim Danil, Kids Tech Lab asoschisi. Men IT-texnologiyalarga qiziqish bildiruvchi bo'lib, bilimlarni avlodga mutlaqo bepul ulashishga qaror qildim.",
+      goal: "Mening maqsadim - bolalarga texnologiyalar nafaqat o'yinlar, balki ijod va haqiqiy muammolarni hal qilish uchun kuchli vosita ekanligini ko'rsatish. Har bir dars - innovatsiyalar dunyosidagi sarguzasht!",
+      experience: "6-10 boladan iborat mini-guruhlar bilan ishlayman, bu har bir o'quvchiga e'tibor berish va qulay o'qitish muhitini yaratish imkonini beradi. Barcha kurslar to'liq bepul!",
       stats: {
         groupSize: 'bolalar guruhda',
         homeNumber: 'Uyda',
         homeLabel: 'qulay muhit',
         free: 'bepul',
-        classesHeld: 'o\'tkazilgan darslar'
+        classesHeld: "o'tkazilgan darslar"
       },
       mission: {
         title: 'Mening vazifam',
-        description: 'Bolalarni texnologiyalarni o\'rganishga ilhomlantirish, ularning ijodiy fikrlashini rivojlantirish va amaliy loyihalar va qiziqarli tajribalar orqali raqamli kelajakka tayyorgarlik ko\'rsatish.'
+        description: "Bolalarni texnologiyalarni o'rganishga ilhomlantirish, ularning ijodiy fikrlashini rivojlantirish va amaliy loyihalar va qiziqarli tajribalar orqali raqamli kelajakka tayyorgarlik ko'rsatish."
       },
-      teacherPhoto: 'O\'qituvchi fotosi'
+      teacherPhoto: "O'qituvchi fotosi"
     },
     
     // Courses Section
     courses: {
-      title: 'Biz nima o\'rganamiz',
-      subtitle: '8-12 yoshdagi bolalarga mantiqiy fikrlash, ijodiy qobiliyatlar va raqamli kelajakka tayyorgarlik ko\'rsatishga yordam beradigan zamonaviy texnologiyalar',
+      title: "Biz nima o'rganamiz",
+      subtitle: "8-12 yoshdagi bolalarga mantiqiy fikrlash, ijodiy qobiliyatlar va raqamli kelajakka tayyorgarlik ko'rsatishga yordam beradigan zamonaviy texnologiyalar",
       freeBanner: '🎁 BARCHA KURSLAR MUTLAQO BEPUL!',
       benefits: {
         title: 'Nega bizni tanlaydilar',
@@ -509,7 +509,7 @@ export const translations = {
         },
         team: {
           title: 'Jamoa ishi',
-          desc: 'Hamkorlik qilish va g\'oyalarni almashishni o\'rganamiz'
+          desc: "Hamkorlik qilish va g'oyalarni almashishni o'rganamiz"
         },
         schedule: {
           title: 'Moslashuvchan jadval',
@@ -522,7 +522,7 @@ export const translations = {
     courseCards: {
       '3d-printing': {
         title: '3D-bosish',
-        description: '3D-modeling va bosish asoslarini o\'rganamiz. O\'z o\'yinchoqlarimiz, bezaklarimiz va foydali narsalarimizni yaratamiz.',
+        description: "3D-modeling va bosish asoslarini o'rganamiz. O'z o'yinchoqlarimiz, bezaklarimiz va foydali narsalarimizni yaratamiz.",
         features: ['Tinkercad', '3D-printer', 'Modeling', 'Bosish']
       },
       arduino: {
@@ -532,12 +532,12 @@ export const translations = {
       },
       robotics: {
         title: 'Robototexnika',
-        description: 'Robotlar va mexanizmlar yasaymiz, turli qurilmalarning ishlash printsipini o\'rganamiz.',
+        description: "Robotlar va mexanizmlar yasaymiz, turli qurilmalarning ishlash printsipini o'rganamiz.",
         features: ['Konstruksiya', 'Robototexnika', 'Mexanika', 'Mantiq']
       },
       it: {
         title: 'IT-savodxonlik',
-        description: 'Kompyuter bilan ishlash, internetda xavfsizlik va dasturlash asoslarini o\'rganamiz.',
+        description: "Kompyuter bilan ishlash, internetda xavfsizlik va dasturlash asoslarini o'rganamiz.",
         features: ['Kompyuter', 'Internet', 'Xavfsizlik', 'Dasturlash']
       }
     },
@@ -753,19 +753,19 @@ export const translations = {
         {
           name: "Anna Petrova",
           childName: "Maksim, 8 yosh",
-          text: "Mening o\'g\'lim darslardan juda mamnun! Bir oy ichida oddiy 3D-modellar yaratishni o\'rgandi va hatto birinchi o\'yinchoqini bosdi. O\'qituvchi juda sabr-toqatli va bolalarni qiziqtira oladi.",
+          text: "Mening o'g'lim darslardan juda mamnun! Bir oy ichida oddiy 3D-modellar yaratishni o'rgandi va hatto birinchi o'yinchoqini bosdi. O'qituvchi juda sabr-toqatli va bolalarni qiziqtira oladi.",
           avatar: "👩‍💼"
         },
         {
           name: "Dmitriy Smirnov",
           childName: "Sofiya, 10 yosh",
-          text: "Qizim har doim darslarni intizorlik bilan kutadi. Ayniqsa Arduino dasturlash yoqadi - birinchi yorqin bilakuzugini yaratdi! Muhit juda uyga o\'xshash va qulay.",
+          text: "Qizim har doim darslarni intizorlik bilan kutadi. Ayniqsa Arduino dasturlash yoqadi - birinchi yorqin bilakuzugini yaratdi! Muhit juda uyga o'xshash va qulay.",
           avatar: "👨‍💻"
         },
         {
           name: "Elena Kozlova",
           childName: "Artem, 7 yosh",
-          text: "Ajoyib kurslar! O\'g\'lim yanada sabr-toqatli va diqqatli bo\'ldi. O\'qituvchi hamma narsani juda tushunarli tushuntiradi, kichik guruhlar esa har bir bolaga e\'tibor berish imkonini beradi.",
+          text: "Ajoyib kurslar! O'g'lim yanada sabr-toqatli va diqqatli bo'ldi. O'qituvchi hamma narsani juda tushunarli tushuntiradi, kichik guruhlar esa har bir bolaga e'tibor berish imkonini beradi.",
           avatar: "👩‍🏫"
         }
       ]
@@ -773,48 +773,48 @@ export const translations = {
 
     // FAQ Section
     faq: {
-      title: 'Ko\'p so\'raladigan savollar',
-      subtitle: 'Kurslarimiz va o\'qitish formati haqidagi eng mashhur savollarga javoblar',
+      title: "Ko'p so'raladigan savollar",
+      subtitle: "Kurslarimiz va o'qitish formati haqidagi eng mashhur savollarga javoblar",
       questions: [
         {
-          question: 'Qaysi yoshdan o\'qishni boshlash mumkin?',
+          question: "Qaysi yoshdan o'qishni boshlash mumkin?",
           answer: 'Biz 8-12 yoshdagi bolalarni qabul qilamiz. Har bir yosh uchun mos darajadagi murakkablik va o\'qitish tezligini tanlaymiz. Kichik bolalar o\'yinlar va oddiy loyihalar orqali asoslarni o\'rganadi, kattalar esa murakkabroq vazifalar bilan ishlaydi.'
         },
         {
-          question: 'Qanday maxsus bilim yoki ko\'nikmalar kerakmi?',
+          question: "Qanday maxsus bilim yoki ko'nikmalar kerakmi?",
           answer: 'Hech qanday maxsus bilim talab qilinmaydi! Biz eng asoslardan boshlaymiz va asta-sekin materialni murakkablashtiramiz. Asosiy narsa - bolaning texnologiyalarga qiziqishi va yangi narsalarni o\'rganishga tayyorligi.'
         },
         {
-          question: 'Darslarga nima olib kelish kerak?',
+          question: "Darslarga nima olib kelish kerak?",
           answer: 'Barcha kerakli jihozlar va materiallarni biz taqdim etamiz. Bolaga faqat yaxshi kayfiyat va o\'rganish istagi kerak! Agar sizda shaxsiy noutbuk bo\'lsa, qulaylik uchun uni olib kelishingiz mumkin.'
         },
         {
-          question: 'Darslar qanday tezlikda o\'tkaziladi?',
+          question: "Darslar qanday tezlikda o'tkaziladi?",
           answer: 'Darslar haftasiga 1-2 marta 2 soat davomida o\'tkaziladi. Biz har bir guruh uchun qulay vaqtni tanlaymiz.'
         },
         {
-          question: 'O\'qish qancha turadi?',
+          question: "O'qish qancha turadi?",
           answer: 'Barcha kurslar mutlaqo bepul! Biz o\'qitish uchun hech qanday to\'lov olmaymiz. Bizning maqsadimiz - IT ta\'limini barcha bolalar uchun qulay qilish.'
         },
         {
-          question: 'Ota-onalar darslarda qatnashishlari mumkinmi?',
+          question: "Ota-onalar darslarda qatnashishlari mumkinmi?",
           answer: 'Albatta! Biz ota-onalarning ishtirokini, ayniqsa birinchi darslarda qadrlaymiz. Bu bolaga o\'zini qulay his qilishga, ota-onalarga esa bolalari nima bilan shug\'ullanishini tushunishga yordam beradi.'
         },
         {
-          question: 'Agar bola darsni o\'tkazib qoldirsa nima qilish kerak?',
+          question: "Agar bola darsni o'tkazib qoldirsa nima qilish kerak?",
           answer: 'Biz har doim o\'tkazib qoldirilgan materialni qayta o\'rganishga yordam berishga tayyormiz. Mavzuni qo\'shimcha tushuntirishimiz mumkin. Asosiy narsa - guruhdan qolib qolmaslik!'
         },
         {
-          question: 'Bolani vaqtdan oldin olib ketish mumkinmi?',
+          question: "Bolani vaqtdan oldin olib ketish mumkinmi?",
           answer: 'Ha, albatta. Agar siz bolani vaqtdan oldin olib ketishni xohlasangiz, bizni oldindan ogohlantiring. Biz tushunamizki, ota-onalarda turli holatlar bo\'lishi mumkin.'
         },
         {
-          question: 'Kurs tugagandan so\'ng bola nima oladi?',
+          question: "Kurs tugagandan so'ng bola nima oladi?",
           answer: 'Kurs tugagandan so\'ng har bir bola tugatish sertifikati va yaratgan barcha loyihalarini oladi. Shuningdek, biz texnologiyalar sohasida keyingi rivojlanish bo\'yicha tavsiyalar beramiz.'
         }
       ],
       cta: {
-        title: 'O\'z savolingizga javob topa olmadingizmi?',
+        title: "O'z savolingizga javob topa olmadingizmi?",
         subtitle: 'Bizga Telegram orqali murojaat qiling va biz mamnuniyat bilan barcha savollaringizga javob beramiz va bolangiz uchun mos kursni tanlashda yordam beramiz',
         button: 'Telegramda yozish'
       }
@@ -822,37 +822,37 @@ export const translations = {
 
     // Donations Section
     donations: {
-      title: 'Bizning loyihamizni qo\'llab-quvvatlang',
-      subtitle: 'Bizning vazifamiz - zamonaviy texnologiyalarni har bir bola uchun qulay qilish. Sizning qo\'llab-quvvatlashingiz bizga loyihani rivojlantirish va ko\'proq bolalarni o\'qitishga yordam beradi.',
+      title: "Bizning loyihamizni qo'llab-quvvatlang",
+      subtitle: "Bizning vazifamiz - zamonaviy texnologiyalarni har bir bola uchun qulay qilish. Sizning qo'llab-quvvatlashingiz bizga loyihani rivojlantirish va ko'proq bolalarni o'qitishga yordam beradi.",
       whySupport: {
-        title: 'Nega biz qo\'llab-quvvatlash so\'raymiz?',
-        description: 'Garchi bizning kurslarimiz bolalar uchun to\'liq bepul bo\'lsa-da, biz jihozlar, materiallar va loyiha rivojlanishi uchun doimiy xarajatlarga duch kelamiz.',
-        materials: 'Har bir xayriya 3D-printerlar uchun sarf materiallari, elektron komponentlar, sensorlar va boshqa o\'qitish materiallarini sotib olish uchun ketadi.',
-        transparency: 'Biz to\'liq shaffoflikni kafolatlaymiz: har bir xayriyachi o\'z mablag\'lari qanday ishlatilgani haqida batafsil hisobot oladi.'
+        title: "Nega biz qo'llab-quvvatlash so'raymiz?",
+        description: "Garchi bizning kurslarimiz bolalar uchun to'liq bepul bo'lsa-da, biz jihozlar, materiallar va loyiha rivojlanishi uchun doimiy xarajatlarga duch kelamiz.",
+        materials: "Har bir xayriya 3D-printerlar uchun sarf materiallari, elektron komponentlar, sensorlar va boshqa o'qitish materiallarini sotib olish uchun ketadi.",
+        transparency: "Biz to'liq shaffoflikni kafolatlaymiz: har bir xayriyachi o'z mablag'lari qanday ishlatilgani haqida batafsil hisobot oladi."
       },
       howToHelp: {
-        title: 'Qanday yordam bera olasiz?',
-        financial: 'Har qanday miqdordagi moliyaviy qo\'llab-quvvatlash',
-        equipment: 'Yaxshi holatdagi jihozlarni uzatish',
-        sharing: 'Bizning loyihamiz haqida ma\'lumotni tarqatish'
+        title: "Qanday yordam bera olasiz?",
+        financial: "Har qanday miqdordagi moliyaviy qo'llab-quvvatlash",
+        equipment: "Yaxshi holatdagi jihozlarni uzatish",
+        sharing: "Bizning loyihamiz haqida ma'lumotni tarqatish"
       },
       benefits: {
-        title: 'Sizning mablag\'laringiz nerga ketadi',
+        title: "Sizning mablag'laringiz nerga ketadi",
         materials: {
           title: 'Sarf materiallari',
           description: '3D-bosish uchun plastik, elektron komponentlar, sensorlar'
         },
         moreChildren: {
-          title: 'Ko\'proq bolalar',
-          description: 'Ko\'proq o\'quvchilarni o\'qitish imkoniyati'
+          title: "Ko'proq bolalar",
+          description: "Ko'proq o'quvchilarni o'qitish imkoniyati"
         },
         expansion: {
-          title: 'Dasturlarni kengaytirish',
-          description: 'Yangi kurslar va chuqurlashtirilgan o\'qitish dasturlari'
+                      title: "Dasturlarni kengaytirish",
+                      description: "Yangi kurslar va chuqurlashtirilgan o'qitish dasturlari"
         },
         transparency: {
-          title: 'Shaffoflik',
-          description: 'Mablag\'larning sarflanishi bo\'yicha to\'liq hisobot'
+                      title: "Shaffoflik",
+                      description: "Mablag'larning sarflanishi bo'yicha to'liq hisobot"
         }
       },
       cta: {

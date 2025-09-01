@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Users, Clock, Calendar, MapPin, Coffee, Wifi, Car, Heart } from 'lucide-react';
+import { Users, Clock, Calendar, MapPin } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Format = () => {
@@ -55,20 +55,7 @@ const Format = () => {
     }
   ];
 
-  const advantages = [
-    { icon: Coffee, title: "Чай и печенье", desc: "Вкусные перекусы для детей" },
-    { icon: Wifi, title: "Wi-Fi", desc: "Быстрый интернет для всех устройств" },
-    { icon: Car, title: "Парковка", desc: "Удобная парковка рядом с домом" },
-    { icon: Heart, title: "Забота", desc: "Индивидуальный подход к каждому" }
-  ];
 
-  const schedule = [
-    { time: "10:00-10:15", activity: "Приветствие и знакомство" },
-    { time: "10:15-11:00", activity: "Основная часть занятия" },
-    { time: "11:00-11:15", activity: "Перерыв с чаем и печеньем" },
-    { time: "11:15-12:00", activity: "Практическая работа" },
-    { time: "12:00-12:15", activity: "Подведение итогов" }
-  ];
 
   return (
     <section id="format" className="section-padding bg-white">

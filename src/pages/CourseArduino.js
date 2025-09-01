@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Cpu, Clock, Users, Target, CheckCircle } from 'lucide-react';
+import { Cpu, Clock, Users, Target, CheckCircle } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const CourseArduino = ({ onBack }) => {

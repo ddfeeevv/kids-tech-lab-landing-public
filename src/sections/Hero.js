@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ChevronDown, Sparkles, Cpu, Printer, BookOpen } from 'lucide-react';
+import { Sparkles, Cpu, Printer, BookOpen } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Hero = () => {

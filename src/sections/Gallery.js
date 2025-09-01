@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Camera, Users, Cpu, Printer, Blocks } from 'lucide-react';
+import { Camera, Users, Cpu, Printer, Blocks } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Gallery = () => {
