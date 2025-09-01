@@ -121,66 +121,7 @@ const Format = () => {
           ))}
         </motion.div>
 
-        {/* Schedule and Advantages */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-12"
-        >
-          {/* Schedule */}
-          <motion.div variants={itemVariants}>
-            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center lg:text-left">
-              Примерное расписание занятия
-            </h3>
-            <div className="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-2xl p-6 shadow-lg">
-              {schedule.map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ x: -20, opacity: 0 }}
-                  whileInView={{ x: 0, opacity: 1 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="flex items-center py-3 border-b border-primary-100 last:border-b-0"
-                >
-                  <div className="w-20 text-sm font-semibold text-primary-600">
-                    {item.time}
-                  </div>
-                  <div className="flex-1 text-gray-700">
-                    {item.activity}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
 
-          {/* Advantages */}
-          <motion.div variants={itemVariants}>
-            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center lg:text-left">
-              Что мы предоставляем
-            </h3>
-            <div className="space-y-4">
-              {advantages.map((advantage, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ x: 20, opacity: 0 }}
-                  whileInView={{ x: 0, opacity: 1 }}
-                  transition={{ delay: index * 0.1 }}
-                  whileHover={{ scale: 1.02 }}
-                  className="flex items-center p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
-                >
-                  <div className="w-12 h-12 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center mr-4 shadow-lg">
-                    <advantage.icon size={20} className="text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">{advantage.title}</h4>
-                    <p className="text-gray-600 text-sm">{advantage.desc}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </motion.div>
 
         {/* CTA Section */}
         <motion.div

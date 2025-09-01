@@ -246,12 +246,12 @@ const Reviews = () => {
                 <div className="text-lg opacity-90">Довольных детей</div>
               </div>
               <div>
-                <div className="text-4xl font-bold mb-2">100+</div>
-                <div className="text-lg opacity-90">Созданных проектов</div>
+                <div className="text-4xl font-bold mb-2">100%</div>
+                <div className="text-lg opacity-90">Бесплатно</div>
               </div>
               <div>
-                <div className="text-4xl font-bold mb-2">5.0</div>
-                <div className="text-lg opacity-90">Средняя оценка</div>
+                <div className="text-4xl font-bold mb-2">120+</div>
+                <div className="text-lg opacity-90">Проведенных занятий</div>
               </div>
             </div>
           </div>

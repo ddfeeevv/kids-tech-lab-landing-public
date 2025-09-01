@@ -84,12 +84,7 @@ const Gallery = () => {
     }
   ];
 
-  const categories = ["Все", "3D-печать", "Arduino", "Конструирование", "Работа в группах"];
-  const [activeCategory, setActiveCategory] = useState("Все");
-
-  const filteredImages = activeCategory === "Все" 
-    ? galleryImages 
-    : galleryImages.filter(img => img.category === activeCategory);
+  const filteredImages = galleryImages;
 
   return (
     <section id="gallery" className="section-padding bg-gradient-to-br from-gray-50 to-blue-50">
@@ -117,31 +112,7 @@ const Gallery = () => {
           </motion.p>
         </motion.div>
 
-        {/* Category Filter */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          className="flex flex-wrap justify-center gap-4 mb-12"
-        >
-          {categories.map((category) => (
-            <motion.button
-              key={category}
-              variants={itemVariants}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => setActiveCategory(category)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                activeCategory === category
-                  ? 'bg-primary-600 text-white shadow-lg'
-                  : 'bg-white text-gray-600 hover:bg-primary-50 hover:text-primary-600 shadow-md'
-              }`}
-            >
-              {category}
-            </motion.button>
-          ))}
-        </motion.div>
+
 
         {/* Gallery Grid */}
         <motion.div

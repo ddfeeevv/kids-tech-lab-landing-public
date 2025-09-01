@@ -231,22 +231,30 @@ const Contact = () => {
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       Возраст ребенка *
                     </label>
-                    <select
-                      name="childAge"
-                      value={formData.childAge}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
-                    >
-                      <option value="">Выберите возраст</option>
-                      <option value="6">6 лет</option>
-                      <option value="7">7 лет</option>
-                      <option value="8">8 лет</option>
-                      <option value="9">9 лет</option>
-                      <option value="10">10 лет</option>
-                      <option value="11">11 лет</option>
-                      <option value="12">12 лет</option>
-                    </select>
+                    <div className="grid grid-cols-2 gap-2">
+                      {[6, 7, 8, 9, 10, 11, 12].map((age) => (
+                        <label key={age} className="flex items-center p-3 border border-gray-300 rounded-lg hover:bg-primary-50 cursor-pointer transition-all duration-200">
+                          <input
+                            type="radio"
+                            name="childAge"
+                            value={age}
+                            checked={formData.childAge === age.toString()}
+                            onChange={handleInputChange}
+                            className="sr-only"
+                          />
+                          <div className={`w-4 h-4 rounded-full border-2 mr-3 flex items-center justify-center ${
+                            formData.childAge === age.toString() 
+                              ? 'border-primary-500 bg-primary-500' 
+                              : 'border-gray-300'
+                          }`}>
+                            {formData.childAge === age.toString() && (
+                              <div className="w-2 h-2 bg-white rounded-full"></div>
+                            )}
+                          </div>
+                          <span className="text-gray-700">{age} лет</span>
+                        </label>
+                      ))}
+                    </div>
                   </div>
                 </div>
 
@@ -254,19 +262,37 @@ const Contact = () => {
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Интересы ребенка
                   </label>
-                  <select
-                    name="interests"
-                    value={formData.interests}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
-                  >
-                    <option value="">Выберите направление</option>
-                    <option value="3d-printing">3D-печать</option>
-                    <option value="arduino">Arduino</option>
-                    <option value="robotics">Робототехника</option>
-                    <option value="programming">Программирование</option>
-                    <option value="all">Все направления</option>
-                  </select>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {[
+                      { value: "3d-printing", label: "3D-печать", icon: "🖨️" },
+                      { value: "arduino", label: "Arduino", icon: "🔧" },
+                      { value: "robotics", label: "Робототехника", icon: "🤖" },
+                      { value: "programming", label: "Программирование", icon: "💻" },
+                      { value: "all", label: "Все направления", icon: "🌟" }
+                    ].map((option) => (
+                      <label key={option.value} className="flex items-center p-4 border border-gray-300 rounded-lg hover:bg-primary-50 cursor-pointer transition-all duration-200">
+                        <input
+                          type="radio"
+                          name="interests"
+                          value={option.value}
+                          checked={formData.interests === option.value}
+                          onChange={handleInputChange}
+                          className="sr-only"
+                        />
+                        <div className={`w-4 h-4 rounded-full border-2 mr-3 flex items-center justify-center ${
+                          formData.interests === option.value 
+                            ? 'border-primary-500 bg-primary-500' 
+                            : 'border-gray-300'
+                        }`}>
+                          {formData.interests === option.value && (
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                          )}
+                        </div>
+                        <span className="text-2xl mr-2">{option.icon}</span>
+                        <span className="text-gray-700">{option.label}</span>
+                      </label>
+                    ))}
+                  </div>
                 </div>
 
                 <div>

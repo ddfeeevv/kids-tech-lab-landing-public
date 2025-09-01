@@ -77,6 +77,14 @@ const Hero = () => {
             >
               3D-печать, Arduino и цифровые навыки для детей 6–12 лет
             </motion.p>
+            <motion.div 
+              variants={itemVariants}
+              className="mt-4"
+            >
+              <span className="inline-block bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-2 rounded-full text-lg font-semibold shadow-lg">
+                🎉 100% БЕСПЛАТНО!
+              </span>
+            </motion.div>
           </motion.div>
 
           {/* Subtitle */}

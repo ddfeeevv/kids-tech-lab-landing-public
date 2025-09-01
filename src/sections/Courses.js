@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Printer, Cpu, Blocks, Monitor, Zap, Target, Users, Clock } from 'lucide-react';
 
 const Courses = () => {
@@ -30,7 +31,8 @@ const Courses = () => {
       features: ["Tinkercad", "3D-принтер", "Моделирование", "Печать"],
       color: "from-blue-500 to-cyan-500",
       bgColor: "bg-blue-50",
-      iconColor: "text-blue-600"
+      iconColor: "text-blue-600",
+      link: "/course/3d"
     },
     {
       icon: Cpu,
@@ -39,25 +41,28 @@ const Courses = () => {
       features: ["Программирование", "Схемы", "Датчики", "Автоматизация"],
       color: "from-green-500 to-emerald-500",
       bgColor: "bg-green-50",
-      iconColor: "text-green-600"
+      iconColor: "text-green-600",
+      link: "/course/arduino"
     },
     {
       icon: Blocks,
-      title: "Лего-подобные наборы",
+      title: "Робототехника",
       description: "Конструируем роботов и механизмы, изучаем принципы работы различных устройств.",
       features: ["Конструирование", "Робототехника", "Механика", "Логика"],
       color: "from-orange-500 to-red-500",
       bgColor: "bg-orange-50",
-      iconColor: "text-orange-600"
+      iconColor: "text-orange-600",
+      link: "/course/robotics"
     },
     {
       icon: Monitor,
-      title: "Основы компьютерной грамотности",
+      title: "IT-грамотность",
       description: "Изучаем работу с компьютером, безопасность в интернете и основы программирования.",
       features: ["Компьютер", "Интернет", "Безопасность", "Программирование"],
       color: "from-purple-500 to-pink-500",
       bgColor: "bg-purple-50",
-      iconColor: "text-purple-600"
+      iconColor: "text-purple-600",
+      link: "/course/it"
     }
   ];
 
@@ -92,6 +97,14 @@ const Courses = () => {
             Современные технологии, которые помогут детям развить логическое мышление, 
             творческие способности и подготовиться к цифровому будущему
           </motion.p>
+          <motion.div 
+            variants={itemVariants}
+            className="mt-6"
+          >
+            <span className="inline-block bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-3 rounded-full text-xl font-bold shadow-lg">
+              🎁 ВСЕ КУРСЫ АБСОЛЮТНО БЕСПЛАТНЫ!
+            </span>
+          </motion.div>
         </motion.div>
 
         {/* Courses Grid */}
@@ -109,7 +122,8 @@ const Courses = () => {
               whileHover={{ y: -5 }}
               className="group"
             >
-              <div className={`${course.bgColor} rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 h-full`}>
+              <Link to={course.link} className="block">
+                <div className={`${course.bgColor} rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 h-full cursor-pointer`}>
                 {/* Icon */}
                 <div className="flex items-center mb-6">
                   <div className={`w-16 h-16 bg-gradient-to-r ${course.color} rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
@@ -132,7 +146,8 @@ const Courses = () => {
                     </div>
                   ))}
                 </div>
-              </div>
+                </div>
+              </Link>
             </motion.div>
           ))}
         </motion.div>
