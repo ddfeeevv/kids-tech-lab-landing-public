@@ -156,12 +156,14 @@ const Course3D = () => {
               <p className="mb-6 opacity-90">
                 Запишитесь на бесплатный курс 3D-печати и создайте свой первый объемный объект!
               </p>
-              <Link
-                to="/#contact"
+              <a
+                href="https://t.me/ddfeeevv"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 Записаться на курс
-              </Link>
+              </a>
             </motion.div>
           </motion.div>
         </div>

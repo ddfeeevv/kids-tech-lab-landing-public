@@ -57,7 +57,7 @@ const Navigation = () => {
               </a>
             ))}
             <motion.a
-              href="https://t.me/your_telegram_username"
+              href="https://t.me/ddfeeevv"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
@@ -100,7 +100,7 @@ const Navigation = () => {
                 </a>
               ))}
               <a
-                href="https://t.me/your_telegram_username"
+                href="https://t.me/ddfeeevv"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block px-3 py-2 btn-primary text-center"

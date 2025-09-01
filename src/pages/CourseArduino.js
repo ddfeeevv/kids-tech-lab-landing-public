@@ -157,12 +157,14 @@ const CourseArduino = () => {
               <p className="mb-6 opacity-90">
                 Запишитесь на бесплатный курс Arduino и создайте свое первое умное устройство!
               </p>
-              <Link
-                to="/#contact"
+              <a
+                href="https://t.me/ddfeeevv"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block bg-white text-green-600 font-semibold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 Записаться на курс
-              </Link>
+              </a>
             </motion.div>
           </motion.div>
         </div>

@@ -57,7 +57,7 @@ const Contact = () => {
 💬 Сообщение: ${formData.message}
     `;
 
-    const telegramUrl = `https://t.me/your_telegram_username?text=${encodeURIComponent(message)}`;
+    const telegramUrl = `https://t.me/ddfeeevv?text=${encodeURIComponent(message)}`;
     window.open(telegramUrl, '_blank');
     setIsSubmitted(true);
   };
@@ -66,28 +66,28 @@ const Contact = () => {
     {
       icon: MessageCircle,
       title: "Telegram",
-      value: "@your_telegram_username",
-      link: "https://t.me/your_telegram_username",
+      value: "@ddfeeevv",
+      link: "https://t.me/ddfeeevv",
       color: "from-blue-500 to-cyan-500"
     },
     {
       icon: Phone,
       title: "Телефон",
-      value: "+7 (XXX) XXX-XX-XX",
-      link: "tel:+7XXXXXXXXXX",
+      value: "+998 90 788 24 75",
+      link: "tel:+998907882475",
       color: "from-green-500 to-emerald-500"
     },
     {
       icon: MapPin,
       title: "Адрес",
-      value: "Домашняя студия",
-      link: "#",
+      value: "2-й проезд Хамроз, 10А, Мирабадский район",
+      link: "https://maps.google.com/?q=2-й+проезд+Хамроз,+10А,+Мирабадский+район",
       color: "from-orange-500 to-red-500"
     },
     {
       icon: Clock,
       title: "Время работы",
-      value: "Пн-Вс: 9:00-20:00",
+      value: "Пн и Пт: 10:00-12:00, Связь в любое время",
       link: "#",
       color: "from-purple-500 to-pink-500"
     }
@@ -364,7 +364,7 @@ const Contact = () => {
                 Есть вопросы? Свяжитесь с нами прямо сейчас через Telegram!
               </p>
               <motion.a
-                href="https://t.me/your_telegram_username"
+                href="https://t.me/ddfeeevv"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}

@@ -109,7 +109,7 @@ const Hero = () => {
               Посмотреть курсы
             </motion.a>
             <motion.a
-              href="https://t.me/your_telegram_username"
+              href="https://t.me/ddfeeevv"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}

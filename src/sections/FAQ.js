@@ -166,7 +166,7 @@ const FAQ = () => {
               и поможем выбрать подходящий курс для вашего ребенка
             </p>
             <motion.a
-              href="https://t.me/your_telegram_username"
+              href="https://t.me/ddfeeevv"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
