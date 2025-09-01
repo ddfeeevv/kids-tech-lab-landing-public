@@ -1,5 +1,4 @@
-import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useState } from 'react';
 import Navigation from './components/Navigation';
 import Hero from './sections/Hero';
 import About from './sections/About';
@@ -14,35 +13,40 @@ import CourseArduino from './pages/CourseArduino';
 import CourseRobotics from './pages/CourseRobotics';
 import CourseIT from './pages/CourseIT';
 
-function HomePage() {
-  return (
-    <>
-      <Hero />
-      <About />
-      <Courses />
-      <Format />
-      <Gallery />
-      <Reviews />
-      <FAQ />
-      <Contact />
-    </>
-  );
-}
-
 function App() {
+  const [currentPage, setCurrentPage] = useState('home');
+
+  const renderPage = () => {
+    switch (currentPage) {
+      case 'course-3d':
+        return <Course3D onBack={() => setCurrentPage('home')} />;
+      case 'course-arduino':
+        return <CourseArduino onBack={() => setCurrentPage('home')} />;
+      case 'course-robotics':
+        return <CourseRobotics onBack={() => setCurrentPage('home')} />;
+      case 'course-it':
+        return <CourseIT onBack={() => setCurrentPage('home')} />;
+      default:
+        return (
+          <>
+            <Hero />
+            <About />
+            <Courses onCourseSelect={setCurrentPage} />
+            <Format />
+            <Gallery />
+            <Reviews />
+            <FAQ />
+            <Contact />
+          </>
+        );
+    }
+  };
+
   return (
-    <Router>
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-        <Navigation />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/course/3d" element={<Course3D />} />
-          <Route path="/course/arduino" element={<CourseArduino />} />
-          <Route path="/course/robotics" element={<CourseRobotics />} />
-          <Route path="/course/it" element={<CourseIT />} />
-        </Routes>
-      </div>
-    </Router>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <Navigation />
+      {renderPage()}
+    </div>
   );
 }
 

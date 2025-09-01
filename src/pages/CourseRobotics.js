@@ -1,9 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Blocks, Clock, Users, Target, CheckCircle } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
-const CourseRobotics = () => {
+const CourseRobotics = ({ onBack }) => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -49,13 +48,13 @@ const CourseRobotics = () => {
           animate="visible"
           className="mb-12"
         >
-          <Link 
-            to="/"
+          <button 
+            onClick={onBack}
             className="inline-flex items-center text-primary-600 hover:text-primary-700 mb-6 transition-colors"
           >
             <ArrowLeft size={20} className="mr-2" />
             Назад к курсам
-          </Link>
+          </button>
           
           <motion.div variants={itemVariants} className="text-center">
             <div className="w-20 h-20 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">

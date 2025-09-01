@@ -1,9 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { Printer, Cpu, Blocks, Monitor, Zap, Target, Users, Clock } from 'lucide-react';
 
-const Courses = () => {
+const Courses = ({ onCourseSelect }) => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -32,7 +31,7 @@ const Courses = () => {
       color: "from-blue-500 to-cyan-500",
       bgColor: "bg-blue-50",
       iconColor: "text-blue-600",
-      link: "/course/3d"
+      pageId: "course-3d"
     },
     {
       icon: Cpu,
@@ -42,7 +41,7 @@ const Courses = () => {
       color: "from-green-500 to-emerald-500",
       bgColor: "bg-green-50",
       iconColor: "text-green-600",
-      link: "/course/arduino"
+      pageId: "course-arduino"
     },
     {
       icon: Blocks,
@@ -52,7 +51,7 @@ const Courses = () => {
       color: "from-orange-500 to-red-500",
       bgColor: "bg-orange-50",
       iconColor: "text-orange-600",
-      link: "/course/robotics"
+      pageId: "course-robotics"
     },
     {
       icon: Monitor,
@@ -62,7 +61,7 @@ const Courses = () => {
       color: "from-purple-500 to-pink-500",
       bgColor: "bg-purple-50",
       iconColor: "text-purple-600",
-      link: "/course/it"
+      pageId: "course-it"
     }
   ];
 
@@ -122,10 +121,10 @@ const Courses = () => {
               whileHover={{ y: -5 }}
               className="group"
             >
-              <Link to={course.link}>
-                <div 
-                  className={`${course.bgColor} rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 h-full cursor-pointer`}
-                >
+              <div 
+                className={`${course.bgColor} rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 h-full cursor-pointer`}
+                onClick={() => onCourseSelect(course.pageId)}
+              >
                 {/* Icon */}
                 <div className="flex items-center mb-6">
                   <div className={`w-16 h-16 bg-gradient-to-r ${course.color} rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
@@ -148,8 +147,7 @@ const Courses = () => {
                     </div>
                   ))}
                 </div>
-                </div>
-              </Link>
+              </div>
             </motion.div>
           ))}
         </motion.div>
