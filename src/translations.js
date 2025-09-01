@@ -93,6 +93,43 @@ export const translations = {
     coursePages: {
       backToCourses: 'Назад к курсам',
       free: '🎁 БЕСПЛАТНО!',
+      '3d-printing': {
+        title: '3D-печать',
+        subtitle: 'Изучите основы 3D-моделирования и печати и создайте свои собственные игрушки!',
+        about: {
+          title: 'О курсе',
+          description: 'На этом курсе дети научатся основам 3D-моделирования и печати. Мы будем создавать игрушки, украшения и полезные предметы в программе Tinkercad. Каждый ребенок разработает свой проект и напечатает его на 3D-принтере.',
+          duration: '8 недель',
+          groupSize: '6-10 детей',
+          age: '8-12 лет',
+          price: 'Бесплатно'
+        },
+        learn: {
+          title: 'Чему научитесь',
+          features: [
+            'Основы 3D-моделирования и программа Tinkercad',
+            'Создание игрушек и украшений',
+            'Работа с 3D-принтером',
+            'Навыки моделирования и дизайна',
+            'Создание полезных предметов',
+            'Разработка собственных проектов'
+          ]
+        },
+        program: {
+          title: 'Программа курса',
+          weeks: [
+            { week: '1-2 неделя', topic: 'Знакомство с 3D-моделированием, программа Tinkercad' },
+            { week: '3-4 неделя', topic: 'Создание простых форм и игрушек' },
+            { week: '5-6 неделя', topic: 'Сложные модели и украшения' },
+            { week: '7-8 неделя', topic: 'Работа с 3D-принтером и проекты' }
+          ]
+        },
+        cta: {
+          title: 'Готовы начать?',
+          subtitle: 'Запишитесь на бесплатный курс 3D-печати и создайте свою первую 3D-модель!',
+          button: 'Записаться на курс'
+        }
+      },
       arduino: {
         title: 'Arduino',
         subtitle: 'Изучите основы программирования микроконтроллеров и создавайте умные устройства!',
@@ -127,6 +164,80 @@ export const translations = {
         cta: {
           title: 'Готовы начать?',
           subtitle: 'Запишитесь на бесплатный курс Arduino и создайте свое первое умное устройство!',
+          button: 'Записаться на курс'
+        }
+      },
+      robotics: {
+        title: 'Робототехника',
+        subtitle: 'Изучите создание роботов и механизмов и поймите основы механики!',
+        about: {
+          title: 'О курсе',
+          description: 'На этом курсе дети научатся создавать роботов и механизмы, изучать принципы работы различных устройств. Мы изучим основы механики, электроники и программирования через практические проекты.',
+          duration: '8 недель',
+          groupSize: '6-10 детей',
+          age: '8-12 лет',
+          price: 'Бесплатно'
+        },
+        learn: {
+          title: 'Чему научитесь',
+          features: [
+            'Создание роботов и механизмов',
+            'Основы механики и физики',
+            'Электроника и программирование',
+            'Проекты и конструкции',
+            'Логическое мышление и решение задач',
+            'Создание собственного робота'
+          ]
+        },
+        program: {
+          title: 'Программа курса',
+          weeks: [
+            { week: '1-2 неделя', topic: 'Знакомство с робототехникой, основы механики' },
+            { week: '3-4 неделя', topic: 'Простые механизмы и конструкции' },
+            { week: '5-6 неделя', topic: 'Элементы электроники и программирования' },
+            { week: '7-8 неделя', topic: 'Создание роботов и проекты' }
+          ]
+        },
+        cta: {
+          title: 'Готовы начать?',
+          subtitle: 'Запишитесь на бесплатный курс робототехники и создайте своего первого робота!',
+          button: 'Записаться на курс'
+        }
+      },
+      it: {
+        title: 'IT-грамотность',
+        subtitle: 'Изучите работу с компьютером и основы программирования!',
+        about: {
+          title: 'О курсе',
+          description: 'На этом курсе дети научатся работать с компьютером, безопасности в интернете и основам программирования. Мы изучим современные технологии в простой и понятной форме.',
+          duration: '8 недель',
+          groupSize: '6-10 детей',
+          age: '8-12 лет',
+          price: 'Бесплатно'
+        },
+        learn: {
+          title: 'Чему научитесь',
+          features: [
+            'Основы работы с компьютером',
+            'Интернет и безопасность',
+            'Основы программирования и алгоритмы',
+            'Работа с файлами и папками',
+            'Современные программы и приложения',
+            'Создание собственной программы'
+          ]
+        },
+        program: {
+          title: 'Программа курса',
+          weeks: [
+            { week: '1-2 неделя', topic: 'Знакомство с компьютером, основные операции' },
+            { week: '3-4 неделя', topic: 'Интернет и безопасность, работа с файлами' },
+            { week: '5-6 неделя', topic: 'Основы программирования и алгоритмы' },
+            { week: '7-8 неделя', topic: 'Проекты и создание программ' }
+          ]
+        },
+        cta: {
+          title: 'Готовы начать?',
+          subtitle: 'Запишитесь на бесплатный курс IT-грамотности и станьте мастером компьютера!',
           button: 'Записаться на курс'
         }
       }
@@ -447,12 +558,49 @@ export const translations = {
     coursePages: {
       backToCourses: 'Kurslarga qaytish',
       free: '🎁 BEPUL!',
+      '3d-printing': {
+        title: '3D-bosish',
+        subtitle: '3D-modeling va bosish asoslarini o\'rganing va o\'z o\'yinchoqlaringizni yarating!',
+        about: {
+          title: 'Kurs haqida',
+          description: 'Bu kursda bolalar 3D-modeling va bosish asoslarini o\'rganadilar. Biz Tinkercad dasturida o\'yinchoqlar, bezaklar va foydali narsalar yaratishni o\'rgatamiz. Har bir bola o\'z loyihasini ishlab chiqadi va 3D-printerda bosadi.',
+          duration: '8 hafta',
+          groupSize: '6-10 bola',
+          age: '8-12 yosh',
+          price: 'Bepul'
+        },
+        learn: {
+          title: 'Nima o\'rganasiz',
+          features: [
+            '3D-modeling asoslari va Tinkercad dasturi',
+            'O\'yinchoqlar va bezaklar yaratish',
+            '3D-printer bilan ishlash',
+            'Modeling va dizayn qobiliyatlari',
+            'Foydali narsalar yaratish',
+            'O\'z loyihalaringizni ishlab chiqish'
+          ]
+        },
+        program: {
+          title: 'Kurs dasturi',
+          weeks: [
+            { week: '1-2 hafta', topic: '3D-modeling bilan tanishish, Tinkercad dasturi' },
+            { week: '3-4 hafta', topic: 'Oddiy shakllar va o\'yinchoqlar yaratish' },
+            { week: '5-6 hafta', topic: 'Murakkab modellar va bezaklar' },
+            { week: '7-8 hafta', topic: '3D-printer bilan ishlash va loyihalar' }
+          ]
+        },
+        cta: {
+          title: 'Boshlashga tayyormisiz?',
+          subtitle: 'Bepul 3D-bosish kursiga yoziling va birinchi 3D-modelingizni yarating!',
+          button: 'Kursga yozilish'
+        }
+      },
       arduino: {
         title: 'Arduino',
         subtitle: 'Mikrokontrollerlarni dasturlash asoslarini o\'rganing va aqlli qurilmalar yarating!',
         about: {
           title: 'Kurs haqida',
-          description: 'Bu kursda bolalar Arduino mikrokontrollerlarini dasturlashni, turli xil sensorlarni ulashni va aqlli qurilmalar yaratishni o\'rganadilar. Biz elektronika va dasturlash asoslarini oddiy va tushunarli shaklda o\'rganamiz.',
+          description: 'Bu kursda bolalar Arduino mikrokontrollerlarini dasturlashni, turli xil sensorlarni ulashni va aqlli qurilmalar yaratishni o\'rganadilar. Biz elektronika va dasturlash asoslarini oddiy va tushunarli shaklda o\'rgatamiz.',
           duration: '8 hafta',
           groupSize: '6-10 bola',
           age: '8-12 yosh',
@@ -481,6 +629,80 @@ export const translations = {
         cta: {
           title: 'Boshlashga tayyormisiz?',
           subtitle: 'Bepul Arduino kursiga yoziling va birinchi aqlli qurilmangizni yarating!',
+          button: 'Kursga yozilish'
+        }
+      },
+      robotics: {
+        title: 'Robototexnika',
+        subtitle: 'Robotlar va mexanizmlar yasashni o\'rganing va mexanika asoslarini tushuning!',
+        about: {
+          title: 'Kurs haqida',
+          description: 'Bu kursda bolalar robotlar va mexanizmlar yasashni, turli qurilmalarning ishlash printsipini o\'rganadilar. Biz mexanika, elektronika va dasturlash asoslarini amaliy loyihalar orqali o\'rgatamiz.',
+          duration: '8 hafta',
+          groupSize: '6-10 bola',
+          age: '8-12 yosh',
+          price: 'Bepul'
+        },
+        learn: {
+          title: 'Nima o\'rganasiz',
+          features: [
+            'Robotlar va mexanizmlar yasash',
+            'Mexanika va fizika asoslari',
+            'Elektronika va dasturlash',
+            'Loyihalar va konstruksiyalar',
+            'Mantiqiy fikrlash va muammolarni hal qilish',
+            'O\'z robotingizni yaratish'
+          ]
+        },
+        program: {
+          title: 'Kurs dasturi',
+          weeks: [
+            { week: '1-2 hafta', topic: 'Robototexnika bilan tanishish, mexanika asoslari' },
+            { week: '3-4 hafta', topic: 'Oddiy mexanizmlar va konstruksiyalar' },
+            { week: '5-6 hafta', topic: 'Elektronika va dasturlash elementlari' },
+            { week: '7-8 hafta', topic: 'Robotlar yaratish va loyihalar' }
+          ]
+        },
+        cta: {
+          title: 'Boshlashga tayyormisiz?',
+          subtitle: 'Bepul robototexnika kursiga yoziling va birinchi robotingizni yarating!',
+          button: 'Kursga yozilish'
+        }
+      },
+      it: {
+        title: 'IT-savodxonlik',
+        subtitle: 'Kompyuter bilan ishlash va dasturlash asoslarini o\'rganing!',
+        about: {
+          title: 'Kurs haqida',
+          description: 'Bu kursda bolalar kompyuter bilan ishlashni, internetda xavfsizlikni va dasturlash asoslarini o\'rganadilar. Biz zamonaviy texnologiyalarni oddiy va tushunarli shaklda o\'rgatamiz.',
+          duration: '8 hafta',
+          groupSize: '6-10 bola',
+          age: '8-12 yosh',
+          price: 'Bepul'
+        },
+        learn: {
+          title: 'Nima o\'rganasiz',
+          features: [
+            'Kompyuter bilan ishlash asoslari',
+            'Internet va xavfsizlik',
+            'Dasturlash asoslari va algoritmlar',
+            'Fayllar va papkalar bilan ishlash',
+            'Zamonaviy dasturlar va ilovalar',
+            'O\'z dasturingizni yaratish'
+          ]
+        },
+        program: {
+          title: 'Kurs dasturi',
+          weeks: [
+            { week: '1-2 hafta', topic: 'Kompyuter bilan tanishish, asosiy amallar' },
+            { week: '3-4 hafta', topic: 'Internet va xavfsizlik, fayllar bilan ishlash' },
+            { week: '5-6 hafta', topic: 'Dasturlash asoslari va algoritmlar' },
+            { week: '7-8 hafta', topic: 'Loyihalar va dasturlar yaratish' }
+          ]
+        },
+        cta: {
+          title: 'Boshlashga tayyormisiz?',
+          subtitle: 'Bepul IT-savodxonlik kursiga yoziling va kompyuter ustasi bo\'ling!',
           button: 'Kursga yozilish'
         }
       }
@@ -801,6 +1023,43 @@ export const translations = {
     coursePages: {
       backToCourses: 'Back to Courses',
       free: '🎁 FREE!',
+      '3d-printing': {
+        title: '3D Printing',
+        subtitle: 'Learn the basics of 3D modeling and printing and create your own toys!',
+        about: {
+          title: 'About the Course',
+          description: 'In this course, children will learn the basics of 3D modeling and printing. We will create toys, decorations, and useful items in Tinkercad. Each child will develop their own project and print it on a 3D printer.',
+          duration: '8 weeks',
+          groupSize: '6-10 children',
+          age: '8-12 years old',
+          price: 'Free'
+        },
+        learn: {
+          title: 'What You Will Learn',
+          features: [
+            'Basics of 3D modeling and Tinkercad software',
+            'Creating toys and decorations',
+            'Working with 3D printer',
+            'Modeling and design skills',
+            'Creating useful items',
+            'Development of own projects'
+          ]
+        },
+        program: {
+          title: 'Course Program',
+          weeks: [
+            { week: '1-2 week', topic: 'Introduction to 3D modeling, Tinkercad software' },
+            { week: '3-4 week', topic: 'Creating simple shapes and toys' },
+            { week: '5-6 week', topic: 'Complex models and decorations' },
+            { week: '7-8 week', topic: 'Working with 3D printer and projects' }
+          ]
+        },
+        cta: {
+          title: 'Ready to Start?',
+          subtitle: 'Sign up for a free 3D printing course and create your first 3D model!',
+          button: 'Sign Up for Course'
+        }
+      },
       arduino: {
         title: 'Arduino',
         subtitle: 'Learn the basics of microcontroller programming and create smart devices!',
@@ -835,6 +1094,80 @@ export const translations = {
         cta: {
           title: 'Ready to Start?',
           subtitle: 'Sign up for a free Arduino course and create your first smart device!',
+          button: 'Sign Up for Course'
+        }
+      },
+      robotics: {
+        title: 'Robotics',
+        subtitle: 'Learn to create robots and mechanisms and understand the basics of mechanics!',
+        about: {
+          title: 'About the Course',
+          description: 'In this course, children will learn to create robots and mechanisms, study the principles of various devices. We will study the basics of mechanics, electronics, and programming through practical projects.',
+          duration: '8 weeks',
+          groupSize: '6-10 children',
+          age: '8-12 years old',
+          price: 'Free'
+        },
+        learn: {
+          title: 'What You Will Learn',
+          features: [
+            'Creating robots and mechanisms',
+            'Basics of mechanics and physics',
+            'Electronics and programming',
+            'Projects and constructions',
+            'Logical thinking and problem solving',
+            'Creating your own robot'
+          ]
+        },
+        program: {
+          title: 'Course Program',
+          weeks: [
+            { week: '1-2 week', topic: 'Introduction to robotics, basics of mechanics' },
+            { week: '3-4 week', topic: 'Simple mechanisms and constructions' },
+            { week: '5-6 week', topic: 'Elements of electronics and programming' },
+            { week: '7-8 week', topic: 'Creating robots and projects' }
+          ]
+        },
+        cta: {
+          title: 'Ready to Start?',
+          subtitle: 'Sign up for a free robotics course and create your first robot!',
+          button: 'Sign Up for Course'
+        }
+      },
+      it: {
+        title: 'IT Literacy',
+        subtitle: 'Learn computer operation and programming basics!',
+        about: {
+          title: 'About the Course',
+          description: 'In this course, children will learn computer operation, internet security, and programming basics. We will study modern technologies in a simple and understandable form.',
+          duration: '8 weeks',
+          groupSize: '6-10 children',
+          age: '8-12 years old',
+          price: 'Free'
+        },
+        learn: {
+          title: 'What You Will Learn',
+          features: [
+            'Basics of computer operation',
+            'Internet and security',
+            'Programming basics and algorithms',
+            'Working with files and folders',
+            'Modern software and applications',
+            'Creating your own program'
+          ]
+        },
+        program: {
+          title: 'Course Program',
+          weeks: [
+            { week: '1-2 week', topic: 'Introduction to computer, basic operations' },
+            { week: '3-4 week', topic: 'Internet and security, working with files' },
+            { week: '5-6 week', topic: 'Programming basics and algorithms' },
+            { week: '7-8 week', topic: 'Projects and creating programs' }
+          ]
+        },
+        cta: {
+          title: 'Ready to Start?',
+          subtitle: 'Sign up for a free IT literacy course and become a computer master!',
           button: 'Sign Up for Course'
         }
       }
