@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/kids-tech-lab-landing/static/css/main.2991377e.css",
+    "main.js": "/kids-tech-lab-landing/static/js/main.67de11f2.js",
+    "index.html": "/kids-tech-lab-landing/index.html",
+    "main.2991377e.css.map": "/kids-tech-lab-landing/static/css/main.2991377e.css.map",
+    "main.67de11f2.js.map": "/kids-tech-lab-landing/static/js/main.67de11f2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2991377e.css",
+    "static/js/main.67de11f2.js"
+  ]
+}
