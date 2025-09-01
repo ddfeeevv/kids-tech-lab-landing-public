@@ -48,7 +48,7 @@ const Contact = () => {
   // Валидация узбекского номера телефона
   const validateUzbekPhone = (phone) => {
     // Убираем все пробелы, дефисы и плюсы
-    const cleanPhone = phone.replace(/[\s\-\+]/g, '');
+    const cleanPhone = phone.replace(/[\s\-+]/g, '');
     
     // Проверяем различные форматы:
     // 998XXXXXXXXX (12 цифр, начинается с 998)
@@ -151,7 +151,7 @@ const Contact = () => {
     
     // Нормализуем номер телефона для отправки
     const normalizePhone = (phone) => {
-      const cleanPhone = phone.replace(/[\s\-\+]/g, '');
+      const cleanPhone = phone.replace(/[\s\-+]/g, '');
       if (cleanPhone.length === 12 && cleanPhone.startsWith('998')) {
         return `+${cleanPhone}`;
       } else if (cleanPhone.length === 9 && cleanPhone.startsWith('90')) {

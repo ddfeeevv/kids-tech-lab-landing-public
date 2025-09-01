@@ -22,7 +22,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://ddfeeevv.github.io/kids-tech-lab-landing",
+  "homepage": "https://ddfeeevv.github.io/kids-tech-lab-landing-public",
   "eslintConfig": {
     "extends": [
       "react-app",
