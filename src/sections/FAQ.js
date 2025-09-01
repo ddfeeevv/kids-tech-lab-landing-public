@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, Minus, HelpCircle } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const FAQ = () => {
+  const { t } = useLanguage();
   const [openIndex, setOpenIndex] = useState(null);
 
   const containerVariants = {
@@ -81,14 +83,14 @@ const FAQ = () => {
           <motion.div variants={itemVariants} className="flex items-center justify-center mb-6">
             <HelpCircle size={48} className="text-primary-600 mr-4" />
             <h2 className="text-4xl font-bold text-gray-900">
-              Часто задаваемые вопросы
+              {t('faq.title')}
             </h2>
           </motion.div>
           <motion.p 
             variants={itemVariants}
             className="text-xl text-gray-600 max-w-3xl mx-auto"
           >
-            Ответы на самые популярные вопросы о наших курсах и формате обучения
+            {t('faq.subtitle')}
           </motion.p>
         </motion.div>
 

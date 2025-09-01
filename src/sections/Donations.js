@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Heart, Gift, Users, Target, Shield, FileText } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Donations = () => {
+  const { t } = useLanguage();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -65,14 +67,13 @@ const Donations = () => {
             variants={itemVariants}
             className="text-4xl font-bold text-gray-900 mb-6"
           >
-            Поддержите наш проект
+            {t('donations.title')}
           </motion.h2>
           <motion.p 
             variants={itemVariants}
             className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed"
           >
-            Наша миссия — сделать современные технологии доступными для каждого ребенка. 
-            Ваша поддержка поможет нам развивать проект и обучать больше детей.
+            {t('donations.subtitle')}
           </motion.p>
         </motion.div>
 

@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Star, Quote, ChevronLeft, ChevronRight, User } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Reviews = () => {
+  const { t } = useLanguage();
   const [currentReview, setCurrentReview] = useState(0);
 
   const containerVariants = {
@@ -100,13 +102,13 @@ const Reviews = () => {
             variants={itemVariants}
             className="text-4xl font-bold text-gray-900 mb-6"
           >
-            Отзывы родителей
+            {t('reviews.title')}
           </motion.h2>
           <motion.p 
             variants={itemVariants}
             className="text-xl text-gray-600 max-w-3xl mx-auto"
           >
-            Узнайте, что говорят родители наших учеников о занятиях в Kids Tech Lab
+            {t('reviews.subtitle')}
           </motion.p>
         </motion.div>
 

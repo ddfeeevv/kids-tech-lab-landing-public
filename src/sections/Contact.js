@@ -160,18 +160,17 @@ const Contact = () => {
           viewport={{ once: true, amount: 0.3 }}
           className="text-center mb-16"
         >
-          <motion.h2 
+                    <motion.h2 
             variants={itemVariants}
             className="text-4xl font-bold text-gray-900 mb-6"
           >
-            Записаться на занятие
+            {t('contact.title')}
           </motion.h2>
           <motion.p 
             variants={itemVariants}
             className="text-xl text-gray-600 max-w-3xl mx-auto"
           >
-            Готовы начать увлекательное путешествие в мир технологий? 
-            Заполните форму ниже, и мы свяжемся с вами для записи на пробное занятие
+            {t('contact.subtitle')}
           </motion.p>
         </motion.div>
 

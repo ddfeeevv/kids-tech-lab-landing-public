@@ -124,6 +124,104 @@ export const translations = {
       }
     },
 
+    // Reviews Section
+    reviews: {
+      title: 'Отзывы родителей',
+      subtitle: 'Узнайте, что говорят родители наших учеников о занятиях в Kids Tech Lab',
+      achievements: {
+        title: 'Наши достижения',
+        satisfiedChildren: 'Довольных детей',
+        free: 'Бесплатно',
+        classesHeld: 'Проведенных занятий'
+      }
+    },
+
+    // FAQ Section
+    faq: {
+      title: 'Часто задаваемые вопросы',
+      subtitle: 'Ответы на самые популярные вопросы о наших курсах и формате обучения',
+      questions: [
+        {
+          question: 'С какого возраста можно начинать обучение?',
+          answer: 'Мы принимаем детей от 8 до 12 лет. Для каждого возраста подбираем подходящий уровень сложности и темп обучения. Младшие дети изучают основы через игры и простые проекты, а старшие могут работать с более сложными задачами.'
+        },
+        {
+          question: 'Нужны ли какие-то специальные знания или навыки?',
+          answer: 'Никаких специальных знаний не требуется! Мы начинаем с самых основ и постепенно усложняем материал. Главное - это интерес ребенка к технологиям и готовность учиться новому.'
+        },
+        {
+          question: 'Что нужно приносить на занятия?',
+          answer: 'Все необходимое оборудование и материалы мы предоставляем. Ребенку нужно принести только хорошее настроение и желание учиться! Если у вас есть собственный ноутбук, можете приносить его для удобства.'
+        },
+        {
+          question: 'Как часто проходят занятия?',
+          answer: 'Занятия проходят 1-2 раза в неделю по 2 часа. Мы подбираем удобное время для каждой группы.'
+        },
+        {
+          question: 'Сколько стоит обучение?',
+          answer: 'Все курсы абсолютно бесплатные! Мы не берем никакой платы за обучение. Наша цель - сделать IT-образование доступным для всех детей.'
+        },
+        {
+          question: 'Можно ли присутствовать родителям на занятиях?',
+          answer: 'Конечно! Мы приветствуем участие родителей, особенно на первых занятиях. Это помогает ребенку чувствовать себя комфортно, а родителям - понимать, чем занимается их ребенок.'
+        },
+        {
+          question: 'Что делать, если ребенок пропустил занятие?',
+          answer: 'Мы всегда готовы помочь наверстать пропущенный материал. Можем объяснить тему дополнительно. Главное - не отставать от группы!'
+        },
+        {
+          question: 'Можно ли забрать ребенка раньше времени?',
+          answer: 'Да, конечно. Если вам нужно забрать ребенка раньше, просто предупредите нас заранее. Мы понимаем, что у родителей могут быть разные обстоятельства.'
+        },
+        {
+          question: 'Что получает ребенок после окончания курса?',
+          answer: 'После завершения курса каждый ребенок получает сертификат об окончании и все созданные им проекты. Также мы даем рекомендации по дальнейшему развитию в области технологий.'
+        }
+      ]
+    },
+
+    // Donations Section
+    donations: {
+      title: 'Поддержите наш проект',
+      subtitle: 'Наша миссия — сделать современные технологии доступными для каждого ребенка. Ваша поддержка поможет нам развивать проект и обучать больше детей.',
+      whySupport: {
+        title: 'Почему мы просим о поддержке?',
+        description: 'Хотя наши курсы полностью бесплатны для детей, мы сталкиваемся с постоянными расходами на оборудование, материалы и развитие проекта.',
+        materials: 'Каждое пожертвование идет на покупку расходников для 3D-принтеров, электрокомпонентов, датчиков и других материалов для обучения.',
+        transparency: 'Мы гарантируем полную прозрачность: каждый донор получает детальный отчет о том, как были использованы его средства.'
+      },
+      howToHelp: {
+        title: 'Как вы можете помочь?',
+        financial: 'Финансовая поддержка на любую сумму',
+        equipment: 'Передача оборудования в хорошем состоянии',
+        sharing: 'Распространение информации о нашем проекте'
+      },
+      benefits: {
+        title: 'На что идут ваши средства',
+        materials: {
+          title: 'Расходные материалы',
+          description: 'Пластик для 3D-печати, электрокомпоненты, датчики'
+        },
+        moreChildren: {
+          title: 'Больше детей',
+          description: 'Возможность обучать большее количество учеников'
+        },
+        expansion: {
+          title: 'Расширение программ',
+          description: 'Новые курсы и углубленные программы обучения'
+        },
+        transparency: {
+          title: 'Прозрачность',
+          description: 'Полный отчет о расходовании средств'
+        }
+      },
+      cta: {
+        title: 'Готовы поддержать проект?',
+        subtitle: 'Напишите нам в Telegram, и мы предоставим реквизиты для перевода, а также отправим полный отчет о расходовании ваших средств.',
+        button: 'Написать о поддержке'
+      }
+    },
+
     // Contact Form
     contact: {
       title: 'Записаться на занятие',
@@ -287,6 +385,104 @@ export const translations = {
       }
     },
 
+    // Reviews Section
+    reviews: {
+      title: 'Ota-onalar fikrlari',
+      subtitle: 'O\'quvchilarimizning ota-onalari Kids Tech Lab darslari haqida nima deyotganini biling',
+      achievements: {
+        title: 'Bizning yutuqlarimiz',
+        satisfiedChildren: 'Mamnun bolalar',
+        free: 'Bepul',
+        classesHeld: 'O\'tkazilgan darslar'
+      }
+    },
+
+    // FAQ Section
+    faq: {
+      title: 'Ko\'p so\'raladigan savollar',
+      subtitle: 'Kurslarimiz va o\'qitish formati haqidagi eng mashhur savollarga javoblar',
+      questions: [
+        {
+          question: 'Qaysi yoshdan o\'qishni boshlash mumkin?',
+          answer: 'Biz 8-12 yoshdagi bolalarni qabul qilamiz. Har bir yosh uchun mos darajadagi murakkablik va o\'qitish tezligini tanlaymiz. Kichik bolalar o\'yinlar va oddiy loyihalar orqali asoslarni o\'rganadi, kattalar esa murakkabroq vazifalar bilan ishlaydi.'
+        },
+        {
+          question: 'Qanday maxsus bilim yoki ko\'nikmalar kerakmi?',
+          answer: 'Hech qanday maxsus bilim talab qilinmaydi! Biz eng asoslardan boshlaymiz va asta-sekin materialni murakkablashtiramiz. Asosiy narsa - bolaning texnologiyalarga qiziqishi va yangi narsalarni o\'rganishga tayyorligi.'
+        },
+        {
+          question: 'Darslarga nima olib kelish kerak?',
+          answer: 'Barcha kerakli jihozlar va materiallarni biz taqdim etamiz. Bolaga faqat yaxshi kayfiyat va o\'rganish istagi kerak! Agar sizda shaxsiy noutbuk bo\'lsa, qulaylik uchun uni olib kelishingiz mumkin.'
+        },
+        {
+          question: 'Darslar qanday tezlikda o\'tkaziladi?',
+          answer: 'Darslar haftasiga 1-2 marta 2 soat davomida o\'tkaziladi. Biz har bir guruh uchun qulay vaqtni tanlaymiz.'
+        },
+        {
+          question: 'O\'qish qancha turadi?',
+          answer: 'Barcha kurslar mutlaqo bepul! Biz o\'qitish uchun hech qanday to\'lov olmaymiz. Bizning maqsadimiz - IT ta\'limini barcha bolalar uchun qulay qilish.'
+        },
+        {
+          question: 'Ota-onalar darslarda qatnashishlari mumkinmi?',
+          answer: 'Albatta! Biz ota-onalarning ishtirokini, ayniqsa birinchi darslarda qadrlaymiz. Bu bolaga o\'zini qulay his qilishga, ota-onalarga esa bolalari nima bilan shug\'ullanishini tushunishga yordam beradi.'
+        },
+        {
+          question: 'Agar bola darsni o\'tkazib qoldirsa nima qilish kerak?',
+          answer: 'Biz har doim o\'tkazib qoldirilgan materialni qayta o\'rganishga yordam berishga tayyormiz. Mavzuni qo\'shimcha tushuntirishimiz mumkin. Asosiy narsa - guruhdan qolib qolmaslik!'
+        },
+        {
+          question: 'Bolani vaqtdan oldin olib ketish mumkinmi?',
+          answer: 'Ha, albatta. Agar siz bolani vaqtdan oldin olib ketishni xohlasangiz, bizni oldindan ogohlantiring. Biz tushunamizki, ota-onalarda turli holatlar bo\'lishi mumkin.'
+        },
+        {
+          question: 'Kurs tugagandan so\'ng bola nima oladi?',
+          answer: 'Kurs tugagandan so\'ng har bir bola tugatish sertifikati va yaratgan barcha loyihalarini oladi. Shuningdek, biz texnologiyalar sohasida keyingi rivojlanish bo\'yicha tavsiyalar beramiz.'
+        }
+      ]
+    },
+
+    // Donations Section
+    donations: {
+      title: 'Bizning loyihamizni qo\'llab-quvvatlang',
+      subtitle: 'Bizning vazifamiz - zamonaviy texnologiyalarni har bir bola uchun qulay qilish. Sizning qo\'llab-quvvatlashingiz bizga loyihani rivojlantirish va ko\'proq bolalarni o\'qitishga yordam beradi.',
+      whySupport: {
+        title: 'Nega biz qo\'llab-quvvatlash so\'raymiz?',
+        description: 'Garchi bizning kurslarimiz bolalar uchun to\'liq bepul bo\'lsa-da, biz jihozlar, materiallar va loyiha rivojlanishi uchun doimiy xarajatlarga duch kelamiz.',
+        materials: 'Har bir xayriya 3D-printerlar uchun sarf materiallari, elektron komponentlar, sensorlar va boshqa o\'qitish materiallarini sotib olish uchun ketadi.',
+        transparency: 'Biz to\'liq shaffoflikni kafolatlaymiz: har bir xayriyachi o\'z mablag\'lari qanday ishlatilgani haqida batafsil hisobot oladi.'
+      },
+      howToHelp: {
+        title: 'Qanday yordam bera olasiz?',
+        financial: 'Har qanday miqdordagi moliyaviy qo\'llab-quvvatlash',
+        equipment: 'Yaxshi holatdagi jihozlarni uzatish',
+        sharing: 'Bizning loyihamiz haqida ma\'lumotni tarqatish'
+      },
+      benefits: {
+        title: 'Sizning mablag\'laringiz nerga ketadi',
+        materials: {
+          title: 'Sarf materiallari',
+          description: '3D-bosish uchun plastik, elektron komponentlar, sensorlar'
+        },
+        moreChildren: {
+          title: 'Ko\'proq bolalar',
+          description: 'Ko\'proq o\'quvchilarni o\'qitish imkoniyati'
+        },
+        expansion: {
+          title: 'Dasturlarni kengaytirish',
+          description: 'Yangi kurslar va chuqurlashtirilgan o\'qitish dasturlari'
+        },
+        transparency: {
+          title: 'Shaffoflik',
+          description: 'Mablag\'larning sarflanishi bo\'yicha to\'liq hisobot'
+        }
+      },
+      cta: {
+        title: 'Loyihani qo\'llab-quvvatlashga tayyormisiz?',
+        subtitle: 'Bizga Telegram orqali yozing va biz o\'tkazma uchun rekvizitlarni taqdim etamiz, shuningdek, mablag\'laringizning sarflanishi bo\'yicha to\'liq hisobot yuboramiz.',
+        button: 'Qo\'llab-quvvatlash haqida yozish'
+      }
+    },
+
     // Contact Form
     contact: {
       title: 'Darsga yozilish',
@@ -447,6 +643,104 @@ export const translations = {
       placeholder: {
         title: 'Photos will be added soon',
         description: 'We actively photograph our classes and projects. Real photos of our students at work will appear here soon!'
+      }
+    },
+
+    // Reviews Section
+    reviews: {
+      title: 'Parent Reviews',
+      subtitle: 'Find out what our students\' parents say about classes at Kids Tech Lab',
+      achievements: {
+        title: 'Our Achievements',
+        satisfiedChildren: 'Satisfied Children',
+        free: 'Free',
+        classesHeld: 'Classes Held'
+      }
+    },
+
+    // FAQ Section
+    faq: {
+      title: 'Frequently Asked Questions',
+      subtitle: 'Answers to the most popular questions about our courses and learning format',
+      questions: [
+        {
+          question: 'From what age can one start learning?',
+          answer: 'We accept children from 8 to 12 years old. For each age, we select an appropriate level of difficulty and learning pace. Younger children learn the basics through games and simple projects, while older children can work on more complex tasks.'
+        },
+        {
+          question: 'Are any special knowledge or skills required?',
+          answer: 'No special knowledge is required! We start from the very basics and gradually complicate the material. The main thing is the child\'s interest in technology and readiness to learn new things.'
+        },
+        {
+          question: 'What do you need to bring to classes?',
+          answer: 'We provide all necessary equipment and materials. The child only needs to bring a good mood and desire to learn! If you have your own laptop, you can bring it for convenience.'
+        },
+        {
+          question: 'How often do classes take place?',
+          answer: 'Classes are held 1-2 times a week for 2 hours. We select a convenient time for each group.'
+        },
+        {
+          question: 'How much does the training cost?',
+          answer: 'All courses are absolutely free! We do not charge any fees for training. Our goal is to make IT education accessible to all children.'
+        },
+        {
+          question: 'Can parents attend classes?',
+          answer: 'Of course! We welcome parent participation, especially in the first classes. This helps the child feel comfortable, and parents understand what their child is doing.'
+        },
+        {
+          question: 'What to do if a child missed a class?',
+          answer: 'We are always ready to help catch up on missed material. We can explain the topic additionally. The main thing is not to fall behind the group!'
+        },
+        {
+          question: 'Can I pick up my child early?',
+          answer: 'Yes, of course. If you need to pick up your child early, just let us know in advance. We understand that parents may have different circumstances.'
+        },
+        {
+          question: 'What does a child receive after completing the course?',
+          answer: 'After completing the course, each child receives a certificate of completion and all projects they created. We also give recommendations for further development in the field of technology.'
+        }
+      ]
+    },
+
+    // Donations Section
+    donations: {
+      title: 'Support Our Project',
+      subtitle: 'Our mission is to make modern technologies accessible to every child. Your support will help us develop the project and educate more children.',
+      whySupport: {
+        title: 'Why do we ask for support?',
+        description: 'Although our courses are completely free for children, we face constant expenses for equipment, materials and project development.',
+        materials: 'Every donation goes to purchase consumables for 3D printers, electronic components, sensors and other learning materials.',
+        transparency: 'We guarantee full transparency: every donor receives a detailed report on how their funds were used.'
+      },
+      howToHelp: {
+        title: 'How can you help?',
+        financial: 'Financial support for any amount',
+        equipment: 'Transfer of equipment in good condition',
+        sharing: 'Sharing information about our project'
+      },
+      benefits: {
+        title: 'What your funds go towards',
+        materials: {
+          title: 'Consumables',
+          description: 'Plastic for 3D printing, electronic components, sensors'
+        },
+        moreChildren: {
+          title: 'More Children',
+          description: 'Opportunity to educate more students'
+        },
+        expansion: {
+          title: 'Program Expansion',
+          description: 'New courses and advanced training programs'
+        },
+        transparency: {
+          title: 'Transparency',
+          description: 'Full report on the expenditure of funds'
+        }
+      },
+      cta: {
+        title: 'Ready to support the project?',
+        subtitle: 'Write to us on Telegram, and we will provide transfer details, as well as send a full report on the expenditure of your funds.',
+        button: 'Write about support'
       }
     },
 
