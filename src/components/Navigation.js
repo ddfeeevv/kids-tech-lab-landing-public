@@ -29,7 +29,7 @@ const Navigation = ({ showBackButton = false, onBack }) => {
 
   const languages = [
     { code: 'ru', name: 'Русский', flag: '🇷🇺' },
-    { code: 'uz', name: 'O'zbekcha', flag: '🇺🇿' },
+    { code: 'uz', name: "O'zbekcha", flag: '🇺🇿' },
     { code: 'en', name: 'English', flag: '🇺🇸' }
   ];
 
