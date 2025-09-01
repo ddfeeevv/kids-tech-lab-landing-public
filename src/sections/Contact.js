@@ -8,14 +8,18 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
-    email: '',
     childName: '',
     childAge: '',
     interests: '',
     message: ''
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSending, setIsSending] = useState(false);
+  const [sendError, setSendError] = useState('');
   const [ageError, setAgeError] = useState('');
+  const [nameError, setNameError] = useState('');
+  const [phoneError, setPhoneError] = useState('');
+  const [childNameError, setChildNameError] = useState('');
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -36,17 +40,76 @@ const Contact = () => {
     }
   };
 
+  // Валидация имени (без цифр)
+  const validateName = (name) => {
+    return !/\d/.test(name);
+  };
+
+  // Валидация узбекского номера телефона
+  const validateUzbekPhone = (phone) => {
+    // Убираем все пробелы, дефисы и плюсы
+    const cleanPhone = phone.replace(/[\s\-\+]/g, '');
+    
+    // Проверяем различные форматы:
+    // 998XXXXXXXXX (12 цифр, начинается с 998)
+    // 90XXXXXXXX (9 цифр, начинается с 90)
+    // 907882475 (9 цифр, начинается с 90)
+    
+    if (cleanPhone.length === 12 && cleanPhone.startsWith('998')) {
+      return /^998[0-9]{9}$/.test(cleanPhone);
+    } else if (cleanPhone.length === 9 && cleanPhone.startsWith('90')) {
+      return /^90[0-9]{7}$/.test(cleanPhone);
+    }
+    
+    return false;
+  };
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     
     if (name === 'childAge') {
-      const age = parseInt(value);
+      // Проверяем, что введены только цифры
       if (value === '') {
         setAgeError('');
-      } else if (isNaN(age) || age < 8 || age > 12) {
-        setAgeError('Мы занимаемся только с детьми от 8 до 12 лет');
+      } else if (!/^\d+$/.test(value)) {
+        setAgeError(t('contact.form.ageNumberError'));
       } else {
-        setAgeError('');
+        const age = parseInt(value);
+        if (age < 8 || age > 12) {
+          setAgeError(t('contact.form.ageError'));
+        } else {
+          setAgeError('');
+        }
+      }
+    }
+
+    if (name === 'name') {
+      if (value === '') {
+        setNameError('');
+      } else if (!validateName(value)) {
+        setNameError(t('contact.form.nameError'));
+      } else {
+        setNameError('');
+      }
+    }
+
+    if (name === 'childName') {
+      if (value === '') {
+        setChildNameError('');
+      } else if (!validateName(value)) {
+        setChildNameError(t('contact.form.nameError'));
+      } else {
+        setChildNameError('');
+      }
+    }
+
+    if (name === 'phone') {
+      if (value === '') {
+        setPhoneError('');
+      } else if (!validateUzbekPhone(value)) {
+        setPhoneError(t('contact.form.phoneError'));
+      } else {
+        setPhoneError('');
       }
     }
     
@@ -59,31 +122,110 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Проверяем возраст перед отправкой
-    const age = parseInt(formData.childAge);
-    if (isNaN(age) || age < 8 || age > 12) {
-      setAgeError('Мы занимаемся только с детьми от 8 до 12 лет');
+    // Проверяем все поля перед отправкой
+    if (!/^\d+$/.test(formData.childAge)) {
+      setAgeError(t('contact.form.ageNumberError'));
       return;
     }
     
-    // Здесь будет отправка данных в Telegram бота
+    const age = parseInt(formData.childAge);
+    if (age < 8 || age > 12) {
+      setAgeError(t('contact.form.ageError'));
+      return;
+    }
+
+          if (!validateName(formData.name)) {
+        setNameError(t('contact.form.nameError'));
+        return;
+      }
+
+      if (!validateName(formData.childName)) {
+        setChildNameError(t('contact.form.nameError'));
+        return;
+      }
+
+    if (!validateUzbekPhone(formData.phone)) {
+      setPhoneError(t('contact.form.phoneError'));
+      return;
+    }
+    
+    // Нормализуем номер телефона для отправки
+    const normalizePhone = (phone) => {
+      const cleanPhone = phone.replace(/[\s\-\+]/g, '');
+      if (cleanPhone.length === 12 && cleanPhone.startsWith('998')) {
+        return `+${cleanPhone}`;
+      } else if (cleanPhone.length === 9 && cleanPhone.startsWith('90')) {
+        return `+998${cleanPhone}`;
+      }
+      return phone;
+    };
+
+    // Формируем сообщение для Telegram
     const message = `
-Новая заявка на запись в Kids Tech Lab:
+<b>🚀 Новая заявка на запись в Kids Tech Lab</b>
 
-👤 Родитель: ${formData.name}
-📞 Телефон: ${formData.phone}
-📧 Email: ${formData.email}
+👤 <b>Родитель:</b> ${formData.name}
+📞 <b>Телефон:</b> ${normalizePhone(formData.phone)}
 
-👶 Ребенок: ${formData.childName}
-🎂 Возраст: ${formData.childAge}
-🎯 Интересы: ${formData.interests}
+👶 <b>Ребенок:</b> ${formData.childName}
+🎂 <b>Возраст:</b> ${formData.childAge}
+🎯 <b>Интересы:</b> ${formData.interests}
 
-💬 Сообщение: ${formData.message}
+💬 <b>Сообщение:</b> ${formData.message}
+
+⏰ <i>Время отправки: ${new Date().toLocaleString('ru-RU')}</i>
     `;
 
-    const telegramUrl = `https://t.me/ddfeeevv?text=${encodeURIComponent(message)}`;
-    window.open(telegramUrl, '_blank');
-    setIsSubmitted(true);
+    // Логируем данные заявки
+    console.log('Новая заявка:', {
+      parent: formData.name,
+      phone: normalizePhone(formData.phone),
+      child: formData.childName,
+      age: formData.childAge,
+      interests: formData.interests,
+      message: formData.message,
+      timestamp: new Date().toISOString()
+    });
+    
+    // Отправляем заявку через Telegram Bot API
+    setIsSending(true);
+    setSendError('');
+    
+    const sendToTelegram = async () => {
+      const botToken = '8009379238:AAHAfQPUDqIH4kXtr067oHI2IBuzH3_JUOU';
+      const chatId = '653776241'; // Ваш ID из BotFather
+      
+      try {
+        const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            chat_id: chatId,
+            text: message,
+            parse_mode: 'HTML'
+          })
+        });
+        
+        if (response.ok) {
+          console.log('Заявка успешно отправлена в Telegram');
+          setIsSending(false);
+          setIsSubmitted(true);
+        } else {
+          console.error('Ошибка отправки в Telegram:', response.status);
+          setSendError(t('contact.form.sendError'));
+          setIsSending(false);
+        }
+      } catch (error) {
+        console.error('Ошибка при отправке в Telegram:', error);
+        setSendError(t('contact.form.sendError'));
+        setIsSending(false);
+      }
+    };
+    
+    // Отправляем заявку
+    sendToTelegram();
   };
 
   const contactInfo = [
@@ -104,8 +246,8 @@ const Contact = () => {
     {
       icon: MapPin,
       title: t('contact.info.address'),
-      value: "2-й проезд Хамроз, 10А, Мирабадский район",
-      link: "https://maps.google.com/?q=2-й+проезд+Хамроз,+10А,+Мирабадский+район",
+      value: t('contact.info.addressValue'),
+      link: "https://maps.google.com/?q=2nd+Hamroz+Lane,+10A,+Mirabad+District",
       color: "from-orange-500 to-red-500"
     },
     {
@@ -129,11 +271,10 @@ const Contact = () => {
           >
             <CheckCircle size={80} className="text-green-500 mx-auto mb-6" />
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Заявка отправлена!
+              {t('contact.form.success.title')}
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              Спасибо за интерес к нашим курсам! Мы свяжемся с вами в ближайшее время 
-              для обсуждения деталей записи.
+              {t('contact.form.success.message')}
             </p>
             <motion.button
               onClick={() => setIsSubmitted(false)}
@@ -141,7 +282,7 @@ const Contact = () => {
               whileTap={{ scale: 0.95 }}
               className="btn-primary"
             >
-              Отправить еще одну заявку
+              {t('contact.form.success.again')}
             </motion.button>
           </motion.div>
         </div>
@@ -160,7 +301,7 @@ const Contact = () => {
           viewport={{ once: true, amount: 0.3 }}
           className="text-center mb-16"
         >
-                    <motion.h2 
+          <motion.h2 
             variants={itemVariants}
             className="text-4xl font-bold text-gray-900 mb-6"
           >
@@ -200,9 +341,14 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 ${
+                        nameError ? 'border-red-500' : 'border-gray-300'
+                      }`}
                       placeholder={t('contact.form.parentNamePlaceholder')}
                     />
+                    {nameError && (
+                      <p className="mt-2 text-sm text-red-600">{nameError}</p>
+                    )}
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -214,24 +360,15 @@ const Contact = () => {
                       value={formData.phone}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 ${
+                        phoneError ? 'border-red-500' : 'border-gray-300'
+                      }`}
                       placeholder={t('contact.form.phonePlaceholder')}
                     />
+                    {phoneError && (
+                      <p className="mt-2 text-sm text-red-600">{phoneError}</p>
+                    )}
                   </div>
-                </div>
-
-                <div>
-                                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                      {t('contact.form.email')}
-                    </label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
-                                          placeholder={t('contact.form.emailPlaceholder')}
-                  />
                 </div>
 
                 {/* Child Info */}
@@ -246,37 +383,42 @@ const Contact = () => {
                       value={formData.childName}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 ${
+                        childNameError ? 'border-red-500' : 'border-gray-300'
+                      }`}
                       placeholder={t('contact.form.childNamePlaceholder')}
                     />
+                    {childNameError && (
+                      <p className="mt-2 text-sm text-red-600">{childNameError}</p>
+                    )}
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       {t('contact.form.childAge')}
                     </label>
                     <input
-                      type="number"
+                      type="text"
+                      inputMode="numeric"
                       name="childAge"
                       value={formData.childAge}
                       onChange={handleInputChange}
-                      min="8"
-                      max="12"
+                      maxLength="2"
                       required
-                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none ${
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 ${
                         ageError ? 'border-red-500' : 'border-gray-300'
                       }`}
                       placeholder={t('contact.form.agePlaceholder')}
                     />
                     {ageError && (
-                      <p className="mt-2 text-sm text-red-600">{t('contact.form.ageError')}</p>
+                      <p className="mt-2 text-sm text-red-600">{ageError}</p>
                     )}
                   </div>
                 </div>
 
                 <div>
-                                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                      {t('contact.form.interests')}
-                    </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    {t('contact.form.interests')}
+                  </label>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {[
                       { value: "3d-printing", label: t('courseCards.3d-printing.title'), icon: "🖨️" },
@@ -310,9 +452,9 @@ const Contact = () => {
                 </div>
 
                 <div>
-                                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                      {t('contact.form.message')}
-                    </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    {t('contact.form.message')}
+                  </label>
                   <textarea
                     name="message"
                     value={formData.message}
@@ -325,13 +467,29 @@ const Contact = () => {
 
                 <motion.button
                   type="submit"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full btn-primary flex items-center justify-center space-x-2"
+                  disabled={isSending}
+                  whileHover={{ scale: isSending ? 1 : 1.02 }}
+                  whileTap={{ scale: isSending ? 1 : 0.98 }}
+                  className={`w-full btn-primary flex items-center justify-center space-x-2 ${
+                    isSending ? 'opacity-75 cursor-not-allowed' : ''
+                  }`}
                 >
-                  <Send size={20} />
-                  <span>{t('contact.form.submit')}</span>
+                  {isSending ? (
+                    <>
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                      <span>{t('contact.form.sending')}</span>
+                    </>
+                  ) : (
+                    <>
+                      <Send size={20} />
+                      <span>{t('contact.form.submit')}</span>
+                    </>
+                  )}
                 </motion.button>
+                
+                {sendError && (
+                  <p className="mt-2 text-sm text-red-600 text-center">{t('contact.form.sendError')}</p>
+                )}
               </form>
             </motion.div>
           </motion.div>
