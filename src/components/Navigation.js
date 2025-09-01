@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X, MessageCircle, ArrowLeft } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Navigation = ({ showBackButton = false, onBack }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [currentLanguage, setCurrentLanguage] = useState('ru');
   const [showLanguageMenu, setShowLanguageMenu] = useState(false);
+  const { currentLanguage, changeLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,14 +35,9 @@ const Navigation = ({ showBackButton = false, onBack }) => {
   ];
 
   const navItems = [
-    { name: 'О нас', href: '#about' },
-    { name: 'Курсы', href: '#courses' },
-    { name: 'Формат', href: '#format' },
-    { name: 'Галерея', href: '#gallery' },
-    { name: 'Отзывы', href: '#reviews' },
-    { name: 'FAQ', href: '#faq' },
-    { name: 'Поддержка', href: '#donations' },
-    { name: 'Контакты', href: '#contact' },
+    { name: t('nav.courses'), href: '#courses' },
+    { name: t('nav.about'), href: '#about' },
+    { name: t('nav.contacts'), href: '#contact' },
   ];
 
   return (
@@ -113,10 +109,10 @@ const Navigation = ({ showBackButton = false, onBack }) => {
                   {languages.map((language) => (
                     <button
                       key={language.code}
-                      onClick={() => {
-                        setCurrentLanguage(language.code);
-                        setShowLanguageMenu(false);
-                      }}
+                                             onClick={() => {
+                         changeLanguage(language.code);
+                         setShowLanguageMenu(false);
+                       }}
                       className={`w-full flex items-center space-x-3 px-4 py-2 text-left hover:bg-gray-50 transition-colors duration-200 ${
                         currentLanguage === language.code ? 'bg-primary-50 text-primary-600' : 'text-gray-700'
                       }`}
@@ -138,7 +134,7 @@ const Navigation = ({ showBackButton = false, onBack }) => {
               className="btn-primary flex items-center space-x-2"
             >
               <MessageCircle size={20} />
-              <span>Написать в Telegram</span>
+              <span>{t('nav.writeTelegram')}</span>
             </motion.a>
           </div>
 
@@ -180,10 +176,10 @@ const Navigation = ({ showBackButton = false, onBack }) => {
                   {languages.map((language) => (
                     <button
                       key={language.code}
-                      onClick={() => {
-                        setCurrentLanguage(language.code);
-                        setIsOpen(false);
-                      }}
+                                             onClick={() => {
+                         changeLanguage(language.code);
+                         setIsOpen(false);
+                       }}
                       className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-colors duration-200 ${
                         currentLanguage === language.code 
                           ? 'bg-primary-100 text-primary-600' 
@@ -204,7 +200,7 @@ const Navigation = ({ showBackButton = false, onBack }) => {
                 className="block px-3 py-2 btn-primary text-center"
                 onClick={() => setIsOpen(false)}
               >
-                Написать в Telegram
+                {t('nav.writeTelegram')}
               </a>
             </div>
           </motion.div>
