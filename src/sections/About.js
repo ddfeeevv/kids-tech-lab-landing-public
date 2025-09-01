@@ -89,7 +89,7 @@ const About = () => {
               >
                 <div className="text-center">
                   <User size={120} className="text-primary-600 mx-auto mb-4" />
-                  <p className="text-gray-500 text-lg">Фото преподавателя</p>
+                  <p className="text-gray-500 text-lg">{t('about.teacherPhoto')}</p>
                 </div>
               </motion.div>
 
@@ -137,10 +137,9 @@ const About = () => {
           className="mt-16 text-center"
         >
           <div className="bg-gradient-to-r from-primary-600 to-secondary-600 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">Моя миссия</h3>
+            <h3 className="text-2xl font-bold mb-4">{t('about.mission.title')}</h3>
             <p className="text-lg opacity-90 max-w-3xl mx-auto">
-              Вдохновлять детей на изучение технологий, развивать их творческое мышление 
-              и готовить к цифровому будущему через практические проекты и веселые эксперименты.
+              {t('about.mission.description')}
             </p>
           </div>
         </motion.div>

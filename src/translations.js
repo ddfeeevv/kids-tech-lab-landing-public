@@ -31,7 +31,12 @@ export const translations = {
         homeLabel: 'уютная атмосфера',
         free: 'бесплатно',
         classesHeld: 'проведенных занятий'
-      }
+      },
+      mission: {
+        title: 'Моя миссия',
+        description: 'Вдохновлять детей на изучение технологий, развивать их творческое мышление и готовить к цифровому будущему через практические проекты и веселые эксперименты.'
+      },
+      teacherPhoto: 'Фото преподавателя'
     },
     
     // Courses Section
@@ -380,7 +385,12 @@ export const translations = {
         homeLabel: 'qulay muhit',
         free: 'bepul',
         classesHeld: 'o\'tkazilgan darslar'
-      }
+      },
+      mission: {
+        title: 'Mening vazifam',
+        description: 'Bolalarni texnologiyalarni o\'rganishga ilhomlantirish, ularning ijodiy fikrlashini rivojlantirish va amaliy loyihalar va qiziqarli tajribalar orqali raqamli kelajakka tayyorgarlik ko\'rsatish.'
+      },
+      teacherPhoto: 'O\'qituvchi fotosi'
     },
     
     // Courses Section
@@ -729,7 +739,12 @@ export const translations = {
         homeLabel: 'cozy atmosphere',
         free: 'free',
         classesHeld: 'classes held'
-      }
+      },
+      mission: {
+        title: 'My Mission',
+        description: 'To inspire children to learn technologies, develop their creative thinking and prepare them for a digital future through practical projects and fun experiments.'
+      },
+      teacherPhoto: 'Teacher Photo'
     },
     
     // Courses Section
