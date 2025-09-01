@@ -34,11 +34,7 @@ const Navigation = ({ showBackButton = false, onBack }) => {
     { code: 'en', name: 'English', flag: '🇺🇸' }
   ];
 
-  const navItems = [
-    { name: t('nav.courses'), href: '#courses' },
-    { name: t('nav.about'), href: '#about' },
-    { name: t('nav.contacts'), href: '#contact' },
-  ];
+
 
   return (
     <motion.nav
@@ -49,11 +45,11 @@ const Navigation = ({ showBackButton = false, onBack }) => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-center h-16 min-h-[4rem] py-2 relative">
+        <div className="flex items-center justify-between h-16 min-h-[4rem] py-2">
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="flex items-center space-x-2 absolute left-0"
+            className="flex items-center space-x-2"
           >
             {showBackButton && (
               <motion.button
@@ -73,7 +69,11 @@ const Navigation = ({ showBackButton = false, onBack }) => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
-            {navItems.map((item) => (
+            {[
+              { name: t('nav.courses'), href: '#courses' },
+              { name: t('nav.about'), href: '#about' },
+              { name: t('nav.contacts'), href: '#contact' },
+            ].map((item) => (
               <a
                 key={item.name}
                 href={item.href}
@@ -139,7 +139,7 @@ const Navigation = ({ showBackButton = false, onBack }) => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden absolute right-0">
+          <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-600 hover:text-primary-600 transition-colors duration-200"
@@ -158,7 +158,11 @@ const Navigation = ({ showBackButton = false, onBack }) => {
             className="md:hidden bg-white/95 backdrop-blur-md rounded-lg mt-2 shadow-lg"
           >
             <div className="px-2 pt-2 pb-3 space-y-1">
-              {navItems.map((item) => (
+              {[
+                { name: t('nav.courses'), href: '#courses' },
+                { name: t('nav.about'), href: '#about' },
+                { name: t('nav.contacts'), href: '#contact' },
+              ].map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
