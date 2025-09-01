@@ -200,7 +200,7 @@ const Contact = () => {
                       onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
-                      placeholder="Иван Иванов"
+                      placeholder="Данил Феев"
                     />
                   </div>
                   <div>
@@ -214,7 +214,7 @@ const Contact = () => {
                       onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
-                      placeholder="+7 (999) 123-45-67"
+                      placeholder="+998 90 788 24 75"
                     />
                   </div>
                 </div>
@@ -229,7 +229,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
-                    placeholder="ivan@example.com"
+                                          placeholder="danil@example.com"
                   />
                 </div>
 
@@ -246,7 +246,7 @@ const Contact = () => {
                       onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
-                      placeholder="Алексей"
+                      placeholder="Алишер"
                     />
                   </div>
                   <div>
