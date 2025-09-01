@@ -13,6 +13,7 @@ const Contact = () => {
     message: ''
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [ageError, setAgeError] = useState('');
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -34,14 +35,35 @@ const Contact = () => {
   };
 
   const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    
+    if (name === 'childAge') {
+      const age = parseInt(value);
+      if (value === '') {
+        setAgeError('');
+      } else if (isNaN(age) || age < 8 || age > 12) {
+        setAgeError('Мы занимаемся только с детьми от 8 до 12 лет');
+      } else {
+        setAgeError('');
+      }
+    }
+    
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [name]: value
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    // Проверяем возраст перед отправкой
+    const age = parseInt(formData.childAge);
+    if (isNaN(age) || age < 8 || age > 12) {
+      setAgeError('Мы занимаемся только с детьми от 8 до 12 лет');
+      return;
+    }
+    
     // Здесь будет отправка данных в Telegram бота
     const message = `
 Новая заявка на запись в Kids Tech Lab:
@@ -231,30 +253,22 @@ const Contact = () => {
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       Возраст ребенка *
                     </label>
-                    <div className="flex flex-wrap gap-2">
-                      {[8, 9, 10, 11, 12].map((age) => (
-                        <label key={age} className="flex items-center px-4 py-2 border border-gray-300 rounded-lg hover:bg-primary-50 cursor-pointer transition-all duration-200">
-                          <input
-                            type="radio"
-                            name="childAge"
-                            value={age}
-                            checked={formData.childAge === age.toString()}
-                            onChange={handleInputChange}
-                            className="sr-only"
-                          />
-                          <div className={`w-4 h-4 rounded-full border-2 mr-2 flex items-center justify-center ${
-                            formData.childAge === age.toString() 
-                              ? 'border-primary-500 bg-primary-500' 
-                              : 'border-gray-300'
-                          }`}>
-                            {formData.childAge === age.toString() && (
-                              <div className="w-2 h-2 bg-white rounded-full"></div>
-                            )}
-                          </div>
-                          <span className="text-gray-700 text-sm">{age} лет</span>
-                        </label>
-                      ))}
-                    </div>
+                    <input
+                      type="number"
+                      name="childAge"
+                      value={formData.childAge}
+                      onChange={handleInputChange}
+                      min="8"
+                      max="12"
+                      required
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 ${
+                        ageError ? 'border-red-500' : 'border-gray-300'
+                      }`}
+                      placeholder="Введите возраст от 8 до 12"
+                    />
+                    {ageError && (
+                      <p className="mt-2 text-sm text-red-600">{ageError}</p>
+                    )}
                   </div>
                 </div>
 
