@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Users, Clock, Calendar, MapPin, Coffee, Wifi, Car, Heart } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Format = () => {
+  const { t } = useLanguage();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -25,30 +27,30 @@ const Format = () => {
   const formatDetails = [
     {
       icon: Users,
-      title: "Размер группы",
-      description: "6-10 детей",
-      details: "Небольшие группы позволяют уделить внимание каждому ребенку и создать комфортную атмосферу для обучения",
+      title: t('format.details.groupSize.title'),
+      description: t('format.details.groupSize.description'),
+      details: t('format.details.groupSize.details'),
       color: "from-blue-500 to-cyan-500"
     },
     {
       icon: Clock,
-      title: "Длительность",
-      description: "2 часа в день",
-      details: "Оптимальное время для концентрации внимания детей с перерывами на отдых и игры",
+      title: t('format.details.duration.title'),
+      description: t('format.details.duration.description'),
+      details: t('format.details.duration.details'),
       color: "from-green-500 to-emerald-500"
     },
     {
       icon: Calendar,
-      title: "График",
-      description: "Гибкий расписание",
-      details: "Занятия проводятся в удобное время для детей и родителей, включая выходные дни",
+      title: t('format.details.schedule.title'),
+      description: t('format.details.schedule.description'),
+      details: t('format.details.schedule.details'),
       color: "from-orange-500 to-red-500"
     },
     {
       icon: MapPin,
-      title: "Место",
-      description: "Домашняя атмосфера",
-      details: "Уютная обстановка в доме преподавателя создает комфортную среду для обучения",
+      title: t('format.details.location.title'),
+      description: t('format.details.location.description'),
+      details: t('format.details.location.details'),
       color: "from-purple-500 to-pink-500"
     }
   ];
@@ -83,14 +85,13 @@ const Format = () => {
             variants={itemVariants}
             className="text-4xl font-bold text-gray-900 mb-6"
           >
-            Формат занятий
+            {t('format.title')}
           </motion.h2>
           <motion.p 
             variants={itemVariants}
             className="text-xl text-gray-600 max-w-3xl mx-auto"
           >
-            Создаем комфортную и эффективную среду для обучения, где каждый ребенок 
-            может раскрыть свой потенциал
+            {t('format.subtitle')}
           </motion.p>
         </motion.div>
 
@@ -132,10 +133,9 @@ const Format = () => {
           className="mt-16 text-center"
         >
           <div className="bg-gradient-to-r from-primary-600 to-secondary-600 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">Готовы начать обучение?</h3>
+            <h3 className="text-2xl font-bold mb-4">{t('format.cta.title')}</h3>
             <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
-              Запишитесь на пробное занятие и убедитесь, что вашему ребенку понравится 
-              изучать технологии в нашей уютной атмосфере
+              {t('format.cta.subtitle')}
             </p>
             <motion.a
               href="https://t.me/ddfeeevv"
@@ -145,7 +145,7 @@ const Format = () => {
               whileTap={{ scale: 0.95 }}
               className="inline-block bg-white text-primary-600 font-semibold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              Записаться на пробное занятие
+              {t('format.cta.button')}
             </motion.a>
           </div>
         </motion.div>

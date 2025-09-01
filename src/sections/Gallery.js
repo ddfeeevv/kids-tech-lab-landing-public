@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Camera, Users, Cpu, Printer, Blocks } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Gallery = () => {
+  const { t } = useLanguage();
 
 
   const containerVariants = {
@@ -97,18 +99,17 @@ const Gallery = () => {
           viewport={{ once: true, amount: 0.3 }}
           className="text-center mb-16"
         >
-          <motion.h2 
+                    <motion.h2 
             variants={itemVariants}
             className="text-4xl font-bold text-gray-900 mb-6"
           >
-            Фотогалерея
+            {t('gallery.title')}
           </motion.h2>
           <motion.p 
             variants={itemVariants}
             className="text-xl text-gray-600 max-w-3xl mx-auto"
           >
-            Посмотрите, как проходят наши занятия и какие удивительные проекты 
-            создают наши ученики
+            {t('gallery.subtitle')}
           </motion.p>
         </motion.div>
 
@@ -168,11 +169,10 @@ const Gallery = () => {
           <div className="bg-white rounded-2xl p-8 shadow-lg max-w-2xl mx-auto">
             <Camera size={48} className="text-primary-600 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-gray-900 mb-2">
-              Фотографии будут добавлены скоро
+              {t('gallery.placeholder.title')}
             </h3>
             <p className="text-gray-600">
-              Мы активно фотографируем наши занятия и проекты. 
-              Скоро здесь появятся реальные фотографии наших учеников за работой!
+              {t('gallery.placeholder.description')}
             </p>
           </div>
         </motion.div>

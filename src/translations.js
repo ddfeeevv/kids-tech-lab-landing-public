@@ -81,6 +81,49 @@ export const translations = {
       }
     },
     
+    // Format Section
+    format: {
+      title: 'Формат занятий',
+      subtitle: 'Создаем комфортную и эффективную среду для обучения, где каждый ребенок может раскрыть свой потенциал',
+      details: {
+        groupSize: {
+          title: 'Размер группы',
+          description: '6-10 детей',
+          details: 'Небольшие группы позволяют уделить внимание каждому ребенку и создать комфортную атмосферу для обучения'
+        },
+        duration: {
+          title: 'Длительность',
+          description: '2 часа в день',
+          details: 'Оптимальное время для концентрации внимания детей с перерывами на отдых и игры'
+        },
+        schedule: {
+          title: 'График',
+          description: 'Гибкий расписание',
+          details: 'Занятия проводятся в удобное время для детей и родителей, включая выходные дни'
+        },
+        location: {
+          title: 'Место',
+          description: 'Домашняя атмосфера',
+          details: 'Уютная обстановка в доме преподавателя создает комфортную среду для обучения'
+        }
+      },
+      cta: {
+        title: 'Готовы начать обучение?',
+        subtitle: 'Запишитесь на пробное занятие и убедитесь, что вашему ребенку понравится изучать технологии в нашей уютной атмосфере',
+        button: 'Записаться на пробное занятие'
+      }
+    },
+
+    // Gallery Section
+    gallery: {
+      title: 'Фотогалерея',
+      subtitle: 'Посмотрите, как проходят наши занятия и какие удивительные проекты создают наши ученики',
+      placeholder: {
+        title: 'Фотографии будут добавлены скоро',
+        description: 'Мы активно фотографируем наши занятия и проекты. Скоро здесь появятся реальные фотографии наших учеников за работой!'
+      }
+    },
+
     // Contact Form
     contact: {
       title: 'Записаться на занятие',
@@ -201,6 +244,49 @@ export const translations = {
       }
     },
     
+    // Format Section
+    format: {
+      title: 'Darslar formati',
+      subtitle: 'Har bir bola o\'z potensialini ochishga imkon beradigan qulay va samarali o\'qitish muhitini yaratamiz',
+      details: {
+        groupSize: {
+          title: 'Guruh hajmi',
+          description: '6-10 bola',
+          details: 'Kichik guruhlar har bir bolaga e\'tibor berish va qulay o\'qitish muhitini yaratish imkonini beradi'
+        },
+        duration: {
+          title: 'Davomiyligi',
+          description: 'Kuniga 2 soat',
+          details: 'Bolalarning diqqatini jamlash uchun optimal vaqt, dam olish va o\'yinlar bilan tanaffuslar'
+        },
+        schedule: {
+          title: 'Jadval',
+          description: 'Moslashuvchan jadval',
+          details: 'Darslar bolalar va ota-onalar uchun qulay vaqtda, shu jumladan dam olish kunlarida o\'tkaziladi'
+        },
+        location: {
+          title: 'Joy',
+          description: 'Uy muhiti',
+          details: 'O\'qituvchining uyidagi qulay muhit o\'qitish uchun qulay muhit yaratadi'
+        }
+      },
+      cta: {
+        title: 'O\'qishni boshlashga tayyormisiz?',
+        subtitle: 'Sinov darsiga yoziling va bolangiz bizning qulay muhitda texnologiyalarni o\'rganishni yoqtirishiga ishonch hosil qiling',
+        button: 'Sinov darsiga yozilish'
+      }
+    },
+
+    // Gallery Section
+    gallery: {
+      title: 'Fotogalereya',
+      subtitle: 'Darslarimiz qanday o\'tayotganini va o\'quvchilarimiz qanday ajoyib loyihalar yaratayotganini ko\'ring',
+      placeholder: {
+        title: 'Fotolar tez orada qo\'shiladi',
+        description: 'Biz darslarimiz va loyihalarimizni faol ravishda suratga olamiz. Tez orada o\'quvchilarimizning ishlayotgan haqiqiy fotolari paydo bo\'ladi!'
+      }
+    },
+
     // Contact Form
     contact: {
       title: 'Darsga yozilish',
@@ -321,6 +407,49 @@ export const translations = {
       }
     },
     
+    // Format Section
+    format: {
+      title: 'Class Format',
+      subtitle: 'We create a comfortable and effective learning environment where every child can unlock their potential',
+      details: {
+        groupSize: {
+          title: 'Group Size',
+          description: '6-10 children',
+          details: 'Small groups allow us to pay attention to each child and create a comfortable learning atmosphere'
+        },
+        duration: {
+          title: 'Duration',
+          description: '2 hours per day',
+          details: 'Optimal time for children\'s concentration with breaks for rest and games'
+        },
+        schedule: {
+          title: 'Schedule',
+          description: 'Flexible schedule',
+          details: 'Classes are held at convenient times for children and parents, including weekends'
+        },
+        location: {
+          title: 'Location',
+          description: 'Home atmosphere',
+          details: 'A cozy atmosphere in the teacher\'s home creates a comfortable learning environment'
+        }
+      },
+      cta: {
+        title: 'Ready to Start Learning?',
+        subtitle: 'Sign up for a trial lesson and make sure your child enjoys learning technology in our cozy atmosphere',
+        button: 'Sign Up for Trial Lesson'
+      }
+    },
+
+    // Gallery Section
+    gallery: {
+      title: 'Photo Gallery',
+      subtitle: 'See how our classes are held and what amazing projects our students create',
+      placeholder: {
+        title: 'Photos will be added soon',
+        description: 'We actively photograph our classes and projects. Real photos of our students at work will appear here soon!'
+      }
+    },
+
     // Contact Form
     contact: {
       title: 'Sign Up for Class',
