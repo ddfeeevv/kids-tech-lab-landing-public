@@ -102,7 +102,7 @@ const CourseIT = () => {
                 </div>
                 <div className="flex items-center">
                   <Target size={20} className="text-primary-600 mr-2" />
-                  <span className="text-gray-600">6-10 лет</span>
+                  <span className="text-gray-600">8-12 лет</span>
                 </div>
                 <div className="flex items-center">
                   <CheckCircle size={20} className="text-green-600 mr-2" />

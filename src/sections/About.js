@@ -47,7 +47,7 @@ const About = () => {
               </h2>
               <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
                 <p>
-                  Привет! Меня зовут Дмитрий, и я основатель <strong>Kids Tech Lab</strong>. 
+                  Привет! Меня зовут Данил, и я основатель <strong>Kids Tech Lab</strong>. 
                   Я не студент, а энтузиаст IT-технологий, который решил делиться знаниями с 
                   подрастающим поколением <strong>абсолютно бесплатно</strong>.
                 </p>

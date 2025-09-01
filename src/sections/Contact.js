@@ -231,9 +231,9 @@ const Contact = () => {
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       Возраст ребенка *
                     </label>
-                    <div className="grid grid-cols-2 gap-2">
-                      {[6, 7, 8, 9, 10, 11, 12].map((age) => (
-                        <label key={age} className="flex items-center p-3 border border-gray-300 rounded-lg hover:bg-primary-50 cursor-pointer transition-all duration-200">
+                    <div className="flex flex-wrap gap-2">
+                      {[8, 9, 10, 11, 12].map((age) => (
+                        <label key={age} className="flex items-center px-4 py-2 border border-gray-300 rounded-lg hover:bg-primary-50 cursor-pointer transition-all duration-200">
                           <input
                             type="radio"
                             name="childAge"
@@ -242,7 +242,7 @@ const Contact = () => {
                             onChange={handleInputChange}
                             className="sr-only"
                           />
-                          <div className={`w-4 h-4 rounded-full border-2 mr-3 flex items-center justify-center ${
+                          <div className={`w-4 h-4 rounded-full border-2 mr-2 flex items-center justify-center ${
                             formData.childAge === age.toString() 
                               ? 'border-primary-500 bg-primary-500' 
                               : 'border-gray-300'
@@ -251,7 +251,7 @@ const Contact = () => {
                               <div className="w-2 h-2 bg-white rounded-full"></div>
                             )}
                           </div>
-                          <span className="text-gray-700">{age} лет</span>
+                          <span className="text-gray-700 text-sm">{age} лет</span>
                         </label>
                       ))}
                     </div>
@@ -267,8 +267,7 @@ const Contact = () => {
                       { value: "3d-printing", label: "3D-печать", icon: "🖨️" },
                       { value: "arduino", label: "Arduino", icon: "🔧" },
                       { value: "robotics", label: "Робототехника", icon: "🤖" },
-                      { value: "programming", label: "Программирование", icon: "💻" },
-                      { value: "all", label: "Все направления", icon: "🌟" }
+                      { value: "programming", label: "Программирование", icon: "💻" }
                     ].map((option) => (
                       <label key={option.value} className="flex items-center p-4 border border-gray-300 rounded-lg hover:bg-primary-50 cursor-pointer transition-all duration-200">
                         <input

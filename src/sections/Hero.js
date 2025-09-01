@@ -75,7 +75,7 @@ const Hero = () => {
               className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed"
               variants={itemVariants}
             >
-              3D-печать, Arduino и цифровые навыки для детей 6–12 лет
+              3D-печать, Arduino и цифровые навыки для детей 8–12 лет
             </motion.p>
             <motion.div 
               variants={itemVariants}
