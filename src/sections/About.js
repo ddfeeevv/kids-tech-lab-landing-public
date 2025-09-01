@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { User, Users, Home, GraduationCap, Heart } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const About = () => {
+  const { t } = useLanguage();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -43,18 +45,14 @@ const About = () => {
           <motion.div variants={itemVariants} className="space-y-8">
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Обо мне
+                {t('about.title')}
               </h2>
               <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
                 <p>
-                  Привет! Меня зовут Данил, и я основатель <strong>Kids Tech Lab</strong>. 
-                  Я энтузиаст IT-технологий, который решил делиться знаниями с 
-                  подрастающим поколением <strong>абсолютно бесплатно</strong>.
+                  {t('about.description')}
                 </p>
                 <p>
-                  Моя цель — показать детям, что технологии — это не только игры, но и мощный 
-                  инструмент для творчества и решения реальных задач. Каждое занятие — это 
-                  приключение в мире инноваций!
+                  {t('about.goal')}
                 </p>
                 <p>
                   Работаю с <strong>мини-группами 6-10 детей</strong>, что позволяет уделить 

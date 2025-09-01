@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, Sparkles, Cpu, Printer, BookOpen } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Hero = () => {
+  const { t } = useLanguage();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -68,21 +70,21 @@ const Hero = () => {
               whileHover={{ scale: 1.02 }}
             >
               <span className="bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
-                Kids Tech Lab
+                {t('hero.title')}
               </span>
             </motion.h1>
             <motion.p 
               className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed"
               variants={itemVariants}
             >
-              3D-печать, Arduino и цифровые навыки для детей 8–12 лет
+              {t('hero.subtitle')}
             </motion.p>
             <motion.div 
               variants={itemVariants}
               className="mt-4"
             >
               <span className="inline-block bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-2 rounded-full text-lg font-semibold shadow-lg">
-                🎉 100% БЕСПЛАТНО!
+                {t('hero.freeBanner')}
               </span>
             </motion.div>
           </motion.div>
@@ -92,7 +94,7 @@ const Hero = () => {
             variants={itemVariants}
             className="text-lg text-gray-500 max-w-3xl mx-auto"
           >
-            Погружаем детей в мир современных технологий через практические проекты и творческие эксперименты
+            {t('hero.description')}
           </motion.p>
 
           {/* CTA Buttons */}
@@ -106,7 +108,7 @@ const Hero = () => {
               whileTap={{ scale: 0.95 }}
               className="btn-primary text-lg px-8 py-4 shadow-xl"
             >
-              Посмотреть курсы
+              {t('hero.viewCourses')}
             </motion.a>
             <motion.a
               href="https://t.me/ddfeeevv"
@@ -116,7 +118,7 @@ const Hero = () => {
               whileTap={{ scale: 0.95 }}
               className="btn-secondary text-lg px-8 py-4"
             >
-              Записаться на занятие
+              {t('hero.signUp')}
             </motion.a>
           </motion.div>
 
@@ -126,9 +128,9 @@ const Hero = () => {
             className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-16 max-w-4xl mx-auto"
           >
             {[
-              { icon: Cpu, title: "Arduino", desc: "Программирование микроконтроллеров" },
-              { icon: Printer, title: "3D-печать", desc: "Создание объемных моделей" },
-              { icon: BookOpen, title: "IT-грамотность", desc: "Основы работы с компьютером" }
+              { icon: Cpu, title: t('courseCards.arduino.title'), desc: t('courseCards.arduino.description').split('.')[0] },
+              { icon: Printer, title: t('courseCards.3d-printing.title'), desc: t('courseCards.3d-printing.description').split('.')[0] },
+              { icon: BookOpen, title: t('courseCards.it.title'), desc: t('courseCards.it.description').split('.')[0] }
             ].map((feature, index) => (
               <motion.div
                 key={index}
@@ -157,7 +159,7 @@ const Hero = () => {
           className="flex flex-col items-center text-gray-400 cursor-pointer"
           onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
         >
-          <span className="text-sm mb-2">Прокрутите вниз</span>
+          <span className="text-sm mb-2">{t('hero.scrollDown')}</span>
           <ChevronDown size={24} />
         </motion.div>
       </motion.div>

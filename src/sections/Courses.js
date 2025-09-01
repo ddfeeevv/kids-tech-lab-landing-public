@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Printer, Cpu, Blocks, Monitor, Zap, Target, Users, Clock } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Courses = ({ onCourseSelect }) => {
+  const { t } = useLanguage();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -25,9 +27,9 @@ const Courses = ({ onCourseSelect }) => {
   const courses = [
     {
       icon: Printer,
-      title: "3D-печать",
-      description: "Изучаем основы 3D-моделирования и печати. Создаем собственные игрушки, украшения и полезные предметы.",
-      features: ["Tinkercad", "3D-принтер", "Моделирование", "Печать"],
+      title: t('courseCards.3d-printing.title'),
+      description: t('courseCards.3d-printing.description'),
+      features: t('courseCards.3d-printing.features'),
       color: "from-blue-500 to-cyan-500",
       bgColor: "bg-blue-50",
       iconColor: "text-blue-600",
@@ -35,9 +37,9 @@ const Courses = ({ onCourseSelect }) => {
     },
     {
       icon: Cpu,
-      title: "Arduino",
-      description: "Программируем микроконтроллеры, создаем умные устройства и автоматизированные системы.",
-      features: ["Программирование", "Схемы", "Датчики", "Автоматизация"],
+      title: t('courseCards.arduino.title'),
+      description: t('courseCards.arduino.description'),
+      features: t('courseCards.arduino.features'),
       color: "from-green-500 to-emerald-500",
       bgColor: "bg-green-50",
       iconColor: "text-green-600",
@@ -45,9 +47,9 @@ const Courses = ({ onCourseSelect }) => {
     },
     {
       icon: Blocks,
-      title: "Робототехника",
-      description: "Конструируем роботов и механизмы, изучаем принципы работы различных устройств.",
-      features: ["Конструирование", "Робототехника", "Механика", "Логика"],
+      title: t('courseCards.robotics.title'),
+      description: t('courseCards.robotics.description'),
+      features: t('courseCards.robotics.features'),
       color: "from-orange-500 to-red-500",
       bgColor: "bg-orange-50",
       iconColor: "text-orange-600",
@@ -55,9 +57,9 @@ const Courses = ({ onCourseSelect }) => {
     },
     {
       icon: Monitor,
-      title: "IT-грамотность",
-      description: "Изучаем работу с компьютером, безопасность в интернете и основы программирования.",
-      features: ["Компьютер", "Интернет", "Безопасность", "Программирование"],
+      title: t('courseCards.it.title'),
+      description: t('courseCards.it.description'),
+      features: t('courseCards.it.features'),
       color: "from-purple-500 to-pink-500",
       bgColor: "bg-purple-50",
       iconColor: "text-purple-600",
@@ -87,21 +89,20 @@ const Courses = ({ onCourseSelect }) => {
             variants={itemVariants}
             className="text-4xl font-bold text-gray-900 mb-6"
           >
-            Что мы изучаем
+            {t('courses.title')}
           </motion.h2>
           <motion.p 
             variants={itemVariants}
             className="text-xl text-gray-600 max-w-3xl mx-auto"
           >
-            Современные технологии, которые помогут детям 8-12 лет развить логическое мышление, 
-            творческие способности и подготовиться к цифровому будущему
+            {t('courses.subtitle')}
           </motion.p>
           <motion.div 
             variants={itemVariants}
             className="mt-6"
           >
             <span className="inline-block bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-3 rounded-full text-xl font-bold shadow-lg">
-              🎁 ВСЕ КУРСЫ АБСОЛЮТНО БЕСПЛАТНЫ!
+              {t('courses.freeBanner')}
             </span>
           </motion.div>
         </motion.div>
