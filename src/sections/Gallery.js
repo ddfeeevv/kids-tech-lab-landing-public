@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, Camera, Users, Cpu, Printer, Blocks } from 'lucide-react';
 
 const Gallery = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
+
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -132,8 +132,7 @@ const Gallery = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
                 whileHover={{ y: -5 }}
-                onClick={() => setSelectedImage(image)}
-                className="group cursor-pointer"
+                className="group"
               >
                 <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
                   {/* Placeholder Image */}
@@ -144,10 +143,7 @@ const Gallery = () => {
                     </div>
                   </div>
                   
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
-                    <Camera size={32} className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  </div>
+
                   
                   {/* Category Badge */}
                   <div className="absolute top-4 left-4">
@@ -182,41 +178,7 @@ const Gallery = () => {
         </motion.div>
       </div>
 
-      {/* Modal */}
-      <AnimatePresence>
-        {selectedImage && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
-            onClick={() => setSelectedImage(null)}
-          >
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8, opacity: 0 }}
-              className="relative max-w-4xl max-h-full bg-white rounded-2xl overflow-hidden"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <button
-                onClick={() => setSelectedImage(null)}
-                className="absolute top-4 right-4 z-10 bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full p-2 transition-all duration-200"
-              >
-                <X size={24} className="text-gray-600" />
-              </button>
-              
-              <div className={`aspect-video bg-gradient-to-br ${selectedImage.color} flex items-center justify-center`}>
-                <div className="text-center text-white">
-                  <selectedImage.icon size={80} className="mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold mb-2">{selectedImage.category}</h3>
-                  <p className="text-lg opacity-90">{selectedImage.description}</p>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+
     </section>
   );
 };

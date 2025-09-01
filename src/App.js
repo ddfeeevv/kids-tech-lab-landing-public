@@ -7,6 +7,7 @@ import Format from './sections/Format';
 import Gallery from './sections/Gallery';
 import Reviews from './sections/Reviews';
 import FAQ from './sections/FAQ';
+import Donations from './sections/Donations';
 import Contact from './sections/Contact';
 import Course3D from './pages/Course3D';
 import CourseArduino from './pages/CourseArduino';
@@ -36,6 +37,7 @@ function App() {
             <Gallery />
             <Reviews />
             <FAQ />
+            <Donations />
             <Contact />
           </>
         );

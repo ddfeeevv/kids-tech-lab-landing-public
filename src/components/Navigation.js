@@ -21,6 +21,7 @@ const Navigation = ({ showBackButton = false, onBack }) => {
     { name: 'Галерея', href: '#gallery' },
     { name: 'Отзывы', href: '#reviews' },
     { name: 'FAQ', href: '#faq' },
+    { name: 'Поддержка', href: '#donations' },
     { name: 'Контакты', href: '#contact' },
   ];
 
