@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/kids-tech-lab-landing/static/css/main.af8599de.css",
-    "main.js": "/kids-tech-lab-landing/static/js/main.8b8a3bcb.js",
+    "main.js": "/kids-tech-lab-landing/static/js/main.b81b0326.js",
     "index.html": "/kids-tech-lab-landing/index.html",
     "main.af8599de.css.map": "/kids-tech-lab-landing/static/css/main.af8599de.css.map",
-    "main.8b8a3bcb.js.map": "/kids-tech-lab-landing/static/js/main.8b8a3bcb.js.map"
+    "main.b81b0326.js.map": "/kids-tech-lab-landing/static/js/main.b81b0326.js.map"
   },
   "entrypoints": [
     "static/css/main.af8599de.css",
-    "static/js/main.8b8a3bcb.js"
+    "static/js/main.b81b0326.js"
   ]
 }
