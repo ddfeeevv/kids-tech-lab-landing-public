@@ -83,6 +83,49 @@ export const translations = {
         features: ['Компьютер', 'Интернет', 'Безопасность', 'Программирование']
       }
     },
+
+    // Course Pages
+    coursePages: {
+      backToCourses: 'Назад к курсам',
+      free: '🎁 БЕСПЛАТНО!',
+      arduino: {
+        title: 'Arduino',
+        subtitle: 'Изучите основы программирования микроконтроллеров и создавайте умные устройства!',
+        about: {
+          title: 'О курсе',
+          description: 'На этом курсе дети научатся программировать микроконтроллеры Arduino, подключать различные датчики и создавать умные устройства. Мы изучим основы электроники и программирования в простой и понятной форме.',
+          duration: '8 недель',
+          groupSize: '6-10 детей',
+          age: '8-12 лет',
+          price: 'Бесплатно'
+        },
+        learn: {
+          title: 'Чему научитесь',
+          features: [
+            'Основы программирования микроконтроллеров',
+            'Работа с датчиками и светодиодами',
+            'Создание умных устройств',
+            'Автоматизация простых процессов',
+            'Понимание принципов работы электроники',
+            'Разработка собственных проектов'
+          ]
+        },
+        program: {
+          title: 'Программа курса',
+          weeks: [
+            { week: '1-2 неделя', topic: 'Знакомство с Arduino, основы программирования' },
+            { week: '3-4 неделя', topic: 'Работа со светодиодами и кнопками' },
+            { week: '5-6 неделя', topic: 'Подключение датчиков и считывание данных' },
+            { week: '7-8 неделя', topic: 'Создание умных устройств и автоматизация' }
+          ]
+        },
+        cta: {
+          title: 'Готовы начать?',
+          subtitle: 'Запишитесь на бесплатный курс Arduino и создайте свое первое умное устройство!',
+          button: 'Записаться на курс'
+        }
+      }
+    },
     
     // Format Section
     format: {
@@ -389,6 +432,49 @@ export const translations = {
         features: ['Kompyuter', 'Internet', 'Xavfsizlik', 'Dasturlash']
       }
     },
+
+    // Course Pages
+    coursePages: {
+      backToCourses: 'Kurslarga qaytish',
+      free: '🎁 BEPUL!',
+      arduino: {
+        title: 'Arduino',
+        subtitle: 'Mikrokontrollerlarni dasturlash asoslarini o\'rganing va aqlli qurilmalar yarating!',
+        about: {
+          title: 'Kurs haqida',
+          description: 'Bu kursda bolalar Arduino mikrokontrollerlarini dasturlashni, turli xil sensorlarni ulashni va aqlli qurilmalar yaratishni o\'rganadilar. Biz elektronika va dasturlash asoslarini oddiy va tushunarli shaklda o\'rganamiz.',
+          duration: '8 hafta',
+          groupSize: '6-10 bola',
+          age: '8-12 yosh',
+          price: 'Bepul'
+        },
+        learn: {
+          title: 'Nima o\'rganasiz',
+          features: [
+            'Mikrokontrollerlarni dasturlash asoslari',
+            'Sensorlar va LEDlar bilan ishlash',
+            'Aqlli qurilmalar yaratish',
+            'Oddiy jarayonlarni avtomatlashtirish',
+            'Elektronika ishlash printsipini tushunish',
+            'O\'z loyihalaringizni ishlab chiqish'
+          ]
+        },
+        program: {
+          title: 'Kurs dasturi',
+          weeks: [
+            { week: '1-2 hafta', topic: 'Arduino bilan tanishish, dasturlash asoslari' },
+            { week: '3-4 hafta', topic: 'LEDlar va tugmalar bilan ishlash' },
+            { week: '5-6 hafta', topic: 'Sensorlarni ulash va ma\'lumotlarni o\'qish' },
+            { week: '7-8 hafta', topic: 'Aqlli qurilmalar yaratish va avtomatlashtirish' }
+          ]
+        },
+        cta: {
+          title: 'Boshlashga tayyormisiz?',
+          subtitle: 'Bepul Arduino kursiga yoziling va birinchi aqlli qurilmangizni yarating!',
+          button: 'Kursga yozilish'
+        }
+      }
+    },
     
     // Format Section
     format: {
@@ -693,6 +779,49 @@ export const translations = {
         title: 'IT Literacy',
         description: 'We study computer operation, internet security and programming basics.',
         features: ['Computer', 'Internet', 'Security', 'Programming']
+      }
+    },
+
+    // Course Pages
+    coursePages: {
+      backToCourses: 'Back to Courses',
+      free: '🎁 FREE!',
+      arduino: {
+        title: 'Arduino',
+        subtitle: 'Learn the basics of microcontroller programming and create smart devices!',
+        about: {
+          title: 'About the Course',
+          description: 'In this course, children will learn to program Arduino microcontrollers, connect various sensors, and create smart devices. We will study the basics of electronics and programming in a simple and understandable form.',
+          duration: '8 weeks',
+          groupSize: '6-10 children',
+          age: '8-12 years old',
+          price: 'Free'
+        },
+        learn: {
+          title: 'What You Will Learn',
+          features: [
+            'Basics of microcontroller programming',
+            'Working with sensors and LEDs',
+            'Creating smart devices',
+            'Automation of simple processes',
+            'Understanding the principles of electronics',
+            'Development of own projects'
+          ]
+        },
+        program: {
+          title: 'Course Program',
+          weeks: [
+            { week: '1-2 week', topic: 'Introduction to Arduino, programming basics' },
+            { week: '3-4 week', topic: 'Working with LEDs and buttons' },
+            { week: '5-6 week', topic: 'Connecting sensors and reading data' },
+            { week: '7-8 week', topic: 'Creating smart devices and automation' }
+          ]
+        },
+        cta: {
+          title: 'Ready to Start?',
+          subtitle: 'Sign up for a free Arduino course and create your first smart device!',
+          button: 'Sign Up for Course'
+        }
       }
     },
     
