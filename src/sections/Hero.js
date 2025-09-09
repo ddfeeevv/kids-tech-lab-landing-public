@@ -97,30 +97,7 @@ const Hero = () => {
             {t('hero.description')}
           </motion.p>
 
-          {/* CTA Buttons */}
-          <motion.div 
-            variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8"
-          >
-            <motion.a
-              href="#courses"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="btn-primary text-lg px-8 py-4 shadow-xl"
-            >
-              {t('hero.viewCourses')}
-            </motion.a>
-            <motion.a
-              href="https://t.me/ddfeeevv"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="btn-secondary text-lg px-8 py-4"
-            >
-              {t('hero.signUp')}
-            </motion.a>
-          </motion.div>
+
 
           {/* Features */}
           <motion.div 

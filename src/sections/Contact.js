@@ -75,7 +75,7 @@ const Contact = () => {
         setAgeError(t('contact.form.ageNumberError'));
       } else {
         const age = parseInt(value);
-        if (age < 8 || age > 12) {
+        if (age < 8 || age > 16) {
           setAgeError(t('contact.form.ageError'));
         } else {
           setAgeError('');

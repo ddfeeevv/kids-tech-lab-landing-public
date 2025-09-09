@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import { LanguageProvider } from './contexts/LanguageContext';
 import Navigation from './components/Navigation';
 import Hero from './sections/Hero';
@@ -46,15 +47,17 @@ function App() {
   };
 
   return (
-    <LanguageProvider>
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-        <Navigation 
-          showBackButton={currentPage !== 'home'} 
-          onBack={() => setCurrentPage('home')} 
-        />
-        {renderPage()}
-      </div>
-    </LanguageProvider>
+    <BrowserRouter>
+      <LanguageProvider>
+        <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+          <Navigation 
+            showBackButton={currentPage !== 'home'} 
+            onBack={() => setCurrentPage('home')} 
+          />
+          {renderPage()}
+        </div>
+      </LanguageProvider>
+    </BrowserRouter>
   );
 }
 

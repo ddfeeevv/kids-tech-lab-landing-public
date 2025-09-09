@@ -11,11 +11,11 @@ export const translations = {
     // Hero Section
     hero: {
       title: 'Kids Tech Lab',
-      subtitle: '3D-печать, Arduino и цифровые навыки для детей 8–12 лет',
+      subtitle: '3D-печать, Arduino и цифровые навыки для детей 8–16 лет',
       freeBanner: '🎉 100% БЕСПЛАТНО!',
       description: 'Погружаем детей в мир современных технологий через практические проекты и творческие эксперименты',
-      viewCourses: 'Посмотреть курсы',
-      signUp: 'Записаться на занятие',
+      viewCourses: '',
+      signUp: '',
       scrollDown: 'Прокрутите вниз'
     },
     
@@ -42,7 +42,7 @@ export const translations = {
     // Courses Section
     courses: {
       title: 'Что мы изучаем',
-      subtitle: 'Современные технологии, которые помогут детям 8-12 лет развить логическое мышление, творческие способности и подготовиться к цифровому будущему',
+      subtitle: 'Современные технологии, которые помогут детям 8-16 лет развить логическое мышление, творческие способности и подготовиться к цифровому будущему',
       freeBanner: '🎁 ВСЕ КУРСЫ АБСОЛЮТНО БЕСПЛАТНЫ!',
       benefits: {
         title: 'Почему выбирают нас',
@@ -325,7 +325,7 @@ export const translations = {
       questions: [
         {
           question: 'С какого возраста можно начинать обучение?',
-          answer: 'Мы принимаем детей от 8 до 12 лет. Для каждого возраста подбираем подходящий уровень сложности и темп обучения. Младшие дети изучают основы через игры и простые проекты, а старшие могут работать с более сложными задачами.'
+          answer: 'Мы принимаем детей от 8 до 16 лет. Для каждого возраста подбираем подходящий уровень сложности и темп обучения. Младшие дети изучают основы через игры и простые проекты, а старшие могут работать с более сложными задачами.'
         },
         {
           question: 'Нужны ли какие-то специальные знания или навыки?',
@@ -424,8 +424,8 @@ export const translations = {
         childName: 'Имя ребенка *',
         childNamePlaceholder: 'Алишер',
         childAge: 'Возраст ребенка *',
-        agePlaceholder: 'Введите возраст от 8 до 12',
-        ageError: 'Мы занимаемся только с детьми от 8 до 12 лет',
+        agePlaceholder: 'Введите возраст от 8 до 16',
+        ageError: 'Мы занимаемся только с детьми от 8 до 16 лет',
         ageNumberError: 'Возраст должен содержать только цифры',
         interests: 'Выбор интереса',
         message: 'Дополнительная информация',
@@ -444,7 +444,7 @@ export const translations = {
         telegram: 'Telegram',
         phone: 'Телефон',
         address: 'Адрес',
-        addressValue: '2nd Hamroz Lane, 10A, Mirabad District',
+        addressValue: '2-й переулок Хамроз, 10А, Мирабадский район',
         workingHours: 'Время работы',
         workingHoursValue: 'Пн и Пт: 10:00-12:00, Связь в любое время',
         quickContact: {
@@ -468,11 +468,11 @@ export const translations = {
     // Hero Section
     hero: {
       title: 'Kids Tech Lab',
-      subtitle: '8-12 yoshdagi bolalar uchun 3D-bosish, Arduino va raqamli ko\'nikmalar',
+      subtitle: '8-16 yoshdagi bolalar uchun 3D-bosish, Arduino va raqamli ko\'nikmalar',
       freeBanner: '🎉 100% BEPUL!',
       description: 'Bolalarni amaliy loyihalar va ijodiy tajribalar orqali zamonaviy texnologiyalar dunyosiga chuqur kirib boramiz',
-      viewCourses: "Kurslarni ko'rish",
-      signUp: 'Darsga yozilish',
+      viewCourses: '',
+      signUp: '',
       scrollDown: 'Pastga aylantiring'
     },
     
@@ -499,7 +499,7 @@ export const translations = {
     // Courses Section
     courses: {
       title: "Biz nima o'rganamiz",
-      subtitle: "8-12 yoshdagi bolalarga mantiqiy fikrlash, ijodiy qobiliyatlar va raqamli kelajakka tayyorgarlik ko'rsatishga yordam beradigan zamonaviy texnologiyalar",
+      subtitle: "8-16 yoshdagi bolalarga mantiqiy fikrlash, ijodiy qobiliyatlar va raqamli kelajakka tayyorgarlik ko'rsatishga yordam beradigan zamonaviy texnologiyalar",
       freeBanner: '🎁 BARCHA KURSLAR MUTLAQO BEPUL!',
       benefits: {
         title: 'Nega bizni tanlaydilar',
@@ -782,7 +782,7 @@ export const translations = {
       questions: [
         {
           question: "Qaysi yoshdan o'qishni boshlash mumkin?",
-          answer: 'Biz 8-12 yoshdagi bolalarni qabul qilamiz. Har bir yosh uchun mos darajadagi murakkablik va o\'qitish tezligini tanlaymiz. Kichik bolalar o\'yinlar va oddiy loyihalar orqali asoslarni o\'rganadi, kattalar esa murakkabroq vazifalar bilan ishlaydi.'
+          answer: 'Biz 8-16 yoshdagi bolalarni qabul qilamiz. Har bir yosh uchun mos darajadagi murakkablik va o\'qitish tezligini tanlaymiz. Kichik bolalar o\'yinlar va oddiy loyihalar orqali asoslarni o\'rganadi, kattalar esa murakkabroq vazifalar bilan ishlaydi.'
         },
         {
           question: "Qanday maxsus bilim yoki ko'nikmalar kerakmi?",
@@ -841,7 +841,7 @@ export const translations = {
         sharing: "Bizning loyihamiz haqida ma'lumotni tarqatish"
       },
       benefits: {
-        title: "Sizning mablag'laringiz nerga ketadi",
+        title: "Sizning mablag'laringiz qayerga ketadi",
         materials: {
           title: 'Sarf materiallari',
           description: '3D-bosish uchun plastik, elektron komponentlar, sensorlar'
@@ -881,8 +881,8 @@ export const translations = {
         childName: 'Bolaning ismi *',
         childNamePlaceholder: 'Alisher',
         childAge: 'Bolaning yoshi *',
-        agePlaceholder: '8-12 yosh oralig\'ida kiriting',
-        ageError: 'Biz faqat 8-12 yoshdagi bolalar bilan ishlaymiz',
+        agePlaceholder: '8-16 yosh oralig\'ida kiriting',
+        ageError: 'Biz faqat 8-16 yoshdagi bolalar bilan ishlaymiz',
         ageNumberError: 'Yosh faqat raqamlardan iborat bo\'lishi kerak',
         interests: 'Qiziqish tanlash',
         message: 'Qo\'shimcha ma\'lumot',
@@ -925,11 +925,11 @@ export const translations = {
     // Hero Section
     hero: {
       title: 'Kids Tech Lab',
-      subtitle: '3D printing, Arduino and digital skills for children 8-12 years old',
+      subtitle: '3D printing, Arduino and digital skills for children 8-16 years old',
       freeBanner: '🎉 100% FREE!',
       description: 'We immerse children in the world of modern technologies through practical projects and creative experiments',
-      viewCourses: 'View Courses',
-      signUp: 'Sign Up for Class',
+      viewCourses: '',
+      signUp: '',
       scrollDown: 'Scroll Down'
     },
     
@@ -956,7 +956,7 @@ export const translations = {
     // Courses Section
     courses: {
       title: 'What We Study',
-      subtitle: 'Modern technologies that will help children 8-12 years old develop logical thinking, creative abilities and prepare for a digital future',
+      subtitle: 'Modern technologies that will help children 8-16 years old develop logical thinking, creative abilities and prepare for a digital future',
       freeBanner: '🎁 ALL COURSES ARE ABSOLUTELY FREE!',
       benefits: {
         title: 'Why Choose Us',
@@ -1239,7 +1239,7 @@ export const translations = {
       questions: [
         {
           question: 'From what age can one start learning?',
-          answer: 'We accept children from 8 to 12 years old. For each age, we select an appropriate level of difficulty and learning pace. Younger children learn the basics through games and simple projects, while older children can work on more complex tasks.'
+          answer: 'We accept children from 8 to 16 years old. For each age, we select an appropriate level of difficulty and learning pace. Younger children learn the basics through games and simple projects, while older children can work on more complex tasks.'
         },
         {
           question: 'Are any special knowledge or skills required?',
@@ -1338,8 +1338,8 @@ export const translations = {
         childName: 'Child\'s Name *',
         childNamePlaceholder: 'Alisher',
         childAge: 'Child\'s Age *',
-        agePlaceholder: 'Enter age from 8 to 12',
-        ageError: 'We only work with children 8-12 years old',
+        agePlaceholder: 'Enter age from 8 to 16',
+        ageError: 'We only work with children 8-16 years old',
         ageNumberError: 'Age must contain only numbers',
         interests: 'Interest Selection',
         message: 'Additional Information',
