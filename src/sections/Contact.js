@@ -192,8 +192,16 @@ const Contact = () => {
     setSendError('');
     
     const sendToTelegram = async () => {
-      const botToken = '8009379238:AAHAfQPUDqIH4kXtr067oHI2IBuzH3_JUOU';
-      const chatId = '653776241'; // Ваш ID из BotFather
+      // Получаем токен из переменных окружения
+      const botToken = process.env.REACT_APP_TELEGRAM_BOT_TOKEN;
+      const chatId = process.env.REACT_APP_TELEGRAM_CHAT_ID || '653776241';
+      
+      if (!botToken) {
+        console.error('Telegram Bot Token не настроен!');
+        setSendError('Ошибка конфигурации. Обратитесь к администратору.');
+        setIsSending(false);
+        return;
+      }
       
       try {
         const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
