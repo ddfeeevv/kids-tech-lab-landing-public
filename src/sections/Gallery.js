@@ -108,6 +108,10 @@ const Gallery = () => {
 
   // Функции для работы с модальным окном
   const openModal = useCallback((image, index) => {
+    // Отключаем модальное окно на мобильных устройствах
+    if (window.innerWidth < 768) {
+      return;
+    }
     setSelectedImage(image);
     setCurrentImageIndex(index);
   }, []);
@@ -159,7 +163,7 @@ const Gallery = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
           className="text-center mb-16"
         >
                     <motion.h2 
@@ -196,16 +200,16 @@ const Gallery = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
                 whileHover={{ y: -5 }}
-                className="group cursor-pointer"
+                className="group md:cursor-pointer"
                 onClick={() => openModal(image, index)}
               >
-                <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="relative overflow-hidden rounded-2xl shadow-lg md:hover:shadow-xl transition-all duration-300">
                   {/* Image */}
                   <div className="aspect-[4/3] relative overflow-hidden">
                     <img 
                       src={image.imageUrl} 
                       alt={image.alt}
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      className="w-full h-full object-cover transition-transform duration-300 md:group-hover:scale-105"
                       onError={(e) => {
                         // Fallback к градиенту если изображение не загрузилось
                         e.target.style.display = 'none';
@@ -220,8 +224,8 @@ const Gallery = () => {
                       </div>
                     </div>
                     
-                    {/* Hover Overlay */}
-                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                    {/* Hover Overlay - только на больших экранах */}
+                    <div className="absolute inset-0 bg-black bg-opacity-0 md:group-hover:bg-opacity-20 transition-all duration-300 items-center justify-center hidden md:flex">
                       <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <div className="bg-white bg-opacity-90 rounded-full p-2">
                           <Camera size={24} className="text-gray-700" />

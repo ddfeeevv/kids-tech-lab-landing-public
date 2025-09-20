@@ -55,7 +55,7 @@ const Donations = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
           className="text-center mb-16"
         >
           <motion.div variants={itemVariants} className="mb-6">
@@ -84,7 +84,7 @@ const Donations = () => {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.1 }}
             className="space-y-8"
           >
             <motion.div variants={itemVariants} className="bg-white rounded-2xl p-8 shadow-lg">
@@ -128,7 +128,7 @@ const Donations = () => {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.1 }}
             className="space-y-6"
           >
             <motion.h3 
@@ -161,7 +161,7 @@ const Donations = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
           className="bg-white rounded-2xl p-8 shadow-xl text-center"
         >
           <motion.div variants={itemVariants} className="mb-6">

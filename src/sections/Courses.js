@@ -10,17 +10,23 @@ const Courses = ({ onCourseSelect }) => {
     visible: {
       opacity: 1,
       transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.2
+        delayChildren: 0.2,
+        staggerChildren: 0.15,
+        duration: 0.6,
+        ease: "easeOut"
       }
     }
   };
 
   const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
+    hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
-      opacity: 1
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
     }
   };
 
@@ -82,7 +88,7 @@ const Courses = ({ onCourseSelect }) => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
           className="text-center mb-16"
         >
           <motion.h2 
@@ -158,7 +164,7 @@ const Courses = ({ onCourseSelect }) => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
           className="bg-white rounded-2xl p-8 shadow-lg"
         >
           <motion.h3 

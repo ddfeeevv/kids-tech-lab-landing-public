@@ -292,7 +292,7 @@ const Contact = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
           className="text-center mb-16"
         >
           <motion.h2 
@@ -315,7 +315,7 @@ const Contact = () => {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.1 }}
           >
             <motion.div variants={itemVariants} className="bg-white rounded-2xl p-8 shadow-xl">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
@@ -493,7 +493,7 @@ const Contact = () => {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.1 }}
             className="space-y-8"
           >
             <motion.div variants={itemVariants}>
