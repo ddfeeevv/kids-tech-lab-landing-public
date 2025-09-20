@@ -43,9 +43,12 @@ const FAQ = () => {
           viewport={{ once: true, amount: 0.3 }}
           className="text-center mb-16"
         >
-          <motion.div variants={itemVariants} className="flex items-center justify-center mb-6">
-            <HelpCircle size={48} className="text-primary-600 mr-4" />
-            <h2 className="text-4xl font-bold text-gray-900">
+          <motion.div variants={itemVariants} className="mb-6">
+            <div className="flex items-center justify-center mb-4">
+              <HelpCircle size={48} className="text-primary-600 hidden sm:block mr-4" />
+              <HelpCircle size={40} className="text-primary-600 block sm:hidden mb-2" />
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 text-center">
               {t('faq.title')}
             </h2>
           </motion.div>
