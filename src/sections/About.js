@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { User, Users, Home, GraduationCap, Heart } from 'lucide-react';
+import { User, Users, School, GraduationCap, Heart } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const About = () => {
@@ -26,7 +26,7 @@ const About = () => {
 
   const stats = [
     { icon: Users, number: "6-10", label: t('about.stats.groupSize') },
-    { icon: Home, number: t('about.stats.homeNumber'), label: t('about.stats.homeLabel') },
+    { icon: School, number: t('about.stats.homeNumber'), label: t('about.stats.homeLabel') },
     { icon: Heart, number: "100%", label: t('about.stats.free') },
     { icon: GraduationCap, number: "120+", label: t('about.stats.classesHeld') }
   ];
@@ -143,6 +143,7 @@ const About = () => {
             </p>
           </div>
         </motion.div>
+
       </div>
     </section>
   );

@@ -40,12 +40,12 @@ const Navigation = ({ showBackButton = false, onBack }) => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 pt-safe pb-4 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 min-h-[4rem] py-2">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
@@ -62,9 +62,9 @@ const Navigation = ({ showBackButton = false, onBack }) => {
               </motion.button>
             )}
             <div className="w-8 h-8 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">KTL</span>
+              <span className="text-white font-bold text-sm">TKL</span>
             </div>
-            <span className="text-xl font-bold text-gray-800">Kids Tech Lab</span>
+            <span className="text-xl font-bold text-gray-800">Tech Kids Lab</span>
           </motion.div>
 
           {/* Desktop Navigation */}

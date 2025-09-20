@@ -111,31 +111,6 @@ const Format = () => {
 
 
 
-        {/* CTA Section */}
-        <motion.div
-          variants={itemVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          className="mt-16 text-center"
-        >
-          <div className="bg-gradient-to-r from-primary-600 to-secondary-600 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">{t('format.cta.title')}</h3>
-            <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
-              {t('format.cta.subtitle')}
-            </p>
-            <motion.a
-              href="https://t.me/ddfeeevv"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-block bg-white text-primary-600 font-semibold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              {t('format.cta.button')}
-            </motion.a>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

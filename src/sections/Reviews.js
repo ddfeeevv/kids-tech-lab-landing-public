@@ -152,48 +152,6 @@ const Reviews = () => {
           </div>
         </motion.div>
 
-        {/* All Reviews Grid */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
-          {reviews.map((review, index) => (
-            <motion.div
-              key={review.id}
-              variants={itemVariants}
-              whileHover={{ y: -5 }}
-              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
-            >
-              {/* Rating */}
-              <div className="flex mb-4">
-                {renderStars(review.rating)}
-              </div>
-              
-              {/* Review Text */}
-              <p className="text-gray-600 mb-4 leading-relaxed">
-                "{review.text}"
-              </p>
-              
-              {/* Author */}
-              <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center text-lg">
-                  {review.avatar}
-                </div>
-                <div>
-                  <div className="font-semibold text-gray-900 text-sm">
-                    {review.name}
-                  </div>
-                  <div className="text-gray-500 text-xs">
-                    {review.childName}
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
 
         {/* Stats */}
         <motion.div

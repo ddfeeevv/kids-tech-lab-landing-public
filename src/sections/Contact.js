@@ -129,7 +129,7 @@ const Contact = () => {
     }
     
     const age = parseInt(formData.childAge);
-    if (age < 8 || age > 12) {
+    if (age < 8 || age > 16) {
       setAgeError(t('contact.form.ageError'));
       return;
     }
@@ -162,7 +162,7 @@ const Contact = () => {
 
     // Формируем сообщение для Telegram
     const message = `
-<b>🚀 Новая заявка на запись в Kids Tech Lab</b>
+<b>🚀 Новая заявка на запись в Tech Kids Lab</b>
 
 👤 <b>Родитель:</b> ${formData.name}
 📞 <b>Телефон:</b> ${normalizePhone(formData.phone)}

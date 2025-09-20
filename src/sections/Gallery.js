@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Camera, Users, Cpu, Printer, Blocks } from 'lucide-react';
+import { Camera, Cpu, Printer, Blocks, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Gallery = () => {
   const { t } = useLanguage();
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
 
   const containerVariants = {
@@ -26,67 +28,129 @@ const Gallery = () => {
     }
   };
 
-  // Заглушки для фотографий
+  // Изображения галереи (замените на реальные пути к вашим фото)
   const galleryImages = [
     {
       id: 1,
       category: "3D-печать",
-      icon: Printer,
       description: "Дети создают свои первые 3D-модели",
+      imageUrl: "/images/gallery/photo1.jpg", // Замените на имя вашего файла
+      alt: "Дети работают с 3D-принтером",
+      // Fallback для отсутствующих изображений
+      icon: Printer,
       color: "from-blue-500 to-cyan-500"
     },
     {
       id: 2,
       category: "Arduino",
-      icon: Cpu,
       description: "Программирование светодиодов и датчиков",
+      imageUrl: "/images/gallery/photo2.jpg", // Замените на имя вашего файла
+      alt: "Занятия по Arduino",
+      icon: Cpu,
       color: "from-green-500 to-emerald-500"
     },
     {
       id: 3,
       category: "Конструирование",
-      icon: Blocks,
       description: "Сборка роботов из конструктора",
+      imageUrl: "/images/gallery/photo3.jpg", // Замените на имя вашего файла
+      alt: "Дети собирают роботов",
+      icon: Blocks,
       color: "from-orange-500 to-red-500"
     },
     {
       id: 4,
-      category: "Работа в группах",
-      icon: Users,
-      description: "Командная работа над проектами",
+      category: "IT-направление",
+      description: "Изучение основ программирования",
+      imageUrl: "/images/gallery/photo4.jpg", // Замените на имя вашего файла
+      alt: "Урок программирования",
+      icon: Cpu,
       color: "from-purple-500 to-pink-500"
     },
     {
       id: 5,
-      category: "3D-печать",
+      category: "3D-моделирование",
+      description: "Создание сложных 3D-проектов",
+      imageUrl: "/images/gallery/photo5.jpg", // Замените на имя вашего файла
+      alt: "3D-моделирование на компьютере",
       icon: Printer,
-      description: "Печать созданных моделей",
-      color: "from-blue-500 to-cyan-500"
+      color: "from-indigo-500 to-blue-500"
     },
     {
       id: 6,
-      category: "Arduino",
+      category: "Электроника",
+      description: "Работа с микросхемами и платами",
+      imageUrl: "/images/gallery/photo6.jpg", // Замените на имя вашего файла
+      alt: "Изучение электронных компонентов",
       icon: Cpu,
-      description: "Создание умных устройств",
-      color: "from-green-500 to-emerald-500"
+      color: "from-yellow-500 to-orange-500"
     },
     {
       id: 7,
-      category: "Конструирование",
+      category: "Робототехника",
+      description: "Программирование роботов",
+      imageUrl: "/images/gallery/photo7.jpg", // Замените на имя вашего файла
+      alt: "Программирование роботов",
       icon: Blocks,
-      description: "Изучение механики и физики",
-      color: "from-orange-500 to-red-500"
+      color: "from-teal-500 to-green-500"
     },
     {
       id: 8,
-      category: "Работа в группах",
-      icon: Users,
-      description: "Презентация проектов",
-      color: "from-purple-500 to-pink-500"
+      category: "Проектная работа",
+      description: "Командные технические проекты",
+      imageUrl: "/images/gallery/photo8.jpg", // Замените на имя вашего файла
+      alt: "Командная работа над проектом",
+      icon: Blocks,
+      color: "from-red-500 to-pink-500"
     }
   ];
 
   const filteredImages = galleryImages;
+
+  // Функции для работы с модальным окном
+  const openModal = useCallback((image, index) => {
+    setSelectedImage(image);
+    setCurrentImageIndex(index);
+  }, []);
+
+  const closeModal = useCallback(() => {
+    setSelectedImage(null);
+  }, []);
+
+  const goToNext = useCallback(() => {
+    const nextIndex = (currentImageIndex + 1) % filteredImages.length;
+    setCurrentImageIndex(nextIndex);
+    setSelectedImage(filteredImages[nextIndex]);
+  }, [currentImageIndex, filteredImages]);
+
+  const goToPrevious = useCallback(() => {
+    const prevIndex = currentImageIndex === 0 ? filteredImages.length - 1 : currentImageIndex - 1;
+    setCurrentImageIndex(prevIndex);
+    setSelectedImage(filteredImages[prevIndex]);
+  }, [currentImageIndex, filteredImages]);
+
+  // Закрытие модального окна по ESC
+  useEffect(() => {
+    const handleKeyPress = (e) => {
+      if (e.key === 'Escape') {
+        closeModal();
+      } else if (e.key === 'ArrowRight') {
+        goToNext();
+      } else if (e.key === 'ArrowLeft') {
+        goToPrevious();
+      }
+    };
+
+    if (selectedImage) {
+      document.addEventListener('keydown', handleKeyPress);
+      document.body.style.overflow = 'hidden'; // Предотвращаем прокрутку фона
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyPress);
+      document.body.style.overflow = 'unset';
+    };
+  }, [selectedImage, currentImageIndex, goToNext, goToPrevious, closeModal]);
 
   return (
     <section id="gallery" className="section-padding bg-gradient-to-br from-gray-50 to-blue-50">
@@ -121,10 +185,10 @@ const Gallery = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 max-w-7xl mx-auto"
         >
           <AnimatePresence mode="wait">
-            {filteredImages.map((image) => (
+            {filteredImages.map((image, index) => (
               <motion.div
                 key={image.id}
                 variants={itemVariants}
@@ -133,52 +197,131 @@ const Gallery = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
                 whileHover={{ y: -5 }}
-                className="group"
+                className="group cursor-pointer"
+                onClick={() => openModal(image, index)}
               >
                 <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-                  {/* Placeholder Image */}
-                  <div className={`aspect-square bg-gradient-to-br ${image.color} flex items-center justify-center`}>
-                    <div className="text-center text-white">
-                      <image.icon size={48} className="mx-auto mb-2" />
-                      <p className="text-sm font-medium">{image.category}</p>
+                  {/* Image */}
+                  <div className="aspect-[4/3] relative overflow-hidden">
+                    <img 
+                      src={image.imageUrl} 
+                      alt={image.alt}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      onError={(e) => {
+                        // Fallback к градиенту если изображение не загрузилось
+                        e.target.style.display = 'none';
+                        e.target.nextSibling.style.display = 'flex';
+                      }}
+                    />
+                    {/* Fallback gradient (скрыт по умолчанию) */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${image.color} items-center justify-center hidden`}>
+                      <div className="text-center text-white">
+                        <image.icon size={48} className="mx-auto mb-2" />
+                        <p className="text-sm font-medium">{image.category}</p>
+                      </div>
+                    </div>
+                    
+                    {/* Hover Overlay */}
+                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div className="bg-white bg-opacity-90 rounded-full p-2">
+                          <Camera size={24} className="text-gray-700" />
+                        </div>
+                      </div>
                     </div>
                   </div>
                   
-
-                  
-                  {/* Category Badge */}
-                  <div className="absolute top-4 left-4">
-                    <span className="bg-white bg-opacity-90 text-gray-800 text-xs font-medium px-3 py-1 rounded-full">
-                      {image.category}
-                    </span>
-                  </div>
                 </div>
               </motion.div>
             ))}
           </AnimatePresence>
         </motion.div>
 
-        {/* Placeholder Notice */}
-        <motion.div
-          variants={itemVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          className="mt-12 text-center"
-        >
-          <div className="bg-white rounded-2xl p-8 shadow-lg max-w-2xl mx-auto">
-            <Camera size={48} className="text-primary-600 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">
-              {t('gallery.placeholder.title')}
-            </h3>
-            <p className="text-gray-600">
-              {t('gallery.placeholder.description')}
-            </p>
-          </div>
-        </motion.div>
+
+        {/* Modal для просмотра изображений */}
+        <AnimatePresence>
+          {selectedImage && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50"
+              onClick={closeModal}
+            >
+              <div className="relative max-w-4xl max-h-[90vh] mx-4">
+                {/* Кнопка закрытия */}
+                <button
+                  onClick={closeModal}
+                  className="absolute top-4 right-4 z-10 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full p-2 transition-all duration-200"
+                >
+                  <X size={24} className="text-white" />
+                </button>
+
+                {/* Навигация - предыдущее изображение */}
+                {filteredImages.length > 1 && (
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      goToPrevious();
+                    }}
+                    className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full p-2 transition-all duration-200"
+                  >
+                    <ChevronLeft size={24} className="text-white" />
+                  </button>
+                )}
+
+                {/* Навигация - следующее изображение */}
+                {filteredImages.length > 1 && (
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      goToNext();
+                    }}
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full p-2 transition-all duration-200"
+                  >
+                    <ChevronRight size={24} className="text-white" />
+                  </button>
+                )}
+
+                {/* Изображение */}
+                <motion.div
+                  key={selectedImage.id}
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  exit={{ scale: 0.8, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="bg-white rounded-lg overflow-hidden shadow-2xl"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  {/* Изображение высокого качества */}
+                  <div className="aspect-[4/3] relative min-h-[400px] overflow-hidden">
+                    <img 
+                      src={selectedImage.imageUrl} 
+                      alt={selectedImage.alt}
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        // Fallback к градиенту если изображение не загрузилось
+                        e.target.style.display = 'none';
+                        e.target.nextSibling.style.display = 'flex';
+                      }}
+                    />
+                    {/* Fallback gradient (скрыт по умолчанию) */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${selectedImage.color} items-center justify-center hidden`}>
+                      <div className="text-center text-white">
+                        <selectedImage.icon size={80} className="mx-auto mb-4" />
+                        <h3 className="text-2xl font-bold mb-2">{selectedImage.category}</h3>
+                        <p className="text-lg opacity-90">{selectedImage.description}</p>
+                        <p className="text-sm opacity-75 mt-4">Изображение не найдено</p>
+                      </div>
+                    </div>
+                  </div>
+
+                </motion.div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
-
-
     </section>
   );
 };

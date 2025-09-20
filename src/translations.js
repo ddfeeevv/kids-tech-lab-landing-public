@@ -10,7 +10,7 @@ export const translations = {
     
     // Hero Section
     hero: {
-      title: 'Kids Tech Lab',
+      title: 'Tech Kids Lab',
       subtitle: '3D-печать, Arduino и цифровые навыки для детей 8–16 лет',
       freeBanner: '🎉 100% БЕСПЛАТНО!',
       description: 'Погружаем детей в мир современных технологий через практические проекты и творческие эксперименты',
@@ -22,13 +22,13 @@ export const translations = {
     // About Section
     about: {
       title: 'Обо мне',
-      description: 'Привет! Меня зовут Данил, и я основатель Kids Tech Lab. Я энтузиаст IT-технологий, который решил делиться знаниями с подрастающим поколением абсолютно бесплатно.',
+      description: 'Привет! Меня зовут Данил, и я основатель Tech Kids Lab. Я энтузиаст IT-технологий, который решил делиться знаниями с подрастающим поколением абсолютно бесплатно.',
       goal: 'Моя цель — показать детям, что технологии — это не только игры, но и мощный инструмент для творчества и решения реальных задач. Каждое занятие — это приключение в мире инноваций!',
-      experience: 'Работаю с мини-группами 6-10 детей, что позволяет уделить внимание каждому ученику и создать комфортную атмосферу для обучения. Все курсы полностью бесплатные!',
+      experience: 'Работаю с мини-группами 6-10 детей в школе №60, где администрация выделила нам специальный кабинет. Это позволяет уделить внимание каждому ученику в профессиональной образовательной среде. Все курсы полностью бесплатные!',
       stats: {
         groupSize: 'детей в группе',
-        homeNumber: 'Дома',
-        homeLabel: 'уютная атмосфера',
+        homeNumber: 'Школа №60',
+        homeLabel: 'образовательная среда',
         free: 'бесплатно',
         classesHeld: 'проведенных занятий'
       },
@@ -265,13 +265,13 @@ export const translations = {
         },
         location: {
           title: 'Место',
-          description: 'Домашняя атмосфера',
-          details: 'Уютная обстановка в доме преподавателя создает комфортную среду для обучения'
+          description: 'Школа №60',
+          details: 'Специально выделенный администрацией школы кабинет с профессиональным оборудованием для обучения'
         }
       },
       cta: {
         title: 'Готовы начать обучение?',
-        subtitle: 'Запишитесь на пробное занятие и убедитесь, что вашему ребенку понравится изучать технологии в нашей уютной атмосфере',
+        subtitle: 'Запишитесь на пробное занятие в школе №60 и убедитесь, что вашему ребенку понравится изучать технологии в профессиональной образовательной среде',
         button: 'Записаться на пробное занятие'
       }
     },
@@ -279,7 +279,7 @@ export const translations = {
     // Gallery Section
     gallery: {
       title: 'Фотогалерея',
-      subtitle: 'Посмотрите, как проходят наши занятия и какие удивительные проекты создают наши ученики',
+      subtitle: 'Посмотрите, как проходят наши занятия',
       placeholder: {
         title: 'Фотографии будут добавлены скоро',
         description: 'Мы активно фотографируем наши занятия и проекты. Скоро здесь появятся реальные фотографии наших учеников за работой!'
@@ -289,7 +289,7 @@ export const translations = {
     // Reviews Section
     reviews: {
       title: 'Отзывы родителей',
-      subtitle: 'Узнайте, что говорят родители наших учеников о занятиях в Kids Tech Lab',
+      subtitle: 'Узнайте, что говорят родители наших учеников о занятиях в Tech Kids Lab',
       achievements: {
         title: 'Наши достижения',
         satisfiedChildren: 'Довольных детей',
@@ -298,21 +298,21 @@ export const translations = {
       },
       testimonials: [
         {
-          name: "Анна Петрова",
-          childName: "Максим, 8 лет",
-          text: "Мой сын просто в восторге от занятий! За месяц научился создавать простые 3D-модели и даже напечатал свою первую игрушку. Преподаватель очень терпеливый и умеет заинтересовать детей.",
+          name: "Мирзалиева Нигина",
+          childName: "Камрон, 14 лет",
+          text: "Мой сын был очень энергичный и гиперактивный, я даже не думала, что ему так понравится, что он будет терпеливо сидеть, фантазировать и изобретать. Теперь он, даже приходя домой, постоянно что-то изучает, не узнаю своего сына🙈 Я очень благодарна Данилу, что он проявил любовь к детям и заинтересовал их! Сейчас, в наше время, это очень важно.",
           avatar: "👩‍💼"
         },
         {
-          name: "Дмитрий Смирнов",
-          childName: "София, 10 лет",
-          text: "Дочь всегда с нетерпением ждет занятий. Особенно ей нравится программирование Arduino - создала свой первый светящийся браслет! Атмосфера очень домашняя и уютная.",
+          name: "Карабаева Ситора",
+          childName: "Лазиза, 14 лет",
+          text: "Моя дочка ходила на курсы по 3D-печати, и ей очень понравилось! Она узнала очень много нового и даже создала свои первые фигурки. Дочка говорит что курсы проходили интересно и увлекательно, а преподаватель всё объяснял понятно и поддерживал детей. Это очень успокаивает каждого родителя, что есть у нас такая молодежь, которая делится своим бесценным опытом!",
           avatar: "👨‍💻"
         },
         {
-          name: "Елена Козлова",
-          childName: "Артем, 7 лет",
-          text: "Отличные курсы! Сын стал более усидчивым и внимательным. Преподаватель объясняет все очень понятно, а маленькие группы позволяют уделить внимание каждому ребенку.",
+          name: "Аникеев Олег",
+          childName: "Гоша, 13 лет",
+          text: "Сын сегодня впервые вернулся домой с дополнительных занятий веселый, весь вечер слушали его восторженные рассказы🤣  Гоша всегда был очень стеснительным ребенком, мини группы это то что нам было нужно. Преподавателю отдельная благодарность за то, что готов обучать детей бесплатно.",
           avatar: "👩‍🏫"
         }
       ]
@@ -345,7 +345,7 @@ export const translations = {
         },
         {
           question: 'Можно ли присутствовать родителям на занятиях?',
-          answer: 'Конечно! Мы приветствуем участие родителей, особенно на первых занятиях. Это помогает ребенку чувствовать себя комфортно, а родителям - понимать, чем занимается их ребенок.'
+          answer: 'Конечно! Мы приветствуем участие родителей, особенно на первых занятиях. Это помогает ребенку чувствовать себя уверенно в новой образовательной среде.'
         },
         {
           question: 'Что делать, если ребенок пропустил занятие?',
@@ -444,7 +444,7 @@ export const translations = {
         telegram: 'Telegram',
         phone: 'Телефон',
         address: 'Адрес',
-        addressValue: '2-й переулок Хамроз, 10А, Мирабадский район',
+        addressValue: 'Школа №60, Мирабадский район, Ташкент',
         workingHours: 'Время работы',
         workingHoursValue: 'Пн и Пт: 10:00-12:00, Связь в любое время',
         quickContact: {
@@ -467,7 +467,7 @@ export const translations = {
     
     // Hero Section
     hero: {
-      title: 'Kids Tech Lab',
+      title: 'Tech Kids Lab',
       subtitle: '8-16 yoshdagi bolalar uchun 3D-bosish, Arduino va raqamli ko\'nikmalar',
       freeBanner: '🎉 100% BEPUL!',
       description: 'Bolalarni amaliy loyihalar va ijodiy tajribalar orqali zamonaviy texnologiyalar dunyosiga chuqur kirib boramiz',
@@ -479,13 +479,13 @@ export const translations = {
     // About Section
     about: {
       title: 'Men haqimda',
-      description: "Salom! Menim ismim Danil, Kids Tech Lab asoschisi. Men IT-texnologiyalarga qiziqish bildiruvchi bo'lib, bilimlarni avlodga mutlaqo bepul ulashishga qaror qildim.",
+      description: "Salom! Menim ismim Danil, Tech Kids Lab asoschisi. Men IT-texnologiyalarga qiziqish bildiruvchi bo'lib, bilimlarni avlodga mutlaqo bepul ulashishga qaror qildim.",
       goal: "Mening maqsadim - bolalarga texnologiyalar nafaqat o'yinlar, balki ijod va haqiqiy muammolarni hal qilish uchun kuchli vosita ekanligini ko'rsatish. Har bir dars - innovatsiyalar dunyosidagi sarguzasht!",
-      experience: "6-10 boladan iborat mini-guruhlar bilan ishlayman, bu har bir o'quvchiga e'tibor berish va qulay o'qitish muhitini yaratish imkonini beradi. Barcha kurslar to'liq bepul!",
+      experience: "6-10 boladan iborat mini-guruhlar bilan 60-sonli maktabda ishlayman, bu yerda maktab ma'muriyati bizga maxsus xona ajratdi. Bu har bir o'quvchiga professional ta'lim muhitida e'tibor berish imkonini beradi. Barcha kurslar to'liq bepul!",
       stats: {
         groupSize: 'bolalar guruhda',
-        homeNumber: 'Uyda',
-        homeLabel: 'qulay muhit',
+        homeNumber: '60-sonli maktab',
+        homeLabel: 'ta\'lim muhiti',
         free: 'bepul',
         classesHeld: "o'tkazilgan darslar"
       },
@@ -722,13 +722,13 @@ export const translations = {
         },
         location: {
           title: 'Joy',
-          description: 'Uy muhiti',
-          details: 'O\'qituvchining uyidagi qulay muhit o\'qitish uchun qulay muhit yaratadi'
+          description: '60-sonli maktab',
+          details: 'Maktab ma\'muriyati tomonidan maxsus ajratilgan professional jihozlar bilan ta\'minlangan xona'
         }
       },
       cta: {
         title: 'O\'qishni boshlashga tayyormisiz?',
-        subtitle: 'Sinov darsiga yoziling va bolangiz bizning qulay muhitda texnologiyalarni o\'rganishni yoqtirishiga ishonch hosil qiling',
+        subtitle: '60-sonli maktabda sinov darsiga yoziling va bolangiz professional ta\'lim muhitida texnologiyalarni o\'rganishni yoqtirishiga ishonch hosil qiling',
         button: 'Sinov darsiga yozilish'
       }
     },
@@ -746,7 +746,7 @@ export const translations = {
     // Reviews Section
     reviews: {
       title: 'Ota-onalar fikrlari',
-      subtitle: 'O\'quvchilarimizning ota-onalari Kids Tech Lab darslari haqida nima deyotganini biling',
+      subtitle: 'O\'quvchilarimizning ota-onalari Tech Kids Lab darslari haqida nima deyotganini biling',
       achievements: {
         title: 'Bizning yutuqlarimiz',
         satisfiedChildren: 'Mamnun bolalar',
@@ -755,21 +755,21 @@ export const translations = {
       },
       testimonials: [
         {
-          name: "Anna Petrova",
-          childName: "Maksim, 8 yosh",
-          text: "Mening o'g'lim darslardan juda mamnun! Bir oy ichida oddiy 3D-modellar yaratishni o'rgandi va hatto birinchi o'yinchoqini bosdi. O'qituvchi juda sabr-toqatli va bolalarni qiziqtira oladi.",
+          name: "Mirzaliyeva Nigina",
+          childName: "Kamron, 14 yosh",
+          text: "Mening o'g'lim juda energik va giperaktiv edi, men hatto u shunday yoqtirishini, sabr-toqat bilan o'tirib, xayol surib, ixtiro qilishini o'ylamagandim. Endi u uyga qaytganda ham doimo nimadir o'rganadi, o'g'limni tanimayman🙈 Men Danilga juda minnatdorman, u bolalarga mehr ko'rsatdi va ularni qiziqtirdi! Hozirgi vaqtda bu juda muhim.",
           avatar: "👩‍💼"
         },
         {
-          name: "Dmitriy Smirnov",
-          childName: "Sofiya, 10 yosh",
-          text: "Qizim har doim darslarni intizorlik bilan kutadi. Ayniqsa Arduino dasturlash yoqadi - birinchi yorqin bilakuzugini yaratdi! Muhit juda uyga o'xshash va qulay.",
+          name: "Karabayeva Sitora",
+          childName: "Laziza, 14 yosh",
+          text: "Mening qizim 3D-bosma kurslarga bordi va unga juda yoqdi! U juda ko'p yangiliklar o'rgandi va hatto birinchi figurkalarini yaratdi. Qizim kurslar qiziq va qiziqarli o'tganini, o'qituvchi hamma narsani tushunarli tushuntirib, bolalarni qo'llab-quvvatlaganini aytadi. Bu har bir ota-onani tinchlantiradi, bizda bunday yoshlar bor, ular o'zlarining bebaho tajribalarini baham ko'rishadi!",
           avatar: "👨‍💻"
         },
         {
-          name: "Elena Kozlova",
-          childName: "Artem, 7 yosh",
-          text: "Ajoyib kurslar! O'g'lim yanada sabr-toqatli va diqqatli bo'ldi. O'qituvchi hamma narsani juda tushunarli tushuntiradi, kichik guruhlar esa har bir bolaga e'tibor berish imkonini beradi.",
+          name: "Anikeyev Oleg",
+          childName: "Gosha, 13 yosh",
+          text: "O'g'lim bugun birinchi marta qo'shimcha darslardan uyga xursand bo'lib qaytdi, butun oqshom uning hayajonli hikoyalarini tingladik🤣 Gosha har doim juda uyatchan bola edi, mini guruhlar bizga kerak bo'lgan narsa edi. O'qituvchiga bolalarni bepul o'qitishga tayyor bo'lgani uchun alohida rahmat.",
           avatar: "👩‍🏫"
         }
       ]
@@ -802,7 +802,7 @@ export const translations = {
         },
         {
           question: "Ota-onalar darslarda qatnashishlari mumkinmi?",
-          answer: 'Albatta! Biz ota-onalarning ishtirokini, ayniqsa birinchi darslarda qadrlaymiz. Bu bolaga o\'zini qulay his qilishga, ota-onalarga esa bolalari nima bilan shug\'ullanishini tushunishga yordam beradi.'
+          answer: 'Albatta! Biz ota-onalarning ishtirokini, ayniqsa birinchi darslarda qadrlaymiz. Bu bolaga yangi ta\'lim muhitida o\'zini ishonchli his qilishga yordam beradi.'
         },
         {
           question: "Agar bola darsni o'tkazib qoldirsa nima qilish kerak?",
@@ -901,7 +901,7 @@ export const translations = {
         telegram: 'Telegram',
         phone: 'Telefon',
         address: 'Manzil',
-        addressValue: '2-Hamroz ko\'chasi, 10A, Mirabad tumani',
+        addressValue: '60-sonli maktab, Mirabad tumani, Toshkent',
         workingHours: 'Ish vaqti',
         workingHoursValue: 'Du va Ju: 10:00-12:00, Har qanday vaqtda aloqa',
         quickContact: {
@@ -924,7 +924,7 @@ export const translations = {
     
     // Hero Section
     hero: {
-      title: 'Kids Tech Lab',
+      title: 'Tech Kids Lab',
       subtitle: '3D printing, Arduino and digital skills for children 8-16 years old',
       freeBanner: '🎉 100% FREE!',
       description: 'We immerse children in the world of modern technologies through practical projects and creative experiments',
@@ -936,13 +936,13 @@ export const translations = {
     // About Section
     about: {
       title: 'About Me',
-      description: 'Hello! My name is Danil, and I am the founder of Kids Tech Lab. I am an IT technology enthusiast who decided to share knowledge with the younger generation absolutely free.',
+      description: 'Hello! My name is Danil, and I am the founder of Tech Kids Lab. I am an IT technology enthusiast who decided to share knowledge with the younger generation absolutely free.',
       goal: 'My goal is to show children that technology is not just games, but also a powerful tool for creativity and solving real problems. Every lesson is an adventure in the world of innovation!',
-      experience: 'I work with mini-groups of 6-10 children, which allows me to pay attention to each student and create a comfortable learning atmosphere. All courses are completely free!',
+      experience: 'I work with mini-groups of 6-10 children at School #60, where the administration has provided us with a dedicated classroom. This allows me to give individual attention to each student in a professional educational environment. All courses are completely free!',
       stats: {
         groupSize: 'children in group',
-        homeNumber: 'At Home',
-        homeLabel: 'cozy atmosphere',
+        homeNumber: 'School #60',
+        homeLabel: 'educational environment',
         free: 'free',
         classesHeld: 'classes held'
       },
@@ -1179,13 +1179,13 @@ export const translations = {
         },
         location: {
           title: 'Location',
-          description: 'Home atmosphere',
-          details: 'A cozy atmosphere in the teacher\'s home creates a comfortable learning environment'
+          description: 'School #60',
+          details: 'A dedicated classroom provided by the school administration with professional equipment for learning'
         }
       },
       cta: {
         title: 'Ready to Start Learning?',
-        subtitle: 'Sign up for a trial lesson and make sure your child enjoys learning technology in our cozy atmosphere',
+        subtitle: 'Sign up for a trial lesson at School #60 and make sure your child enjoys learning technology in our professional educational environment',
         button: 'Sign Up for Trial Lesson'
       }
     },
@@ -1203,7 +1203,7 @@ export const translations = {
     // Reviews Section
     reviews: {
       title: 'Parent Reviews',
-      subtitle: 'Find out what our students\' parents say about classes at Kids Tech Lab',
+      subtitle: 'Find out what our students\' parents say about classes at Tech Kids Lab',
       achievements: {
         title: 'Our Achievements',
         satisfiedChildren: 'Satisfied Children',
@@ -1212,22 +1212,22 @@ export const translations = {
       },
       testimonials: [
         {
-          name: "Anna Petrova",
-          childName: "Maxim, 8 years old",
-          text: "My son is absolutely delighted with the classes! In a month he learned to create simple 3D models and even printed his first toy. The teacher is very patient and knows how to interest children.",
+          name: "Мирзалиева Нигина",
+          childName: "Камрон, 14 лет",
+          text: "Мой сын был очень энергичный и гиперактивный, я даже не думала, что ему так понравится, что он будет терпеливо сидеть, фантазировать и изобретать. Теперь он, даже приходя домой, постоянно что-то изучает, не узнаю своего сына🙈 Я очень благодарна Данилу, что он проявил любовь к детям и заинтересовал их! Сейчас, в наше время, это очень важно.",
           avatar: "👩‍💼"
         },
         {
-          name: "Dmitry Smirnov",
-          childName: "Sofia, 10 years old",
-          text: "My daughter always looks forward to classes. She especially likes Arduino programming - she created her first glowing bracelet! The atmosphere is very homely and cozy.",
-          avatar: "👨‍💻"
+          name: "Карабаева Ситора",
+          childName: "Лазиза, 14 лет",
+          text: "Моя дочка ходила на курсы по 3D-печати, и ей очень понравилось! Она узнала очень много нового и даже создала свои первые фигурки. Дочка говорит что курсы проходили интересно и увлекательно, а преподаватель всё объяснял понятно и поддерживал детей. Это очень успокаивает каждого родителя, что есть у нас такая молодежь, которая делится своим бесценным опытом!",
+          avatar: "👩‍🎓"
         },
         {
-          name: "Elena Kozlova",
-          childName: "Artem, 7 years old",
-          text: "Excellent courses! My son became more focused and attentive. The teacher explains everything very clearly, and small groups allow attention to each child.",
-          avatar: "👩‍🏫"
+          name: "Аникеев Олег",
+          childName: "Гоша, 13 лет",
+          text: "Сын сегодня впервые вернулся домой с дополнительных занятий веселый, весь вечер слушали его восторженные рассказы🤣  Гоша всегда был очень стеснительным ребенком, мини группы это то что нам было нужно. Преподавателю отдельная благодарность за то, что готов обучать детей бесплатно.",
+          avatar: "👨‍💻"
         }
       ]
     },
@@ -1259,7 +1259,7 @@ export const translations = {
         },
         {
           question: 'Can parents attend classes?',
-          answer: 'Of course! We welcome parent participation, especially in the first classes. This helps the child feel comfortable, and parents understand what their child is doing.'
+          answer: 'Of course! We welcome parent participation, especially in the first classes. This helps the child feel confident in the new educational environment.'
         },
         {
           question: 'What to do if a child missed a class?',
@@ -1358,7 +1358,7 @@ export const translations = {
         telegram: 'Telegram',
         phone: 'Phone',
         address: 'Address',
-        addressValue: '2nd Hamroz Lane, 10A, Mirabad District',
+        addressValue: 'School #60, Mirabad District, Tashkent',
         workingHours: 'Working Hours',
         workingHoursValue: 'Mon & Fri: 10:00-12:00, Contact anytime',
         quickContact: {
