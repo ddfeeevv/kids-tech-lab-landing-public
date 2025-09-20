@@ -176,16 +176,6 @@ const Contact = () => {
 ⏰ <i>Время отправки: ${new Date().toLocaleString('ru-RU')}</i>
     `;
 
-    // Логируем данные заявки
-    console.log('Новая заявка:', {
-      parent: formData.name,
-      phone: normalizePhone(formData.phone),
-      child: formData.childName,
-      age: formData.childAge,
-      interests: formData.interests,
-      message: formData.message,
-      timestamp: new Date().toISOString()
-    });
     
     // Отправляем заявку через Telegram Bot API
     setIsSending(true);
@@ -194,10 +184,9 @@ const Contact = () => {
     const sendToTelegram = async () => {
       // Получаем токен из переменных окружения
       const botToken = process.env.REACT_APP_TELEGRAM_BOT_TOKEN;
-      const chatId = process.env.REACT_APP_TELEGRAM_CHAT_ID || '653776241';
+      const chatId = process.env.REACT_APP_TELEGRAM_CHAT_ID;
       
-      if (!botToken) {
-        console.error('Telegram Bot Token не настроен!');
+      if (!botToken || !chatId) {
         setSendError('Ошибка конфигурации. Обратитесь к администратору.');
         setIsSending(false);
         return;
@@ -217,16 +206,13 @@ const Contact = () => {
         });
         
         if (response.ok) {
-          console.log('Заявка успешно отправлена в Telegram');
           setIsSending(false);
           setIsSubmitted(true);
         } else {
-          console.error('Ошибка отправки в Telegram:', response.status);
           setSendError(t('contact.form.sendError'));
           setIsSending(false);
         }
       } catch (error) {
-        console.error('Ошибка при отправке в Telegram:', error);
         setSendError(t('contact.form.sendError'));
         setIsSending(false);
       }

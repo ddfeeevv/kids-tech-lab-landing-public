@@ -14,8 +14,6 @@ export const translations = {
       subtitle: '3D-печать, Arduino и цифровые навыки для детей 8–16 лет',
       freeBanner: '🎉 100% БЕСПЛАТНО!',
       description: 'Погружаем детей в мир современных технологий через практические проекты и творческие эксперименты',
-      viewCourses: '',
-      signUp: '',
       scrollDown: 'Прокрутите вниз'
     },
     
@@ -747,6 +745,7 @@ export const translations = {
     reviews: {
       title: 'Ota-onalar fikrlari',
       subtitle: 'O\'quvchilarimizning ota-onalari Tech Kids Lab darslari haqida nima deyotganini biling',
+      originalLanguageNote: 'Rus tilida asl nusxa',
       achievements: {
         title: 'Bizning yutuqlarimiz',
         satisfiedChildren: 'Mamnun bolalar',
@@ -758,19 +757,22 @@ export const translations = {
           name: "Mirzaliyeva Nigina",
           childName: "Kamron, 14 yosh",
           text: "Mening o'g'lim juda energik va giperaktiv edi, men hatto u shunday yoqtirishini, sabr-toqat bilan o'tirib, xayol surib, ixtiro qilishini o'ylamagandim. Endi u uyga qaytganda ham doimo nimadir o'rganadi, o'g'limni tanimayman🙈 Men Danilga juda minnatdorman, u bolalarga mehr ko'rsatdi va ularni qiziqtirdi! Hozirgi vaqtda bu juda muhim.",
-          avatar: "👩‍💼"
+          avatar: "👩‍💼",
+          originalText: "Мой сын был очень энергичный и гиперактивный, я даже не думала, что ему так понравится, что он будет терпеливо сидеть, фантазировать и изобретать. Теперь он, даже приходя домой, постоянно что-то изучает, не узнаю своего сына🙈 Я очень благодарна Данилу, что он проявил любовь к детям и заинтересовал их! Сейчас, в наше время, это очень важно."
         },
         {
           name: "Karabayeva Sitora",
           childName: "Laziza, 14 yosh",
           text: "Mening qizim 3D-bosma kurslarga bordi va unga juda yoqdi! U juda ko'p yangiliklar o'rgandi va hatto birinchi figurkalarini yaratdi. Qizim kurslar qiziq va qiziqarli o'tganini, o'qituvchi hamma narsani tushunarli tushuntirib, bolalarni qo'llab-quvvatlaganini aytadi. Bu har bir ota-onani tinchlantiradi, bizda bunday yoshlar bor, ular o'zlarining bebaho tajribalarini baham ko'rishadi!",
-          avatar: "👨‍💻"
+          avatar: "👨‍💻",
+          originalText: "Моя дочка ходила на курсы по 3D-печати, и ей очень понравилось! Она узнала очень много нового и даже создала свои первые фигурки. Дочка говорит что курсы проходили интересно и увлекательно, а преподаватель всё объяснял понятно и поддерживал детей. Это очень успокаивает каждого родителя, что есть у нас такая молодежь, которая делится своим бесценным опытом!"
         },
         {
           name: "Anikeyev Oleg",
           childName: "Gosha, 13 yosh",
           text: "O'g'lim bugun birinchi marta qo'shimcha darslardan uyga xursand bo'lib qaytdi, butun oqshom uning hayajonli hikoyalarini tingladik🤣 Gosha har doim juda uyatchan bola edi, mini guruhlar bizga kerak bo'lgan narsa edi. O'qituvchiga bolalarni bepul o'qitishga tayyor bo'lgani uchun alohida rahmat.",
-          avatar: "👩‍🏫"
+          avatar: "👩‍🏫",
+          originalText: "Сын сегодня впервые вернулся домой с дополнительных занятий веселый, весь вечер слушали его восторженные рассказы🤣  Гоша всегда был очень стеснительным ребенком, мини группы это то что нам было нужно. Преподавателю отдельная благодарность за то, что готов обучать детей бесплатно."
         }
       ]
     },
@@ -1204,6 +1206,7 @@ export const translations = {
     reviews: {
       title: 'Parent Reviews',
       subtitle: 'Find out what our students\' parents say about classes at Tech Kids Lab',
+      originalLanguageNote: 'Original in Russian',
       achievements: {
         title: 'Our Achievements',
         satisfiedChildren: 'Satisfied Children',
@@ -1212,22 +1215,25 @@ export const translations = {
       },
       testimonials: [
         {
-          name: "Мирзалиева Нигина",
-          childName: "Камрон, 14 лет",
-          text: "Мой сын был очень энергичный и гиперактивный, я даже не думала, что ему так понравится, что он будет терпеливо сидеть, фантазировать и изобретать. Теперь он, даже приходя домой, постоянно что-то изучает, не узнаю своего сына🙈 Я очень благодарна Данилу, что он проявил любовь к детям и заинтересовал их! Сейчас, в наше время, это очень важно.",
-          avatar: "👩‍💼"
+          name: "Mirzalieva Nigina",
+          childName: "Kamron, 14 years old",
+          text: "My son was very energetic and hyperactive, I didn't even think he would like it so much that he would patiently sit, fantasize and invent. Now, even when he comes home, he constantly studies something, I don't recognize my son🙈 I am very grateful to Danil for showing love for children and engaging them! Now, in our time, this is very important.",
+          avatar: "👩‍💼",
+          originalText: "Мой сын был очень энергичный и гиперактивный, я даже не думала, что ему так понравится, что он будет терпеливо сидеть, фантазировать и изобретать. Теперь он, даже приходя домой, постоянно что-то изучает, не узнаю своего сына🙈 Я очень благодарна Данилу, что он проявил любовь к детям и заинтересовал их! Сейчас, в наше время, это очень важно."
         },
         {
-          name: "Карабаева Ситора",
-          childName: "Лазиза, 14 лет",
-          text: "Моя дочка ходила на курсы по 3D-печати, и ей очень понравилось! Она узнала очень много нового и даже создала свои первые фигурки. Дочка говорит что курсы проходили интересно и увлекательно, а преподаватель всё объяснял понятно и поддерживал детей. Это очень успокаивает каждого родителя, что есть у нас такая молодежь, которая делится своим бесценным опытом!",
-          avatar: "👩‍🎓"
+          name: "Karabaeva Sitora",
+          childName: "Laziza, 14 years old",
+          text: "My daughter went to 3D printing courses and she loved it! She learned so much new and even created her first figures. My daughter says the courses were interesting and exciting, and the teacher explained everything clearly and supported the children. This is very reassuring for every parent that we have such young people who share their invaluable experience!",
+          avatar: "👩‍🎓",
+          originalText: "Моя дочка ходила на курсы по 3D-печати, и ей очень понравилось! Она узнала очень много нового и даже создала свои первые фигурки. Дочка говорит что курсы проходили интересно и увлекательно, а преподаватель всё объяснял понятно и поддерживал детей. Это очень успокаивает каждого родителя, что есть у нас такая молодежь, которая делится своим бесценным опытом!"
         },
         {
-          name: "Аникеев Олег",
-          childName: "Гоша, 13 лет",
-          text: "Сын сегодня впервые вернулся домой с дополнительных занятий веселый, весь вечер слушали его восторженные рассказы🤣  Гоша всегда был очень стеснительным ребенком, мини группы это то что нам было нужно. Преподавателю отдельная благодарность за то, что готов обучать детей бесплатно.",
-          avatar: "👨‍💻"
+          name: "Anikeyev Oleg",
+          childName: "Gosha, 13 years old",
+          text: "Today my son returned home from additional classes happy for the first time, we listened to his enthusiastic stories all evening🤣 Gosha was always a very shy child, mini groups were exactly what we needed. Special thanks to the teacher for being ready to teach children for free.",
+          avatar: "👨‍💻",
+          originalText: "Сын сегодня впервые вернулся домой с дополнительных занятий веселый, весь вечер слушали его восторженные рассказы🤣  Гоша всегда был очень стеснительным ребенком, мини группы это то что нам было нужно. Преподавателю отдельная благодарность за то, что готов обучать детей бесплатно."
         }
       ]
     },

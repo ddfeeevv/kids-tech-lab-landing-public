@@ -4,7 +4,7 @@ import { Star, Quote, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Reviews = () => {
-  const { t } = useLanguage();
+  const { t, currentLanguage } = useLanguage();
   const [currentReview, setCurrentReview] = useState(0);
 
   const containerVariants = {
@@ -99,6 +99,13 @@ const Reviews = () => {
               <blockquote className="text-lg md:text-xl text-gray-700 leading-relaxed mb-8 italic">
                 "{reviews[currentReview].text}"
               </blockquote>
+              
+              {/* Original Language Note for Translations */}
+              {currentLanguage !== 'ru' && reviews[currentReview].originalText && (
+                <div className="text-sm text-gray-500 mb-6 italic">
+                  {t('reviews.originalLanguageNote')}
+                </div>
+              )}
               
               {/* Rating */}
               <div className="flex justify-center mb-6">

@@ -28,15 +28,14 @@ const Gallery = () => {
     }
   };
 
-  // Изображения галереи (замените на реальные пути к вашим фото)
+  // Изображения галереи
   const galleryImages = [
     {
       id: 1,
       category: "3D-печать",
       description: "Дети создают свои первые 3D-модели",
-      imageUrl: "/images/gallery/photo1.jpg", // Замените на имя вашего файла
+      imageUrl: "/images/gallery/photo1.jpg",
       alt: "Дети работают с 3D-принтером",
-      // Fallback для отсутствующих изображений
       icon: Printer,
       color: "from-blue-500 to-cyan-500"
     },
@@ -44,7 +43,7 @@ const Gallery = () => {
       id: 2,
       category: "Arduino",
       description: "Программирование светодиодов и датчиков",
-      imageUrl: "/images/gallery/photo2.jpg", // Замените на имя вашего файла
+      imageUrl: "/images/gallery/photo2.jpg",
       alt: "Занятия по Arduino",
       icon: Cpu,
       color: "from-green-500 to-emerald-500"
@@ -53,7 +52,7 @@ const Gallery = () => {
       id: 3,
       category: "Конструирование",
       description: "Сборка роботов из конструктора",
-      imageUrl: "/images/gallery/photo3.jpg", // Замените на имя вашего файла
+      imageUrl: "/images/gallery/photo3.jpg",
       alt: "Дети собирают роботов",
       icon: Blocks,
       color: "from-orange-500 to-red-500"
@@ -62,7 +61,7 @@ const Gallery = () => {
       id: 4,
       category: "IT-направление",
       description: "Изучение основ программирования",
-      imageUrl: "/images/gallery/photo4.jpg", // Замените на имя вашего файла
+      imageUrl: "/images/gallery/photo4.jpg",
       alt: "Урок программирования",
       icon: Cpu,
       color: "from-purple-500 to-pink-500"
@@ -71,7 +70,7 @@ const Gallery = () => {
       id: 5,
       category: "3D-моделирование",
       description: "Создание сложных 3D-проектов",
-      imageUrl: "/images/gallery/photo5.jpg", // Замените на имя вашего файла
+      imageUrl: "/images/gallery/photo5.jpg",
       alt: "3D-моделирование на компьютере",
       icon: Printer,
       color: "from-indigo-500 to-blue-500"
@@ -80,7 +79,7 @@ const Gallery = () => {
       id: 6,
       category: "Электроника",
       description: "Работа с микросхемами и платами",
-      imageUrl: "/images/gallery/photo6.jpg", // Замените на имя вашего файла
+      imageUrl: "/images/gallery/photo6.jpg",
       alt: "Изучение электронных компонентов",
       icon: Cpu,
       color: "from-yellow-500 to-orange-500"
@@ -89,7 +88,7 @@ const Gallery = () => {
       id: 7,
       category: "Робототехника",
       description: "Программирование роботов",
-      imageUrl: "/images/gallery/photo7.jpg", // Замените на имя вашего файла
+      imageUrl: "/images/gallery/photo7.jpg",
       alt: "Программирование роботов",
       icon: Blocks,
       color: "from-teal-500 to-green-500"
@@ -98,7 +97,7 @@ const Gallery = () => {
       id: 8,
       category: "Проектная работа",
       description: "Командные технические проекты",
-      imageUrl: "/images/gallery/photo8.jpg", // Замените на имя вашего файла
+      imageUrl: "/images/gallery/photo8.jpg",
       alt: "Командная работа над проектом",
       icon: Blocks,
       color: "from-red-500 to-pink-500"

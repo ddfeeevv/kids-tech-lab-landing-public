@@ -82,7 +82,6 @@ const About = () => {
           {/* Right Column - Visual Content */}
           <motion.div variants={itemVariants} className="relative">
             <div className="relative">
-              {/* Main Image Placeholder */}
               <motion.div
                 whileHover={{ scale: 1.02 }}
                 className="aspect-square bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl shadow-2xl flex items-center justify-center"
