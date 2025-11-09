@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Printer, Cpu, Blocks, Monitor, Zap, Target, Users, Clock } from 'lucide-react';
+import { Printer, Zap, Target, Users, Clock } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Courses = ({ onCourseSelect }) => {
@@ -40,36 +40,6 @@ const Courses = ({ onCourseSelect }) => {
       bgColor: "bg-blue-50",
       iconColor: "text-blue-600",
       pageId: "course-3d"
-    },
-    {
-      icon: Cpu,
-      title: t('courseCards.arduino.title'),
-      description: t('courseCards.arduino.description'),
-      features: t('courseCards.arduino.features'),
-      color: "from-green-500 to-emerald-500",
-      bgColor: "bg-green-50",
-      iconColor: "text-green-600",
-      pageId: "course-arduino"
-    },
-    {
-      icon: Blocks,
-      title: t('courseCards.robotics.title'),
-      description: t('courseCards.robotics.description'),
-      features: t('courseCards.robotics.features'),
-      color: "from-orange-500 to-red-500",
-      bgColor: "bg-orange-50",
-      iconColor: "text-orange-600",
-      pageId: "course-robotics"
-    },
-    {
-      icon: Monitor,
-      title: t('courseCards.it.title'),
-      description: t('courseCards.it.description'),
-      features: t('courseCards.it.features'),
-      color: "from-purple-500 to-pink-500",
-      bgColor: "bg-purple-50",
-      iconColor: "text-purple-600",
-      pageId: "course-it"
     }
   ];
 
@@ -119,7 +89,7 @@ const Courses = ({ onCourseSelect }) => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16"
+          className="grid grid-cols-1 md:grid-cols-1 max-w-3xl mx-auto gap-8 mb-16"
         >
           {courses.map((course, index) => (
             <motion.div

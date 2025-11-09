@@ -70,7 +70,6 @@ const Navigation = ({ showBackButton = false, onBack }) => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
             {[
-              { name: t('nav.courses'), href: '#courses' },
               { name: t('nav.about'), href: '#about' },
               { name: t('nav.contacts'), href: '#contact' },
             ].map((item) => (
@@ -159,7 +158,6 @@ const Navigation = ({ showBackButton = false, onBack }) => {
           >
             <div className="px-2 pt-2 pb-3 space-y-1">
               {[
-                { name: t('nav.courses'), href: '#courses' },
                 { name: t('nav.about'), href: '#about' },
                 { name: t('nav.contacts'), href: '#contact' },
               ].map((item) => (

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, Cpu, Printer, BookOpen } from 'lucide-react';
+import { Sparkles, Printer, BookOpen } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Hero = () => {
@@ -25,10 +25,10 @@ const Hero = () => {
   };
 
   const floatingIcons = [
-    { Icon: Cpu, delay: 0, x: 20, y: 10 },
-    { Icon: Printer, delay: 0.5, x: -30, y: 20 },
+    { Icon: Printer, delay: 0, x: 20, y: 10 },
+    { Icon: Sparkles, delay: 0.5, x: -30, y: 20 },
     { Icon: BookOpen, delay: 1, x: 40, y: -10 },
-    { Icon: Sparkles, delay: 1.5, x: -20, y: 30 },
+    { Icon: Printer, delay: 1.5, x: -20, y: 30 },
   ];
 
   return (
@@ -96,30 +96,6 @@ const Hero = () => {
           >
             {t('hero.description')}
           </motion.p>
-
-
-
-          {/* Features */}
-          <motion.div 
-            variants={itemVariants}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-16 max-w-4xl mx-auto"
-          >
-            {[
-              { icon: Cpu, title: t('courseCards.arduino.title'), desc: t('courseCards.arduino.description').split('.')[0] },
-              { icon: Printer, title: t('courseCards.3d-printing.title'), desc: t('courseCards.3d-printing.description').split('.')[0] },
-              { icon: BookOpen, title: t('courseCards.it.title'), desc: t('courseCards.it.description').split('.')[0] }
-            ].map((feature, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ y: -5 }}
-                className="bg-white/70 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                <feature.icon size={40} className="text-primary-600 mx-auto mb-4" />
-                <h3 className="font-semibold text-gray-800 mb-2">{feature.title}</h3>
-                <p className="text-gray-600 text-sm">{feature.desc}</p>
-              </motion.div>
-            ))}
-          </motion.div>
         </motion.div>
       </div>
 

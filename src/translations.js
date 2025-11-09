@@ -11,9 +11,9 @@ export const translations = {
     // Hero Section
     hero: {
       title: 'Tech Kids Lab',
-      subtitle: '3D-печать, Arduino и цифровые навыки для детей 8–16 лет',
+      subtitle: '3D-печать для детей 8–16 лет',
       freeBanner: '🎉 100% БЕСПЛАТНО!',
-      description: 'Погружаем детей в мир современных технологий через практические проекты и творческие эксперименты',
+      description: 'Погружаем детей в мир 3D-моделирования и печати через практические проекты и творческие эксперименты',
       scrollDown: 'Прокрутите вниз'
     },
     
@@ -69,21 +69,6 @@ export const translations = {
         title: '3D-печать',
         description: 'Изучаем основы 3D-моделирования и печати. Создаем собственные игрушки, украшения и полезные предметы.',
         features: ['Tinkercad', '3D-принтер', 'Моделирование', 'Печать']
-      },
-      arduino: {
-        title: 'Arduino',
-        description: 'Программируем микроконтроллеры, создаем умные устройства и автоматизированные системы.',
-        features: ['Программирование', 'Схемы', 'Датчики', 'Автоматизация']
-      },
-      robotics: {
-        title: 'Робототехника',
-        description: 'Конструируем роботов и механизмов, изучаем принципы работы различных устройств.',
-        features: ['Конструирование', 'Робототехника', 'Механика', 'Логика']
-      },
-      it: {
-        title: 'IT-грамотность',
-        description: 'Изучаем работу с компьютером, безопасность в интернете и основы программирования.',
-        features: ['Компьютер', 'Интернет', 'Безопасность', 'Программирование']
       }
     },
 
@@ -128,117 +113,6 @@ export const translations = {
           button: 'Записаться на курс'
         }
       },
-      arduino: {
-        title: 'Arduino',
-        subtitle: 'Изучите основы программирования микроконтроллеров и создавайте умные устройства!',
-        about: {
-          title: 'О курсе',
-          description: 'На этом курсе дети научатся программировать микроконтроллеры Arduino, подключать различные датчики и создавать умные устройства. Мы изучим основы электроники и программирования в простой и понятной форме.',
-          duration: '8 недель',
-          groupSize: '6-10 детей',
-          age: '8-12 лет',
-          price: 'Бесплатно'
-        },
-        learn: {
-          title: 'Чему научитесь',
-          features: [
-            'Основы программирования микроконтроллеров',
-            'Работа с датчиками и светодиодами',
-            'Создание умных устройств',
-            'Автоматизация простых процессов',
-            'Понимание принципов работы электроники',
-            'Разработка собственных проектов'
-          ]
-        },
-        program: {
-          title: 'Программа курса',
-          weeks: [
-            { week: '1-2 неделя', topic: 'Знакомство с Arduino, основы программирования' },
-            { week: '3-4 неделя', topic: 'Работа со светодиодами и кнопками' },
-            { week: '5-6 неделя', topic: 'Подключение датчиков и считывание данных' },
-            { week: '7-8 неделя', topic: 'Создание умных устройств и автоматизация' }
-          ]
-        },
-        cta: {
-          title: 'Готовы начать?',
-          subtitle: 'Запишитесь на бесплатный курс Arduino и создайте свое первое умное устройство!',
-          button: 'Записаться на курс'
-        }
-      },
-      robotics: {
-        title: 'Робототехника',
-        subtitle: 'Изучите создание роботов и механизмов и поймите основы механики!',
-        about: {
-          title: 'О курсе',
-          description: 'На этом курсе дети научатся создавать роботов и механизмы, изучать принципы работы различных устройств. Мы изучим основы механики, электроники и программирования через практические проекты.',
-          duration: '8 недель',
-          groupSize: '6-10 детей',
-          age: '8-12 лет',
-          price: 'Бесплатно'
-        },
-        learn: {
-          title: 'Чему научитесь',
-          features: [
-            'Создание роботов и механизмов',
-            'Основы механики и физики',
-            'Электроника и программирование',
-            'Проекты и конструкции',
-            'Логическое мышление и решение задач',
-            'Создание собственного робота'
-          ]
-        },
-        program: {
-          title: 'Программа курса',
-          weeks: [
-            { week: '1-2 неделя', topic: 'Знакомство с робототехникой, основы механики' },
-            { week: '3-4 неделя', topic: 'Простые механизмы и конструкции' },
-            { week: '5-6 неделя', topic: 'Элементы электроники и программирования' },
-            { week: '7-8 неделя', topic: 'Создание роботов и проекты' }
-          ]
-        },
-        cta: {
-          title: 'Готовы начать?',
-          subtitle: 'Запишитесь на бесплатный курс робототехники и создайте своего первого робота!',
-          button: 'Записаться на курс'
-        }
-      },
-      it: {
-        title: 'IT-грамотность',
-        subtitle: 'Изучите работу с компьютером и основы программирования!',
-        about: {
-          title: 'О курсе',
-          description: 'На этом курсе дети научатся работать с компьютером, безопасности в интернете и основам программирования. Мы изучим современные технологии в простой и понятной форме.',
-          duration: '8 недель',
-          groupSize: '6-10 детей',
-          age: '8-12 лет',
-          price: 'Бесплатно'
-        },
-        learn: {
-          title: 'Чему научитесь',
-          features: [
-            'Основы работы с компьютером',
-            'Интернет и безопасность',
-            'Основы программирования и алгоритмы',
-            'Работа с файлами и папками',
-            'Современные программы и приложения',
-            'Создание собственной программы'
-          ]
-        },
-        program: {
-          title: 'Программа курса',
-          weeks: [
-            { week: '1-2 неделя', topic: 'Знакомство с компьютером, основные операции' },
-            { week: '3-4 неделя', topic: 'Интернет и безопасность, работа с файлами' },
-            { week: '5-6 неделя', topic: 'Основы программирования и алгоритмы' },
-            { week: '7-8 неделя', topic: 'Проекты и создание программ' }
-          ]
-        },
-        cta: {
-          title: 'Готовы начать?',
-          subtitle: 'Запишитесь на бесплатный курс IT-грамотности и станьте мастером компьютера!',
-          button: 'Записаться на курс'
-        }
-      }
     },
     
     // Format Section
@@ -444,7 +318,7 @@ export const translations = {
         address: 'Адрес',
         addressValue: 'Школа №60, Мирабадский район, Ташкент',
         workingHours: 'Время работы',
-        workingHoursValue: 'Пн и Пт: 10:00-12:00, Связь в любое время',
+        workingHoursValue: 'Пн, Ср, Пт: 12:00-14:00',
         quickContact: {
           title: 'Быстрая связь',
           message: 'Есть вопросы? Свяжитесь с нами прямо сейчас через Telegram!',
@@ -466,9 +340,9 @@ export const translations = {
     // Hero Section
     hero: {
       title: 'Tech Kids Lab',
-      subtitle: '8-16 yoshdagi bolalar uchun 3D-bosish, Arduino va raqamli ko\'nikmalar',
+      subtitle: '8-16 yoshdagi bolalar uchun 3D-bosish',
       freeBanner: '🎉 100% BEPUL!',
-      description: 'Bolalarni amaliy loyihalar va ijodiy tajribalar orqali zamonaviy texnologiyalar dunyosiga chuqur kirib boramiz',
+      description: 'Bolalarni amaliy loyihalar va ijodiy tajribalar orqali 3D-modeling va bosish dunyosiga chuqur kirib boramiz',
       viewCourses: '',
       signUp: '',
       scrollDown: 'Pastga aylantiring'
@@ -526,21 +400,6 @@ export const translations = {
         title: '3D-bosish',
         description: "3D-modeling va bosish asoslarini o'rganamiz. O'z o'yinchoqlarimiz, bezaklarimiz va foydali narsalarimizni yaratamiz.",
         features: ['Tinkercad', '3D-printer', 'Modeling', 'Bosish']
-      },
-      arduino: {
-        title: 'Arduino',
-        description: 'Mikrokontrollerlarni dasturlaymiz, aqlli qurilmalar va avtomatlashtirilgan tizimlarni yaratamiz.',
-        features: ['Dasturlash', 'Sxemalar', 'Sensörler', 'Avtomatlashtirish']
-      },
-      robotics: {
-        title: 'Robototexnika',
-        description: "Robotlar va mexanizmlar yasaymiz, turli qurilmalarning ishlash printsipini o'rganamiz.",
-        features: ['Konstruksiya', 'Robototexnika', 'Mexanika', 'Mantiq']
-      },
-      it: {
-        title: 'IT-savodxonlik',
-        description: "Kompyuter bilan ishlash, internetda xavfsizlik va dasturlash asoslarini o'rganamiz.",
-        features: ['Kompyuter', 'Internet', 'Xavfsizlik', 'Dasturlash']
       }
     },
 
@@ -585,117 +444,6 @@ export const translations = {
           button: 'Kursga yozilish'
         }
       },
-      arduino: {
-        title: 'Arduino',
-        subtitle: 'Mikrokontrollerlarni dasturlash asoslarini o\'rganing va aqlli qurilmalar yarating!',
-        about: {
-          title: 'Kurs haqida',
-          description: 'Bu kursda bolalar Arduino mikrokontrollerlarini dasturlashni, turli xil sensorlarni ulashni va aqlli qurilmalar yaratishni o\'rganadilar. Biz elektronika va dasturlash asoslarini oddiy va tushunarli shaklda o\'rgatamiz.',
-          duration: '8 hafta',
-          groupSize: '6-10 bola',
-          age: '8-12 yosh',
-          price: 'Bepul'
-        },
-        learn: {
-          title: 'Nima o\'rganasiz',
-          features: [
-            'Mikrokontrollerlarni dasturlash asoslari',
-            'Sensorlar va LEDlar bilan ishlash',
-            'Aqlli qurilmalar yaratish',
-            'Oddiy jarayonlarni avtomatlashtirish',
-            'Elektronika ishlash printsipini tushunish',
-            'O\'z loyihalaringizni ishlab chiqish'
-          ]
-        },
-        program: {
-          title: 'Kurs dasturi',
-          weeks: [
-            { week: '1-2 hafta', topic: 'Arduino bilan tanishish, dasturlash asoslari' },
-            { week: '3-4 hafta', topic: 'LEDlar va tugmalar bilan ishlash' },
-            { week: '5-6 hafta', topic: 'Sensorlarni ulash va ma\'lumotlarni o\'qish' },
-            { week: '7-8 hafta', topic: 'Aqlli qurilmalar yaratish va avtomatlashtirish' }
-          ]
-        },
-        cta: {
-          title: 'Boshlashga tayyormisiz?',
-          subtitle: 'Bepul Arduino kursiga yoziling va birinchi aqlli qurilmangizni yarating!',
-          button: 'Kursga yozilish'
-        }
-      },
-      robotics: {
-        title: 'Robototexnika',
-        subtitle: 'Robotlar va mexanizmlar yasashni o\'rganing va mexanika asoslarini tushuning!',
-        about: {
-          title: 'Kurs haqida',
-          description: 'Bu kursda bolalar robotlar va mexanizmlar yasashni, turli qurilmalarning ishlash printsipini o\'rganadilar. Biz mexanika, elektronika va dasturlash asoslarini amaliy loyihalar orqali o\'rgatamiz.',
-          duration: '8 hafta',
-          groupSize: '6-10 bola',
-          age: '8-12 yosh',
-          price: 'Bepul'
-        },
-        learn: {
-          title: 'Nima o\'rganasiz',
-          features: [
-            'Robotlar va mexanizmlar yasash',
-            'Mexanika va fizika asoslari',
-            'Elektronika va dasturlash',
-            'Loyihalar va konstruksiyalar',
-            'Mantiqiy fikrlash va muammolarni hal qilish',
-            'O\'z robotingizni yaratish'
-          ]
-        },
-        program: {
-          title: 'Kurs dasturi',
-          weeks: [
-            { week: '1-2 hafta', topic: 'Robototexnika bilan tanishish, mexanika asoslari' },
-            { week: '3-4 hafta', topic: 'Oddiy mexanizmlar va konstruksiyalar' },
-            { week: '5-6 hafta', topic: 'Elektronika va dasturlash elementlari' },
-            { week: '7-8 hafta', topic: 'Robotlar yaratish va loyihalar' }
-          ]
-        },
-        cta: {
-          title: 'Boshlashga tayyormisiz?',
-          subtitle: 'Bepul robototexnika kursiga yoziling va birinchi robotingizni yarating!',
-          button: 'Kursga yozilish'
-        }
-      },
-      it: {
-        title: 'IT-savodxonlik',
-        subtitle: 'Kompyuter bilan ishlash va dasturlash asoslarini o\'rganing!',
-        about: {
-          title: 'Kurs haqida',
-          description: 'Bu kursda bolalar kompyuter bilan ishlashni, internetda xavfsizlikni va dasturlash asoslarini o\'rganadilar. Biz zamonaviy texnologiyalarni oddiy va tushunarli shaklda o\'rgatamiz.',
-          duration: '8 hafta',
-          groupSize: '6-10 bola',
-          age: '8-12 yosh',
-          price: 'Bepul'
-        },
-        learn: {
-          title: 'Nima o\'rganasiz',
-          features: [
-            'Kompyuter bilan ishlash asoslari',
-            'Internet va xavfsizlik',
-            'Dasturlash asoslari va algoritmlar',
-            'Fayllar va papkalar bilan ishlash',
-            'Zamonaviy dasturlar va ilovalar',
-            'O\'z dasturingizni yaratish'
-          ]
-        },
-        program: {
-          title: 'Kurs dasturi',
-          weeks: [
-            { week: '1-2 hafta', topic: 'Kompyuter bilan tanishish, asosiy amallar' },
-            { week: '3-4 hafta', topic: 'Internet va xavfsizlik, fayllar bilan ishlash' },
-            { week: '5-6 hafta', topic: 'Dasturlash asoslari va algoritmlar' },
-            { week: '7-8 hafta', topic: 'Loyihalar va dasturlar yaratish' }
-          ]
-        },
-        cta: {
-          title: 'Boshlashga tayyormisiz?',
-          subtitle: 'Bepul IT-savodxonlik kursiga yoziling va kompyuter ustasi bo\'ling!',
-          button: 'Kursga yozilish'
-        }
-      }
     },
     
     // Format Section
@@ -905,7 +653,7 @@ export const translations = {
         address: 'Manzil',
         addressValue: '60-sonli maktab, Mirabad tumani, Toshkent',
         workingHours: 'Ish vaqti',
-        workingHoursValue: 'Du va Ju: 10:00-12:00, Har qanday vaqtda aloqa',
+        workingHoursValue: 'Du, Ch, Ju: 12:00-14:00',
         quickContact: {
           title: 'Tezkor aloqa',
           message: 'Savollaringiz bormi? Hozircha Telegram orqali biz bilan bog\'laning!',
@@ -927,9 +675,9 @@ export const translations = {
     // Hero Section
     hero: {
       title: 'Tech Kids Lab',
-      subtitle: '3D printing, Arduino and digital skills for children 8-16 years old',
+      subtitle: '3D printing for children 8-16 years old',
       freeBanner: '🎉 100% FREE!',
-      description: 'We immerse children in the world of modern technologies through practical projects and creative experiments',
+      description: 'We immerse children in the world of 3D modeling and printing through practical projects and creative experiments',
       viewCourses: '',
       signUp: '',
       scrollDown: 'Scroll Down'
@@ -987,21 +735,6 @@ export const translations = {
         title: '3D Printing',
         description: 'We study the basics of 3D modeling and printing. We create our own toys, decorations and useful items.',
         features: ['Tinkercad', '3D Printer', 'Modeling', 'Printing']
-      },
-      arduino: {
-        title: 'Arduino',
-        description: 'We program microcontrollers, create smart devices and automated systems.',
-        features: ['Programming', 'Schematics', 'Sensors', 'Automation']
-      },
-      robotics: {
-        title: 'Robotics',
-        description: 'We construct robots and mechanisms, study the principles of various devices.',
-        features: ['Construction', 'Robotics', 'Mechanics', 'Logic']
-      },
-      it: {
-        title: 'IT Literacy',
-        description: 'We study computer operation, internet security and programming basics.',
-        features: ['Computer', 'Internet', 'Security', 'Programming']
       }
     },
 
@@ -1046,117 +779,6 @@ export const translations = {
           button: 'Sign Up for Course'
         }
       },
-      arduino: {
-        title: 'Arduino',
-        subtitle: 'Learn the basics of microcontroller programming and create smart devices!',
-        about: {
-          title: 'About the Course',
-          description: 'In this course, children will learn to program Arduino microcontrollers, connect various sensors, and create smart devices. We will study the basics of electronics and programming in a simple and understandable form.',
-          duration: '8 weeks',
-          groupSize: '6-10 children',
-          age: '8-12 years old',
-          price: 'Free'
-        },
-        learn: {
-          title: 'What You Will Learn',
-          features: [
-            'Basics of microcontroller programming',
-            'Working with sensors and LEDs',
-            'Creating smart devices',
-            'Automation of simple processes',
-            'Understanding the principles of electronics',
-            'Development of own projects'
-          ]
-        },
-        program: {
-          title: 'Course Program',
-          weeks: [
-            { week: '1-2 week', topic: 'Introduction to Arduino, programming basics' },
-            { week: '3-4 week', topic: 'Working with LEDs and buttons' },
-            { week: '5-6 week', topic: 'Connecting sensors and reading data' },
-            { week: '7-8 week', topic: 'Creating smart devices and automation' }
-          ]
-        },
-        cta: {
-          title: 'Ready to Start?',
-          subtitle: 'Sign up for a free Arduino course and create your first smart device!',
-          button: 'Sign Up for Course'
-        }
-      },
-      robotics: {
-        title: 'Robotics',
-        subtitle: 'Learn to create robots and mechanisms and understand the basics of mechanics!',
-        about: {
-          title: 'About the Course',
-          description: 'In this course, children will learn to create robots and mechanisms, study the principles of various devices. We will study the basics of mechanics, electronics, and programming through practical projects.',
-          duration: '8 weeks',
-          groupSize: '6-10 children',
-          age: '8-12 years old',
-          price: 'Free'
-        },
-        learn: {
-          title: 'What You Will Learn',
-          features: [
-            'Creating robots and mechanisms',
-            'Basics of mechanics and physics',
-            'Electronics and programming',
-            'Projects and constructions',
-            'Logical thinking and problem solving',
-            'Creating your own robot'
-          ]
-        },
-        program: {
-          title: 'Course Program',
-          weeks: [
-            { week: '1-2 week', topic: 'Introduction to robotics, basics of mechanics' },
-            { week: '3-4 week', topic: 'Simple mechanisms and constructions' },
-            { week: '5-6 week', topic: 'Elements of electronics and programming' },
-            { week: '7-8 week', topic: 'Creating robots and projects' }
-          ]
-        },
-        cta: {
-          title: 'Ready to Start?',
-          subtitle: 'Sign up for a free robotics course and create your first robot!',
-          button: 'Sign Up for Course'
-        }
-      },
-      it: {
-        title: 'IT Literacy',
-        subtitle: 'Learn computer operation and programming basics!',
-        about: {
-          title: 'About the Course',
-          description: 'In this course, children will learn computer operation, internet security, and programming basics. We will study modern technologies in a simple and understandable form.',
-          duration: '8 weeks',
-          groupSize: '6-10 children',
-          age: '8-12 years old',
-          price: 'Free'
-        },
-        learn: {
-          title: 'What You Will Learn',
-          features: [
-            'Basics of computer operation',
-            'Internet and security',
-            'Programming basics and algorithms',
-            'Working with files and folders',
-            'Modern software and applications',
-            'Creating your own program'
-          ]
-        },
-        program: {
-          title: 'Course Program',
-          weeks: [
-            { week: '1-2 week', topic: 'Introduction to computer, basic operations' },
-            { week: '3-4 week', topic: 'Internet and security, working with files' },
-            { week: '5-6 week', topic: 'Programming basics and algorithms' },
-            { week: '7-8 week', topic: 'Projects and creating programs' }
-          ]
-        },
-        cta: {
-          title: 'Ready to Start?',
-          subtitle: 'Sign up for a free IT literacy course and become a computer master!',
-          button: 'Sign Up for Course'
-        }
-      }
     },
     
     // Format Section
@@ -1366,7 +988,7 @@ export const translations = {
         address: 'Address',
         addressValue: 'School #60, Mirabad District, Tashkent',
         workingHours: 'Working Hours',
-        workingHoursValue: 'Mon & Fri: 10:00-12:00, Contact anytime',
+        workingHoursValue: 'Mon, Wed, Fri: 12:00-14:00',
         quickContact: {
           title: 'Quick Contact',
           message: 'Have questions? Contact us right now via Telegram!',

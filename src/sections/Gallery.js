@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Camera, Cpu, Printer, Blocks, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Camera, Printer, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Gallery = () => {
@@ -41,30 +41,30 @@ const Gallery = () => {
     },
     {
       id: 2,
-      category: "Arduino",
-      description: "Программирование светодиодов и датчиков",
+      category: "3D-печать",
+      description: "Работа с 3D-принтером",
       imageUrl: "/images/gallery/photo2.jpg",
-      alt: "Занятия по Arduino",
-      icon: Cpu,
-      color: "from-green-500 to-emerald-500"
+      alt: "Занятия по 3D-печати",
+      icon: Printer,
+      color: "from-blue-500 to-cyan-500"
     },
     {
       id: 3,
-      category: "Конструирование",
-      description: "Сборка роботов из конструктора",
+      category: "3D-моделирование",
+      description: "Создание 3D-моделей",
       imageUrl: "/images/gallery/photo3.jpg",
-      alt: "Дети собирают роботов",
-      icon: Blocks,
-      color: "from-orange-500 to-red-500"
+      alt: "Дети создают 3D-модели",
+      icon: Printer,
+      color: "from-blue-500 to-cyan-500"
     },
     {
       id: 4,
-      category: "IT-направление",
-      description: "Изучение основ программирования",
+      category: "3D-печать",
+      description: "Изучение основ 3D-печати",
       imageUrl: "/images/gallery/photo4.jpg",
-      alt: "Урок программирования",
-      icon: Cpu,
-      color: "from-purple-500 to-pink-500"
+      alt: "Урок по 3D-печати",
+      icon: Printer,
+      color: "from-blue-500 to-cyan-500"
     },
     {
       id: 5,
@@ -77,30 +77,30 @@ const Gallery = () => {
     },
     {
       id: 6,
-      category: "Электроника",
-      description: "Работа с микросхемами и платами",
+      category: "3D-печать",
+      description: "Работа с 3D-принтером",
       imageUrl: "/images/gallery/photo6.jpg",
-      alt: "Изучение электронных компонентов",
-      icon: Cpu,
-      color: "from-yellow-500 to-orange-500"
+      alt: "Изучение 3D-печати",
+      icon: Printer,
+      color: "from-blue-500 to-cyan-500"
     },
     {
       id: 7,
-      category: "Робототехника",
-      description: "Программирование роботов",
+      category: "3D-проекты",
+      description: "Готовые 3D-изделия",
       imageUrl: "/images/gallery/photo7.jpg",
-      alt: "Программирование роботов",
-      icon: Blocks,
-      color: "from-teal-500 to-green-500"
+      alt: "3D-проекты детей",
+      icon: Printer,
+      color: "from-blue-500 to-cyan-500"
     },
     {
       id: 8,
-      category: "Проектная работа",
-      description: "Командные технические проекты",
+      category: "3D-печать",
+      description: "Командная работа над 3D-проектами",
       imageUrl: "/images/gallery/photo8.jpg",
-      alt: "Командная работа над проектом",
-      icon: Blocks,
-      color: "from-red-500 to-pink-500"
+      alt: "Командная работа над 3D-проектом",
+      icon: Printer,
+      color: "from-blue-500 to-cyan-500"
     }
   ];
 

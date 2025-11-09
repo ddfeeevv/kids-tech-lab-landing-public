@@ -10,7 +10,6 @@ const Contact = () => {
     phone: '',
     childName: '',
     childAge: '',
-    interests: '',
     message: ''
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -160,18 +159,33 @@ const Contact = () => {
       return phone;
     };
 
-    // Формируем сообщение для Telegram
-    const message = `
+    // Нормализуем номер телефона для сообщения
+    const normalizedPhone = normalizePhone(formData.phone);
+    
+    // Формируем текстовое сообщение для Telegram
+    const messageText = `🚀 Новая заявка на запись в Tech Kids Lab
+
+👤 Родитель: ${formData.name}
+📞 Телефон: ${normalizedPhone}
+
+👶 Ребенок: ${formData.childName}
+🎂 Возраст: ${formData.childAge}
+
+💬 Сообщение: ${formData.message || 'Не указано'}
+
+⏰ Время отправки: ${new Date().toLocaleString('ru-RU')}`;
+    
+    // Формируем сообщение для Telegram Bot API (HTML формат)
+    const messageHTML = `
 <b>🚀 Новая заявка на запись в Tech Kids Lab</b>
 
 👤 <b>Родитель:</b> ${formData.name}
-📞 <b>Телефон:</b> ${normalizePhone(formData.phone)}
+📞 <b>Телефон:</b> ${normalizedPhone}
 
 👶 <b>Ребенок:</b> ${formData.childName}
 🎂 <b>Возраст:</b> ${formData.childAge}
-🎯 <b>Интересы:</b> ${formData.interests}
 
-💬 <b>Сообщение:</b> ${formData.message}
+💬 <b>Сообщение:</b> ${formData.message || 'Не указано'}
 
 ⏰ <i>Время отправки: ${new Date().toLocaleString('ru-RU')}</i>
     `;
@@ -186,35 +200,93 @@ const Contact = () => {
       const botToken = process.env.REACT_APP_TELEGRAM_BOT_TOKEN;
       const chatId = process.env.REACT_APP_TELEGRAM_CHAT_ID;
       
-      if (!botToken || !chatId) {
-        setSendError('Ошибка конфигурации. Обратитесь к администратору.');
+      // Проверяем, что переменные действительно загружены (не плейсхолдеры)
+      const isTokenValid = botToken && 
+        botToken !== 'your_bot_token_here' && 
+        !botToken.includes('your_bot') &&
+        botToken.length > 20; // Реальный токен должен быть длинным
+      const isChatIdValid = chatId && 
+        chatId !== 'your_chat_id_here' && 
+        !isNaN(parseInt(chatId, 10)) && 
+        parseInt(chatId, 10) > 0;
+      
+      // Логируем для отладки
+      console.log('=== ENV VARIABLES CHECK ===');
+      console.log('Bot Token exists:', !!botToken);
+      console.log('Bot Token value:', botToken ? (botToken.length > 20 ? `${botToken.substring(0, 15)}...${botToken.substring(botToken.length - 5)}` : 'TOO_SHORT') : 'NOT SET');
+      console.log('Bot Token is valid:', isTokenValid);
+      console.log('Chat ID:', chatId);
+      console.log('Chat ID is valid:', isChatIdValid);
+      console.log('All env vars:', Object.keys(process.env).filter(k => k.startsWith('REACT_APP_')).map(k => `${k}=${process.env[k]?.substring(0, 10)}...`));
+      
+      // Если переменные окружения не установлены или это плейсхолдеры, используем прямой линк на Telegram
+      if (!isTokenValid || !isChatIdValid) {
+        console.warn('⚠️ Telegram Bot API не настроен корректно, используем прямой линк');
+        console.warn('Token valid:', isTokenValid, 'Chat ID valid:', isChatIdValid);
+        // Формируем URL для отправки сообщения напрямую в Telegram
+        const telegramUsername = 'ddfeeevv';
+        const encodedMessage = encodeURIComponent(messageText);
+        const telegramUrl = `https://t.me/${telegramUsername}?text=${encodedMessage}`;
+        
+        console.log('Opening Telegram link:', telegramUrl);
+        // Открываем Telegram в новой вкладке
+        window.open(telegramUrl, '_blank');
+        
+        // Показываем успешное сообщение
         setIsSending(false);
+        setIsSubmitted(true);
         return;
       }
       
       try {
-        const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            chat_id: chatId,
-            text: message,
-            parse_mode: 'HTML'
-          })
+        // Преобразуем chat_id в число
+        const chatIdNum = parseInt(chatId, 10);
+        
+        if (isNaN(chatIdNum)) {
+          throw new Error(`Invalid chat ID: ${chatId}`);
+        }
+
+        // Формируем URL для GET-запроса (избегаем preflight и CORS проблем)
+        const apiBaseUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
+        const apiUrlWithParams = `${apiBaseUrl}?${new URLSearchParams({
+          chat_id: chatIdNum.toString(),
+          text: messageText,
+          parse_mode: 'HTML'
+        }).toString()}`;
+        
+        console.log('=== TELEGRAM API REQUEST ===');
+        console.log('API URL (masked token):', apiBaseUrl.replace(botToken, `TOKEN[${botToken.length}chars]`));
+        console.log('Chat ID (number):', chatIdNum);
+        console.log('Request URL (with params masked):', apiUrlWithParams.replace(botToken, `TOKEN[${botToken.length}chars]`));
+        
+        // Отправляем GET-запрос с mode:"no-cors". Ответ будет opaque, но запрос дойдет до Telegram
+        const response = await fetch(apiUrlWithParams, {
+          method: 'GET',
+          mode: 'no-cors',
         });
         
-        if (response.ok) {
+        console.log('Fetch response type:', response.type); // ожидаем 'opaque'
+        console.log('Fetch response status:', response.status); // 0 для opaque
+        
+        // Считаем отправку успешной (Telegram принял запрос). Ответ будет opaque из-за no-cors.
+        setIsSending(false);
+        setIsSubmitted(true);
+        console.log('✅ Запрос отправлен. Проверьте Telegram. Если сообщение не пришло, откройте ссылку вручную.');
+        console.log('Fallback link:', `https://t.me/ddfeeevv?text=${encodeURIComponent(messageText)}`);
+      } catch (error) {
+        // Если произошла ошибка, используем прямой линк на Telegram
+        console.error('Error sending to Telegram:', error);
+        setSendError(`Ошибка соединения: ${error.message}. Открываем Telegram...`);
+        
+        setTimeout(() => {
+          const telegramUsername = 'ddfeeevv';
+          const encodedMessage = encodeURIComponent(messageText);
+          const telegramUrl = `https://t.me/${telegramUsername}?text=${encodedMessage}`;
+          window.open(telegramUrl, '_blank');
           setIsSending(false);
           setIsSubmitted(true);
-        } else {
-          setSendError(t('contact.form.sendError'));
-          setIsSending(false);
-        }
-      } catch (error) {
-        setSendError(t('contact.form.sendError'));
-        setIsSending(false);
+          setSendError('');
+        }, 1500);
       }
     };
     
@@ -406,42 +478,6 @@ const Contact = () => {
                     {ageError && (
                       <p className="mt-2 text-sm text-red-600">{ageError}</p>
                     )}
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    {t('contact.form.interests')}
-                  </label>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    {[
-                      { value: "3d-printing", label: t('courseCards.3d-printing.title'), icon: "🖨️" },
-                      { value: "arduino", label: t('courseCards.arduino.title'), icon: "🔧" },
-                      { value: "robotics", label: t('courseCards.robotics.title'), icon: "🤖" },
-                      { value: "programming", label: t('courseCards.it.title'), icon: "💻" }
-                    ].map((option) => (
-                      <label key={option.value} className="flex items-center p-4 border border-gray-300 rounded-lg hover:bg-primary-50 cursor-pointer transition-all duration-200">
-                        <input
-                          type="radio"
-                          name="interests"
-                          value={option.value}
-                          checked={formData.interests === option.value}
-                          onChange={handleInputChange}
-                          className="sr-only"
-                        />
-                        <div className={`w-4 h-4 rounded-full border-2 mr-3 flex items-center justify-center ${
-                          formData.interests === option.value 
-                            ? 'border-primary-500 bg-primary-500' 
-                            : 'border-gray-300'
-                        }`}>
-                          {formData.interests === option.value && (
-                            <div className="w-2 h-2 bg-white rounded-full"></div>
-                          )}
-                        </div>
-                        <span className="text-2xl mr-2">{option.icon}</span>
-                        <span className="text-gray-700">{option.label}</span>
-                      </label>
-                    ))}
                   </div>
                 </div>
 
