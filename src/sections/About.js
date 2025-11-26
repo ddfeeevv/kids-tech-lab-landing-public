@@ -90,11 +90,24 @@ const About = () => {
             <div className="relative">
               <motion.div
                 whileHover={{ scale: 1.02 }}
-                className="aspect-square bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl shadow-2xl flex items-center justify-center"
+                className="aspect-square rounded-2xl shadow-2xl overflow-hidden relative border-4 border-white ring-4 ring-primary-100"
               >
-                <div className="text-center">
-                  <User size={120} className="text-primary-600 mx-auto mb-4" />
-                  <p className="text-gray-500 text-lg">{t('about.teacherPhoto')}</p>
+                <img
+                  src="/images/teacher/teacher.jpg"
+                  alt={t('about.teacherAlt', 'Преподаватель Tech Kids Lab')}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    // Fallback на иконку, если изображение не загрузится
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'flex';
+                  }}
+                />
+                {/* Fallback на иконку, если изображение не найдено */}
+                <div className="hidden w-full h-full bg-gradient-to-br from-primary-100 to-secondary-100 items-center justify-center">
+                  <div className="text-center">
+                    <User size={120} className="text-primary-600 mx-auto mb-4" />
+                    <p className="text-gray-500 text-lg">{t('about.teacherPhoto')}</p>
+                  </div>
                 </div>
               </motion.div>
 
@@ -109,7 +122,7 @@ const About = () => {
                   repeat: Infinity, 
                   ease: "easeInOut" 
                 }}
-                className="absolute -top-4 -right-4 w-20 h-20 bg-yellow-400 rounded-full flex items-center justify-center shadow-lg"
+                className="absolute -top-4 -right-4 w-20 h-20 bg-yellow-400 rounded-full flex items-center justify-center shadow-lg z-10"
               >
                 <span className="text-2xl">🚀</span>
               </motion.div>
@@ -125,7 +138,7 @@ const About = () => {
                   ease: "easeInOut",
                   delay: 1
                 }}
-                className="absolute -bottom-4 -left-4 w-16 h-16 bg-green-400 rounded-full flex items-center justify-center shadow-lg"
+                className="absolute -bottom-4 -left-4 w-16 h-16 bg-green-400 rounded-full flex items-center justify-center shadow-lg z-10"
               >
                 <span className="text-xl">💡</span>
               </motion.div>
