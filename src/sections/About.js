@@ -93,7 +93,7 @@ const About = () => {
                 className="aspect-square rounded-2xl shadow-2xl overflow-hidden relative border-4 border-white ring-4 ring-primary-100"
               >
                 <img
-                  src="/images/teacher/teacher.jpg"
+                  src={`${process.env.PUBLIC_URL}/images/teacher/teacher.jpg`}
                   alt={t('about.teacherAlt', 'Преподаватель Tech Kids Lab')}
                   className="w-full h-full object-cover"
                   onError={(e) => {

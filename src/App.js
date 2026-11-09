@@ -36,7 +36,7 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL || '/'}>
       <LanguageProvider>
         <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
           <Navigation 

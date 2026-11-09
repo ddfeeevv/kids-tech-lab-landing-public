@@ -34,7 +34,7 @@ const Gallery = () => {
       id: 1,
       category: "3D-печать",
       description: "Дети создают свои первые 3D-модели",
-      imageUrl: "/images/gallery/photo1.jpg",
+      imageUrl: `${process.env.PUBLIC_URL}/images/gallery/photo1.jpg`,
       alt: "Дети работают с 3D-принтером",
       icon: Printer,
       color: "from-blue-500 to-cyan-500"
@@ -43,7 +43,7 @@ const Gallery = () => {
       id: 2,
       category: "3D-печать",
       description: "Работа с 3D-принтером",
-      imageUrl: "/images/gallery/photo2.jpg",
+      imageUrl: `${process.env.PUBLIC_URL}/images/gallery/photo2.jpg`,
       alt: "Занятия по 3D-печати",
       icon: Printer,
       color: "from-blue-500 to-cyan-500"
@@ -52,7 +52,7 @@ const Gallery = () => {
       id: 3,
       category: "3D-моделирование",
       description: "Создание 3D-моделей",
-      imageUrl: "/images/gallery/photo3.jpg",
+      imageUrl: `${process.env.PUBLIC_URL}/images/gallery/photo3.jpg`,
       alt: "Дети создают 3D-модели",
       icon: Printer,
       color: "from-blue-500 to-cyan-500"
@@ -61,7 +61,7 @@ const Gallery = () => {
       id: 4,
       category: "3D-печать",
       description: "Изучение основ 3D-печати",
-      imageUrl: "/images/gallery/photo4.jpg",
+      imageUrl: `${process.env.PUBLIC_URL}/images/gallery/photo4.jpg`,
       alt: "Урок по 3D-печати",
       icon: Printer,
       color: "from-blue-500 to-cyan-500"
@@ -70,7 +70,7 @@ const Gallery = () => {
       id: 5,
       category: "3D-моделирование",
       description: "Создание сложных 3D-проектов",
-      imageUrl: "/images/gallery/photo5.jpg",
+      imageUrl: `${process.env.PUBLIC_URL}/images/gallery/photo5.jpg`,
       alt: "3D-моделирование на компьютере",
       icon: Printer,
       color: "from-indigo-500 to-blue-500"
@@ -79,7 +79,7 @@ const Gallery = () => {
       id: 6,
       category: "3D-печать",
       description: "Работа с 3D-принтером",
-      imageUrl: "/images/gallery/photo6.jpg",
+      imageUrl: `${process.env.PUBLIC_URL}/images/gallery/photo6.jpg`,
       alt: "Изучение 3D-печати",
       icon: Printer,
       color: "from-blue-500 to-cyan-500"
@@ -88,7 +88,7 @@ const Gallery = () => {
       id: 7,
       category: "3D-проекты",
       description: "Готовые 3D-изделия",
-      imageUrl: "/images/gallery/photo7.jpg",
+      imageUrl: `${process.env.PUBLIC_URL}/images/gallery/photo7.jpg`,
       alt: "3D-проекты детей",
       icon: Printer,
       color: "from-blue-500 to-cyan-500"
@@ -97,7 +97,7 @@ const Gallery = () => {
       id: 8,
       category: "3D-печать",
       description: "Командная работа над 3D-проектами",
-      imageUrl: "/images/gallery/photo8.jpg",
+      imageUrl: `${process.env.PUBLIC_URL}/images/gallery/photo8.jpg`,
       alt: "Командная работа над 3D-проектом",
       icon: Printer,
       color: "from-blue-500 to-cyan-500"
